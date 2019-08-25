@@ -7,9 +7,11 @@ entries:
       - title: 새로운 기능
         output: web
         folderitems:
-           - title: 2019 V2
+          - title: 2019 V2
             url: /2019v2_whatsnew.html
             output: web
+            type: homepage
+
           - title: 2019 V1
             url: /2019v1_whatsnew.html
             output: web
