@@ -8,6 +8,6 @@
 {% if site.feedback_link %}
   <a class="email" title="Submit feedback" href="{{site.feedback_link}}">{{feedback_text}}</a>
 {% else %}
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} - <제목>&body= ComponentOne(컴포넌트원)에 대한 문의 내용을 보내주시면, 빠른 시일 내에 회신드겠습니다."><i class="fa fa-envelope-o"></i> {{feedback_text}}</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} 제목&body='ComponentOne 제품사용 중에 도움이 필요하시거나 문의가 있으실 경우, 메일 보내주시면, 안내드릴 수 있도록 하겠습니다. + window.location.href;"><i class="fa fa-envelope-o"></i> {{feedback_text}}</a>
 {% endif %}
 </li>
