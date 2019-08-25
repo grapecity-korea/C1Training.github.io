@@ -1,5 +1,5 @@
 ---
-title: News
+title: ComponentOne Enterprise 2019 V1 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: news.html
@@ -25,7 +25,7 @@ ComponentOne Control Panel을 사용하여 ComponentOne라이브러리를 설치
 
 모든 컨트롤은 Visual Studio 2019를 전면 지원하도록 테스트를 완료하였습니다.
 
-- [WinForms： DataFilter, CollectionView, BulletGraph, Data Slicer](https://www.grapecity.co.kr/componentone-enterprise/whatsnew#winform)
+- [WinForms： DataFilter, CollectionView, BulletGraph, Data Slicer](## WinForms)
 - [ASP.NET MVC： OLAP Slicer, Multi-Column Combo Sample, Control Wizard](https://www.grapecity.co.kr/componentone-enterprise/whatsnew#mvc)
 - [WPF & UWP： SimplifiedRibbon, FlexGrid](https://www.grapecity.co.kr/componentone-enterprise/whatsnew#xaml)
 - [Xamarin： FlexGrid, Gauges, Input, C1Icon](https://www.grapecity.co.kr/componentone-enterprise/whatsnew#xamarin)
