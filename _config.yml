@@ -3,10 +3,10 @@ repository: tomjoht/documentation-theme-jekyll
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Spread.Net 튜토리얼 센터
+topnav_title: ComponentOne 튜토리얼 센터
 # this appears on the top navigation bar next to the home button
 
-site_title: Spread.Net 튜토리얼 센터 | C#.NET Excel
+site_title: ComponentOne 튜토리얼 센터 | C#.NET Excel
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: GrapeCity Korea
@@ -36,15 +36,15 @@ exclude:
   - vendor
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: 기술지원
+feedback_subject_line: Componetone 제품 및 기술문의
 
 feedback_email: support-kor@grapecity.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-feedback_disable: true
+#feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
-# feedback_text: "Need help?"
+feedback_text: "제품문의"
 # if you uncomment the previous line, it changes the Feedback text
 
 # feedback_link: "http://helpy.io/"
