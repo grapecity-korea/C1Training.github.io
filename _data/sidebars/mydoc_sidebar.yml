@@ -35,9 +35,13 @@ entries:
             output: web, pdf
 
           - title: 배포
-            url: /mydoc_about.html
+            url: /c1_deploy.html
             output: web, pdf
 
           - title: 마이그레이션
-            url: /mydoc_support.html
+            url: /c1_migration.html
+            output: web, pdf
+
+          - title: C1 라이브 업데이트
+            url: /c1_liveupdate.html
             output: web, pdf
