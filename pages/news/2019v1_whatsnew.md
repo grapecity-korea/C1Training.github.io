@@ -3,7 +3,6 @@ title: ComponentOne Enterprise 2019 V1 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: 2019v1_whatsnew.html
-toc: false
 folder: news
 ---
 
