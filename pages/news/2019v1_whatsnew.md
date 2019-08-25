@@ -25,9 +25,9 @@ ComponentOne Control Panel을 사용하여 ComponentOne라이브러리를 설치
 
 모든 컨트롤은 Visual Studio 2019를 전면 지원하도록 테스트를 완료하였습니다.
 
-- [WinForms： DataFilter, CollectionView, BulletGraph, Data Slicer](#winform)
-- [ASP.NET MVC： OLAP Slicer, Multi-Column Combo Sample, Control Wizard](#mvc)
-- [WPF & UWP： SimplifiedRibbon, FlexGrid](#xaml)
+- [WinForms： DataFilter, CollectionView, BulletGraph, Data Slicer](#winforms)
+- [ASP.NET MVC： OLAP Slicer, Multi-Column Combo Sample, Control Wizard](#aspnet-mvc)
+- [WPF & UWP： SimplifiedRibbon, FlexGrid](#wpf)
 - [Xamarin： FlexGrid, Gauges, Input, C1Icon](#xamarin)
 
 ## WinForms
