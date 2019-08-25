@@ -9,7 +9,7 @@ permalink: license_online.html
 folder: mydoc
 ---
 
-## 올라인 라이선스 인증 (Activation)
+## 온라인 라이선스 인증 (Activation)
 
 1. 정품 인증 프로그램은 **ComponentOne**시작 메뉴에 등록 된 제품 그룹
    "**c:\Windows\ProgramFiles(x86)\ComponentOne\C1StartMenu**"에서 "**C1LicenseActivation**"을 클릭합니다.
@@ -38,5 +38,3 @@ folder: mydoc
    ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-3.png)
 
 시리얼 넘버는 사용자 하드웨어의 손-망실을 대비하여 한 개에 총 3회까지 활성화를 허용하고 있습니다. 활성화 횟수를 초과하여 어려움을 겪지 않도록 주의 바랍니다.
-
-{% include links.html %}

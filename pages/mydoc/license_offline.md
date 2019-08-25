@@ -47,9 +47,3 @@ folder: mydoc
 
 ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-4.png)  
 ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/deactivation/tc_winforms1-3-5.png)
-
-## 평가판에서 정식 버전으로 전환
-
-ComponentOne Studio 평가판을 설치하는 경우 정품 인증 프로그램을 실행하여 시리얼 번호를 입력하여 정품 인증을 수행하여 평가판에서 정식 버전으로 라이센스를 전환 할 수 있습니다. 정식 버전으로 전환은 평가판 사용 기간, 사용 기간 종료 후 모두 가능합니다. 또한 전환 시 제품의 설치 제거하고 다시 설치할 필요가 없습니다.
-
-{% include links.html %}

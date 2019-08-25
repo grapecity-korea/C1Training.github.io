@@ -4,7 +4,7 @@ keywords: c1 마이그레이션, c1 migration
 last_updated: Aug 08, 2019
 summary: "컴포넌트원(ComponentOne)의 DLL을 평가판에서 정식버전으로, 또는 구버전에서 최신버전으로 마이그리이션 하는 방법을 설명합니다."
 sidebar: mydoc_sidebar
-permalink: c1_deploy.html
+permalink: c1_migration.html
 folder: mydoc
 ---
 
@@ -28,6 +28,4 @@ folder: mydoc
 솔루션 내 모든 프로젝트에 대해 위의 1-4 단계를 진행하십시오.  
 전체 솔루션을 Rebuild하십시오.
 
-#### 평가판에서 정식 버전으로 전환
-
-ComponentOne Studio 평가판을 설치하는 경우 정품 인증 프로그램을 실행하여 시리얼 번호를 입력하여 정품 인증을 수행하여 평가판에서 정식 버전으로 라이센스를 전환 할 수 있습니다. 정식 버전으로 전환은 평가판 사용 기간, 사용 기간 종료 후 모두 가능합니다. 또한 전환 시 제품의 설치 제거하고 다시 설치할 필요가 없습니다.
+{% include note.html content="<b>평가판에서 정식 버전으로 전환:</b> ComponentOne Studio 평가판을 설치하는 경우 정품 인증 프로그램을 실행하여 시리얼 번호를 입력하여 정품 인증을 수행하여 평가판에서 정식 버전으로 라이센스를 전환 할 수 있습니다. 정식 버전으로 전환은 평가판 사용 기간, 사용 기간 종료 후 모두 가능합니다. 또한 전환 시 제품의 설치 제거하고 다시 설치할 필요가 없습니다." %}

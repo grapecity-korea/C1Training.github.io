@@ -4,7 +4,7 @@ keywords: spread.net 배포, spread.net deply, spread.net distribution
 last_updated: Aug 08, 2019
 summary: "컴포넌트원(ComponentOne)을 최신 버전으로 업데이트하는 방법을 설명합니다."
 sidebar: mydoc_sidebar
-permalink: c1_deploy.html
+permalink: c1_liveupdate.html
 folder: mydoc
 ---
 
