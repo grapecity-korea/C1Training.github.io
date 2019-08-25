@@ -11,7 +11,6 @@ entries:
             url: /2019v2_whatsnew.html
             output: web
             type: homepage
-
           - title: 2019 V1
             url: /2019v1_whatsnew.html
             output: web
