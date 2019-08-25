@@ -43,5 +43,4 @@ ComponentOne Studio 제품을 설치하면, C1Live라는 업그레이드 전용 
 
 - 현재 사용 가능한 최신 버전으로 업데이트를 시작합니다.  
   ![](https://www.grapecity.co.kr/images/metalsmith/training/componentone/c1liveupgrade/tc_winforms1-6-3.png)
-
-3. 만약 설치되어 있는 모든 제품을 한 번에 업데이트하고 싶다면, "**Update All Products**"를 선택하시면 됩니다.
+  3. 만약 설치되어 있는 모든 제품을 한 번에 업데이트하고 싶다면, "**Update All Products**"를 선택하시면 됩니다.
