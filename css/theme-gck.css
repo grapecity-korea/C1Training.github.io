@@ -36,6 +36,11 @@ h4 {
   color: #333;
 }
 
+.nav li li a{
+  background-color: #f2f2f2;
+  color: #333;
+}
+
 .nav > li > a:hover {
   background-color: #e87777;
 }
