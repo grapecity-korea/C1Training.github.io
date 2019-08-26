@@ -4,7 +4,7 @@ sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: 2019v2_whatsnew.html
 folder: news
-summary: "2019년 두 번째 주요 릴리스인 ComponentOne 2019 v2를 발표하게 되어 매우 기쁘게 생각합니다. 2019 v2 릴리스에 포함된 ComponentOne Studio Enterprise와 ComponentOne Ultimate은 한 단계 더 발전하여 .NET, 모바일 및 웹 개발자의 요구를 충족합니다. 이전 릴리스에서는 전체 프레임워크를 지원하는 60개 이상의 JavaScript UI 컨트롤 제품군인 Wijmo를 Studio Enterprise(및 Ultimate) 구독에 추가했습니다. 최신 릴리스에서는 이를 더 확장하여 두 가지의 새로운 .NET Core 및 .NET Standard 서비스 컴포넌트를 ComponentOne Ultimate에 추가했습니다. .NET Standard 서비스 컴포넌트는 데스크톱(전체 .NET 프레임워크), 모바일(Xamarin) 및 웹(ASP.NET Core 또는 MVC)을 포함한 다양한 플랫폼에서 실행할 수 있다는 고유의 장점이 있습니다. 이 서비스 컴포넌트를 통해 개발자는 ETL(extraction, transformation, loading: 추출, 변환 및 로드)과 HTML 및 기타 반구조화 텍스트 소스에서의 텍스트 추출 및 구문 분석을 위한 대규모 데이터 집합을 더 효율적으로 관리할 수 있습니다."
+# summary: "2019년 두 번째 주요 릴리스인 ComponentOne 2019 v2를 발표하게 되어 매우 기쁘게 생각합니다. 2019 v2 릴리스에 포함된 ComponentOne Studio Enterprise와 ComponentOne Ultimate은 한 단계 더 발전하여 .NET, 모바일 및 웹 개발자의 요구를 충족합니다. 이전 릴리스에서는 전체 프레임워크를 지원하는 60개 이상의 JavaScript UI 컨트롤 제품군인 Wijmo를 Studio Enterprise(및 Ultimate) 구독에 추가했습니다. 최신 릴리스에서는 이를 더 확장하여 두 가지의 새로운 .NET Core 및 .NET Standard 서비스 컴포넌트를 ComponentOne Ultimate에 추가했습니다. .NET Standard 서비스 컴포넌트는 데스크톱(전체 .NET 프레임워크), 모바일(Xamarin) 및 웹(ASP.NET Core 또는 MVC)을 포함한 다양한 플랫폼에서 실행할 수 있다는 고유의 장점이 있습니다. 이 서비스 컴포넌트를 통해 개발자는 ETL(extraction, transformation, loading: 추출, 변환 및 로드)과 HTML 및 기타 반구조화 텍스트 소스에서의 텍스트 추출 및 구문 분석을 위한 대규모 데이터 집합을 더 효율적으로 관리할 수 있습니다."
 ---
 
 # .NET Core용 DataEngine
