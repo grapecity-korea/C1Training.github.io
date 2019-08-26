@@ -19,8 +19,17 @@ h4 {
   color: white;
 }
 
-.nav li.active > a{
+.nav li a:hover {
   background-color: #f8cace;
+}
+
+.nav li.active > a{
+  background-color: #da706f;
+}
+
+.nav li.active li a{
+  background-color: #f8cace;
+  color: #333;
 }
 
 .nav > li > a:hover {
