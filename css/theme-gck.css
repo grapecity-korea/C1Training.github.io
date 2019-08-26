@@ -98,8 +98,8 @@ a.navbar-brand:hover {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: #ae2024;
-  color: #fff;
+  color: #ae2024;
+  background-color: #fff;
 }
 
 .btn-primary:hover,
