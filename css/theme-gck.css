@@ -27,7 +27,7 @@ h4 {
   background-color: #da706f;
 }
 
-.nav li.active li a{
+.nav li.active li.active a{
   background-color: #f8cace;
   color: #333;
 }
