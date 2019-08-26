@@ -61,7 +61,7 @@ C1DataEngine과 C1TextParser 모두 ComponentOne Studio 설치 관리자의 서�
 
 # WinForms용 FlexGrid의 향상된 기능
 
-# 열 바닥글로 사용 가능한 고정된 열 요약
+**열 바닥글로 사용 가능한 고정된 열 요약**
 
 인기 있는 WinForms용 FlexGrid는 현재 열 바닥글을 지원합니다. 바닥글 행은 눈금의 마지막 행으로 고정하거나 스크롤할 수 있습니다. 바닥글에 합계, 평균, 최소, 최대 등 집계를 쉽게 표시할 수 있습니다. 바닥글에는 몇 개의 열을 기반으로 계산된 값과 같이 식에 따른 값을 표시할 수도 있습니다(즉, 총계). 이 기능은 식과 캡션으로 열 바닥글을 구성할 수 있는 전체 디자인 타임 지원과 함께 제공됩니다.
 
@@ -71,7 +71,7 @@ C1DataEngine과 C1TextParser 모두 ComponentOne Studio 설치 관리자의 서�
 
 # WinForms용 FlexPivot의 향상된 기능
 
-### 그룹 범위를 지원하는 WinForms용 FlexPivot
+**그룹 범위를 지원하는 WinForms용 FlexPivot**
 
 이제 WinForms용 ComponentOne FlexPivot에서는 필드에 대해 그룹 범위를 지원합니다. 그룹화된 범위를 통해 데이터를 10~20세, 21~39세, 40~59세 이상 등 범주화된 범위로 사용자 정의하여 그룹화할 수 있습니다. 또는 단순 날짜 필드만 사용하여 매년 분기별 그룹을 생성할 수 있습니다. 문자열, 숫자 및 날짜 필드에 근거하여 그룹화된 범위를 생성할 수 있습니다. 그룹화된 범위가 생성되면 사용자는 이러한 범위를 기준으로 필터링하여 피벗 보기를 더욱 개선할 수도 있습니다.
 
@@ -79,7 +79,7 @@ C1DataEngine과 C1TextParser 모두 ComponentOne Studio 설치 관리자의 서�
 
 # WinForms용 FlexChart의 향상된 기능
 
-### WinForms용 FlexChart 사용자 정의 데이터 필터 샘플
+**WinForms용 FlexChart 사용자 정의 데이터 필터 샘플**
 
 DataFilter 컨트롤 내에서 FlexChart를 사용자 정의 필터로 사용하는 방법을 설명하는 새로운 샘플을 추가했습니다. 이 샘플에는 주식의 시가, 고가, 저가, 종가 및 거래량이 표시되며, 데이터 필터 내 기간 동안 다양한 차트에 값을 표시함으로써 이 값을 필터링할 수 있습니다. 데이터 요소를 클릭하여 데이터를 필터링하고, 범위형 가로 막대를 사용하여 기간을 조정하며, 마우스를 드래그하여 범위 선택을 필터링할 수 있습니다. WinForms Edition 샘플을 다운로드하여 샘플이 작동하는 모습을 볼 수 있습니다.
 
@@ -111,13 +111,13 @@ DataFilter 컨트롤 내에서 FlexChart를 사용자 정의 필터로 사용하
 
 # ASP.NET MVC용 FlexChart의 향상된 기능
 
-### 범위 영역형 차트
+**범위 영역형 차트**
 
 범위 영역형 차트는 각 데이터 요소에 대해 Y축에 두 개의 값을 표시하고 그 사이의 영역을 채웁니다. 이는 각 데이터 요소에 대해 두 개의 값으로 범위를 표시하는 범위 가로 막대형 및 세로 막대형 차트와 유사합니다. 이 새로운 차트 유형은 차트 유형을 '영역'으로 설정한 후 계열 바인딩에서 상위 및 하위 범위 값을 설정하면 활성화됩니다.
 
 ![mvc flexchart chart](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V2/mvc_chart.png "mvc flexchart chart")
 
-### 계열 도구 설명 및 ItemFormatter
+**계열 도구 설명 및 ItemFormatter**
 
 새로운 계열 itemFormatter 기능을 통해 여러 계열이 포함된 차트에서 특정 계열에 대해 데이터 요소의 모양을 사용자 정의할 수 있습니다. 또한 새로운 계열 도구 설명 속성을 통해 여러 계열이 포함된 차트에서 특정 계열에 대한 도구 설명을 사용자 정의할 수 있습니다. 선행 버전에서는 itemFormatter 및 도구 설명 템플릿이 모든 계열에 적용되었습니다.
 
