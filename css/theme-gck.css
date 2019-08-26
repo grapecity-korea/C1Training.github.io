@@ -174,3 +174,9 @@ div#tg-sb-content h1 {
   bottom: 50px;
   cursor: pointer;
 }
+
+#download{
+  background-color: #e87777;
+  color: #fff;
+  font-weight: bold;
+}
