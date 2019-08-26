@@ -159,3 +159,7 @@ li.sidebarTitle {
 .navbar-inverse .navbar-toggle {
   border-color: #015cae;
 }
+
+div#tg-sb-content h1 {
+  font-size: 28px;
+}
