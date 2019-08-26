@@ -1,5 +1,5 @@
 ---
-title: 온라인 라이선스 인증 및 해재
+title: 온라인 라이선스 인증 및 해제
 tags: [라이선스, license, activation]
 keywords: c1 activation, c1 deactivation, c1 license, c1 라이선스, c1 인증, c1 해제, 컴포넌트원 라이선스, 컴포넌트원 정품, 컴포넌트원 해제, 컴포넌트원 인증
 last_updated: Aug 08, 2019
