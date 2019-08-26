@@ -4,7 +4,7 @@ sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
 permalink: 2019v2_whatsnew.html
 folder: news
-# summary: "2019년 두 번째 주요 릴리스인 ComponentOne 2019 v2를 발표하게 되어 매우 기쁘게 생각합니다. 2019 v2 릴리스에 포함된 ComponentOne Studio Enterprise와 ComponentOne Ultimate은 한 단계 더 발전하여 .NET, 모바일 및 웹 개발자의 요구를 충족합니다. 이전 릴리스에서는 전체 프레임워크를 지원하는 60개 이상의 JavaScript UI 컨트롤 제품군인 Wijmo를 Studio Enterprise(및 Ultimate) 구독에 추가했습니다. 최신 릴리스에서는 이를 더 확장하여 두 가지의 새로운 .NET Core 및 .NET Standard 서비스 컴포넌트를 ComponentOne Ultimate에 추가했습니다. .NET Standard 서비스 컴포넌트는 데스크톱(전체 .NET 프레임워크), 모바일(Xamarin) 및 웹(ASP.NET Core 또는 MVC)을 포함한 다양한 플랫폼에서 실행할 수 있다는 고유의 장점이 있습니다. 이 서비스 컴포넌트를 통해 개발자는 ETL(extraction, transformation, loading: 추출, 변환 및 로드)과 HTML 및 기타 반구조화 텍스트 소스에서의 텍스트 추출 및 구문 분석을 위한 대규모 데이터 집합을 더 효율적으로 관리할 수 있습니다."
+summary: "2019년 두 번째 주요 릴리스인 ComponentOne 2019 v2를 발표하게 되어 매우 기쁘게 생각합니다. 2019 v2 릴리스에 포함된 ComponentOne Studio Enterprise와 ComponentOne Ultimate은 한 단계 더 발전하여 .NET, 모바일 및 웹 개발자의 요구를 충족합니다. 이전 릴리스에서는 전체 프레임워크를 지원하는 60개 이상의 JavaScript UI 컨트롤 제품군인 Wijmo를 Studio Enterprise(및 Ultimate) 구독에 추가했습니다. 최신 릴리스에서는 이를 더 확장하여 두 가지의 새로운 .NET Core 및 .NET Standard 서비스 컴포넌트를 ComponentOne Ultimate에 추가했습니다. .NET Standard 서비스 컴포넌트는 데스크톱(전체 .NET 프레임워크), 모바일(Xamarin) 및 웹(ASP.NET Core 또는 MVC)을 포함한 다양한 플랫폼에서 실행할 수 있다는 고유의 장점이 있습니다. 이 서비스 컴포넌트를 통해 개발자는 ETL(extraction, transformation, loading: 추출, 변환 및 로드)과 HTML 및 기타 반구조화 텍스트 소스에서의 텍스트 추출 및 구문 분석을 위한 대규모 데이터 집합을 더 효율적으로 관리할 수 있습니다."
 ---
 
 # .NET Core용 DataEngine
@@ -61,7 +61,7 @@ C1DataEngine과 C1TextParser 모두 ComponentOne Studio 설치 관리자의 서�
 
 # WinForms용 FlexGrid의 향상된 기능
 
-## 열 바닥글로 사용 가능한 고정된 열 요약
+# 열 바닥글로 사용 가능한 고정된 열 요약
 
 인기 있는 WinForms용 FlexGrid는 현재 열 바닥글을 지원합니다. 바닥글 행은 눈금의 마지막 행으로 고정하거나 스크롤할 수 있습니다. 바닥글에 합계, 평균, 최소, 최대 등 집계를 쉽게 표시할 수 있습니다. 바닥글에는 몇 개의 열을 기반으로 계산된 값과 같이 식에 따른 값을 표시할 수도 있습니다(즉, 총계). 이 기능은 식과 캡션으로 열 바닥글을 구성할 수 있는 전체 디자인 타임 지원과 함께 제공됩니다.
 
@@ -71,7 +71,7 @@ C1DataEngine과 C1TextParser 모두 ComponentOne Studio 설치 관리자의 서�
 
 # WinForms용 FlexPivot의 향상된 기능
 
-## 그룹 범위를 지원하는 WinForms용 FlexPivot
+### 그룹 범위를 지원하는 WinForms용 FlexPivot
 
 이제 WinForms용 ComponentOne FlexPivot에서는 필드에 대해 그룹 범위를 지원합니다. 그룹화된 범위를 통해 데이터를 10~20세, 21~39세, 40~59세 이상 등 범주화된 범위로 사용자 정의하여 그룹화할 수 있습니다. 또는 단순 날짜 필드만 사용하여 매년 분기별 그룹을 생성할 수 있습니다. 문자열, 숫자 및 날짜 필드에 근거하여 그룹화된 범위를 생성할 수 있습니다. 그룹화된 범위가 생성되면 사용자는 이러한 범위를 기준으로 필터링하여 피벗 보기를 더욱 개선할 수도 있습니다.
 
@@ -79,7 +79,7 @@ C1DataEngine과 C1TextParser 모두 ComponentOne Studio 설치 관리자의 서�
 
 # WinForms용 FlexChart의 향상된 기능
 
-## WinForms용 FlexChart 사용자 정의 데이터 필터 샘플
+### WinForms용 FlexChart 사용자 정의 데이터 필터 샘플
 
 DataFilter 컨트롤 내에서 FlexChart를 사용자 정의 필터로 사용하는 방법을 설명하는 새로운 샘플을 추가했습니다. 이 샘플에는 주식의 시가, 고가, 저가, 종가 및 거래량이 표시되며, 데이터 필터 내 기간 동안 다양한 차트에 값을 표시함으로써 이 값을 필터링할 수 있습니다. 데이터 요소를 클릭하여 데이터를 필터링하고, 범위형 가로 막대를 사용하여 기간을 조정하며, 마우스를 드래그하여 범위 선택을 필터링할 수 있습니다. WinForms Edition 샘플을 다운로드하여 샘플이 작동하는 모습을 볼 수 있습니다.
 
@@ -111,13 +111,13 @@ DataFilter 컨트롤 내에서 FlexChart를 사용자 정의 필터로 사용하
 
 # ASP.NET MVC용 FlexChart의 향상된 기능
 
-## 범위 영역형 차트
+### 범위 영역형 차트
 
 범위 영역형 차트는 각 데이터 요소에 대해 Y축에 두 개의 값을 표시하고 그 사이의 영역을 채웁니다. 이는 각 데이터 요소에 대해 두 개의 값으로 범위를 표시하는 범위 가로 막대형 및 세로 막대형 차트와 유사합니다. 이 새로운 차트 유형은 차트 유형을 '영역'으로 설정한 후 계열 바인딩에서 상위 및 하위 범위 값을 설정하면 활성화됩니다.
 
 ![mvc flexchart chart](https://www.grapecity.co.kr/images/metalsmith/developer/componentone-enterprise/whatsnew/2019V2/mvc_chart.png "mvc flexchart chart")
 
-## 계열 도구 설명 및 ItemFormatter
+### 계열 도구 설명 및 ItemFormatter
 
 새로운 계열 itemFormatter 기능을 통해 여러 계열이 포함된 차트에서 특정 계열에 대해 데이터 요소의 모양을 사용자 정의할 수 있습니다. 또한 새로운 계열 도구 설명 속성을 통해 여러 계열이 포함된 차트에서 특정 계열에 대한 도구 설명을 사용자 정의할 수 있습니다. 선행 버전에서는 itemFormatter 및 도구 설명 템플릿이 모든 계열에 적용되었습니다.
 
