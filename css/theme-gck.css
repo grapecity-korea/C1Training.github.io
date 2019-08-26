@@ -1,6 +1,6 @@
 .summary {
   color: #808080;
-  border-left: 5px solid #6d222b;
+  border-left: 5px solid #6d6d6d;
   font-size: 16px;
   line-height: 24px;
 }
@@ -19,12 +19,16 @@ h4 {
   color: white;
 }
 
+.nav li a:hover {
+  background-color: #f8cace;
+}
+
 .nav > li.active > a {
-  background-color: #347dbe;
+  background-color: #da706f;
 }
 
 .nav > li > a:hover {
-  background-color: #248ec2;
+  background-color: #e87777;
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
@@ -44,7 +48,7 @@ a[data-toggle="tooltip"] {
 }
 
 .navbar-inverse {
-  background-color: #b72421;
+  background-color: #ae2024;
 }
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-brand {
