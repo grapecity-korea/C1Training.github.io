@@ -23,7 +23,7 @@ h4 {
   background-color: #f8cace;
 }
 
-.nav > li.active > a {
+.nav li.active > a{
   background-color: #da706f;
 }
 
