@@ -29,7 +29,7 @@ C1Menu의 DataBindings을 통해 C1의 MenuItem을 설정합니다. 메뉴와 �
 
   
 
-```csharp
+```html
 <DataBindings>
 <wijmo:C1MenuItemBinding DataMember="Menuitem" HeaderField="header" 
 NavigateUrlField="navigateUrl" SeparatorField="separator" TextField="text" />
@@ -38,7 +38,7 @@ NavigateUrlField="navigateUrl" SeparatorField="separator" TextField="text" />
 
 C1Menu의 HideAnimation를 통해 애니메이션 감추기를 설정합니다. 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <HideAnimation>
 <Animated Effect="fade"></Animated>
 </HideAnimation>
@@ -52,7 +52,7 @@ C1Menu를 페이지에 추가합니다.
 
 C1Menu의 HideAnimation를 통해 애니메이션 감추기를 설정합니다. 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
 DataFile="~/App_Data/menu_structure.xml" XPath="/root/menuitem">
 </asp:XmlDataSource>
@@ -60,7 +60,7 @@ DataFile="~/App_Data/menu_structure.xml" XPath="/root/menuitem">
 
 C1Menu의 DataBindings을 통해 XML데이터소스를 바인딩합니다. 또한 Mode를 통해 IPod스타일의 수직메뉴를 설정합니다. 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <wijmo:C1Menu runat="server" ID="Menu2" Mode="Sliding" DataSourceID="XmlDataSource1">
 </wijmo:C1Menu>
 ```
@@ -102,7 +102,7 @@ C1FileExplorer는 여러 가지 레이아웃의 작성을 지원하여 상세정
 먼저, ASP.Net Web응용프로그램을 만든 후, Web폼을 추가해야 합니다. 그리고 툴 바에서 C1FileExplorer 컨트롤을 찾아Web 폼에 드래그합니다. 툴 바에 C1FileExplorer 가 없는 경우, 오른쪽을 클릭하여 “옵션항목”에서 C1FileExplorer를 선택하여 추가하면 됩니다.  
 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <div>
 <cc1:C1FileExplorer ID="C1FileExplorer1" InitPath="./picture" runat="server">
 </cc1:C1FileExplorer>
@@ -139,7 +139,7 @@ InitPath="./picture"。
 파일이 너무 많은 경우라도 페이지 나누기 관리를 할 수 있습니다. AllowPaging 속성을 true로 설정하기만 하면 됩니다.  
 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <div>
 <cc1:C1FileExplorer ID="C1FileExplorer1" InitPath="./picture" runat="server" AllowPaging = true PageSize=5>
 </cc1:C1FileExplorer>
@@ -156,7 +156,7 @@ InitPath="./picture"。
 
 AllowMultipleSelection속성을 true로 설정하면 됩니다.
 
-```csharp
+```html
 <div>
 <cc1:C1FileExplorer ID="C1FileExplorer1" InitPath="./picture" runat="server" AllowMultipleSelection="true">
 </cc1:C1FileExplorer>
@@ -186,7 +186,7 @@ EnableOpenFile=false
 EnableCreateNewFolder=false  
 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <div>
 <cc1:C1FileExplorer ID="C1FileExplorer1" InitPath="./picture" runat="server" AllowMultipleSelection="true" EnableCopy=false EnableOpenFile=false EnableCreateNewFolder=false>
 </cc1:C1FileExplorer>

@@ -130,7 +130,7 @@ protected void C1GridView1_ColumnUngrouped(object sender, C1.Web.Wijmo.Controls.
 
   
 
-```csharp
+```html
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\C1Nwind.mdb;Persist Security Info=True" ProviderName="System.Data.OleDb" SelectCommand="SELECT [EmployeeID], [LastName], [FirstName], [BirthDate] FROM [Employees]">
 </asp:SqlDataSource>
 ```
@@ -143,7 +143,7 @@ C1GridView의 DataSourceID 속성으로 데이터 소스를 바인딩 하고 아
 
 구체적인 코드는 다음과 같습니다. :
 
-```csharp
+```html
 <wijmo:C1GridView ID="C1GridView1" runat="server" DataSourceID="SqlDataSource1" 
     AutoGenerateColumns="false" ShowRowHeader="true" AllowSorting="true" CallbackSettings-Action="All"> 
     <Columns> 
@@ -181,7 +181,7 @@ C1GridView컨트롤을 페이지에 드래그하고 데이터소스를 설정합
 
   
 
-```csharp
+```html
 <asp:sqldatasource id="SqlDataSource1" runat="server" connectionstring="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\C1NWind.mdb;Persist Security Info=True" providername="System.Data.OleDb" selectcommand="SELECT TOP 50 Products.ProductName, d.OrderID, d.Quantity, (d.UnitPrice * d.Quantity) as Total FROM Products INNER JOIN (SELECT details.ProductID, details.OrderID, details.UnitPrice, details.Quantity FROM [Order Details] AS details INNER JOIN (SELECT OrderID FROM Orders WHERE Year(OrderDate) = 1994) AS tmp ON details.OrderID = tmp.OrderID) as d ON Products.ProductID = d.ProductID ORDER BY d.ProductID"> 
 </asp:sqldatasource>
 ```
@@ -195,7 +195,7 @@ C1GridView은 DataSourceID를 통해 데이터소스를 선택하고 Columns의 
 
 그룹 헤드와 마지막 행은  wijmo-wijgrid-groupheaderrow와  wijmo wijgrid-groupfooterrow  CSS유형으로 표기합니다. 개발자는 이 유형들과 Child Node를 결합 사용하여 그룹 행의 자체정의 양식을 제공하도록 합니다. 그룹 나눔을 실현하는 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <wijmo:C1BoundField DataField="ProductName" SortExpression="ProductName" HeaderText="제품명" Aggregate="Count"> 
     <GroupInfo Position="Header" OutlineMode="StartCollapsed" />
 </wijmo:C1BoundField> 
@@ -251,7 +251,7 @@ UpdateCommand="UPDATE [Appointments] SET [Description] = ?, [End] = ?, [Location
 
 설정한C1EventCalendar일정은 저장 데이터를 반영합니다. 다음과 같은 코드로 표시합니다. :
 
-```csharp
+```html
 <EventStorage DataSourceID="AccessDataSource_Events">
 	<Mappings>	
 		<IdMapping MappingName="AppointmentId" />			
@@ -275,7 +275,7 @@ C1EventsCalendar일정에 저장된 DataSourceID속성을 설정합니다. 필�
 
 설정한C1EventCalendar일정은 저장 데이터를 반영합니다. 예：
 
-```csharp
+```html
 <CalendarStorage DataSourceID="AccessDataSource_Calendars">
 	<Mappings>
 		<IdMapping MappingName="CalendarId" />
@@ -369,7 +369,7 @@ C1EventsCalendar일정을 저장한 DataSourceID속성을 설정합니다. 필�
 C1InputCurrency는 C1InputNumeric에서 파생됩니다. 화폐 값을 입력하는데 사용됩니다. 디지털 편집기를 사용하면 사용자 지정 유효성 검사 논리를 작성하지 않고도 응용 프로그램에서 입력을 지정할 수 있습니다.  
 참고 코드는 다음과 같습니다. ；
 
-```csharp
+```html
 <wijmo:C1InputCurrency ID="C1InputCurrency" runat="server" Value="123.45">
 </wijmo:C1InputCurrency>
 ```
@@ -380,7 +380,7 @@ C1InputMask  의 컨트롤은 주로 텍스트 양식에 관련된 데이터 유
 
 C1InputNumeric은 C1InputMask에서 파생된 것으로 숫자 입력에 사용됩니다. 해당 디지털 에디터를 사용하여 응용프로그램에서 입력을 지정할 수 있어 어떤 사용자 지정 유효성 검사 논리를 작성하지 않고도 응용 프로그램에서 입력을 지정할 수 있습니다. 참고 코드는 다음과 같습니다. :
 
-```csharp
+```html
 <wijmo:C1InputNumeric ID="C1InputNumeric1" runat="server" 
 ShowSpinner="true" value="2.324" DecimalPlaces="3">
 </wijmo:C1InputNumeric>
@@ -419,7 +419,7 @@ C1ComboBox를 페이지에 추가합니다.
 
 Items  속성의 설정을 통해  C1ComboBox의 외관과 드롭 다운 메뉴 리스트 항목을 제어할 수 있습니다. 코드는 다음과 같습니다. :
 
-```csharp
+```html
 <Items>
 <wijmo:C1ComboBoxItem Text="c++" Value="c++" />
 <wijmo:C1ComboBoxItem Text="java" Value="java" />
@@ -451,7 +451,7 @@ ShowingAnimation  및  HidingAnimation  속성이 설정되면 페이지가 로�
 
 참고 코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <ShowingAnimation Duration="1000">
 <Animated Effect="Scale" />
 </ShowingAnimation>
@@ -485,7 +485,7 @@ ASP.NET의 C1Editor는 비 엔지니어 사용자가 어떤 웹 페이지에서�
 
 C1Editor를 페이지에 추가하면 에디터가 생성됩니다. 해당 에디터는 Microsoft Office의 스타일과 기능 영역 인터페이스를 실현합니다. 이 기능 영역은 관련 명령을 일련의 탭으로 구성하여 사용자가 메뉴 계층 구조를 탐색 할 필요없이 편집기 기능을 익힐 있습니다. 코드를 참고하세요. :
 
-```csharp
+```html
 <wijmo:C1Editor runat="server" 
 ID="Editor1" Width="760" Height="530"  Text="The Insert tab contains groups of commands that enable end-users to insert items, 
 such as images or paragraph breaks, into the text editor. 

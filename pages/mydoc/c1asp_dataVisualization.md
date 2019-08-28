@@ -27,7 +27,7 @@ C1LineChart.Header.Text를 통해 타이틀을 추가합니다. C1LineChart. Sho
 
   
 
-```csharp
+```html
 <wijmo:C1LineChart runat="server" ID="C1LineChart1" ShowChartLabels="False" Height="475" Width="756">
     <Animation Duration="2000"></Animation>
     <Header Text="온라인사용자">
@@ -100,7 +100,7 @@ C1BarChart的Axis태그를 통해 X, Y축의 텍스트를 설정합니다. Axis.
 
   
 
-```csharp
+```html
 <Axis>
     <X Text=""></X>
     <Y Text="전체 하드웨어" Compass="West"></Y>
@@ -119,7 +119,7 @@ C1BarChart의 레이블은 ShowChartLabels를 통해 표시됩니다. ChartLabel
 
 C1BarChart의 SeriesList를 통해 BarChartSeries를 만들고,  태그로 X축, Y축의 값을 설정합니다. 코드는 다음과 같습니다.
 
-```csharp
+```html
 <SeriesList> 
     <wijmo:BarChartSeries Label="서부" LegendEntry="true"> 
         <Data> 
@@ -222,7 +222,7 @@ X의 값은 2011-12-01부터2012-01-31까지입니다.
 
 소스코드는 다음과 같습니다：
 
-```csharp
+```html
 <Data>
 <Low DoubleValues="7.5,8.6,4.4,4.2,8,9,11,10,12.2,12,16,15.5,16,15,16,16.5,16,16,15,14.5,14,13.5,13,12,11,11,10,9,8,7.5,7.9,7.5,8.6,4.4,4.2,8,9,11,10,12.2,12,16,15.5,16" />
 <High DoubleValues="10,12,11,14,16,20,18,17,17.5,20,22,21,22.5,20,21,20.8,20,19,18,17,16,15,15,14,13,12,11.5,10.9,10,9,9.5,10,12,11,14,16,20,18,17,17.5,20,22,21,22.5" />
@@ -292,7 +292,7 @@ SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이
 
 소스코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <HighLow Width="2">
     <Fill Color="#8C8C8C"></Fill>
 </HighLow>
@@ -310,7 +310,7 @@ SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이
 
 소스보기에서 차트 좌표축의 외관을 변경할 수 있습니다. 이 예시는 다음과 같이 코드를 변경한 것입니다：
 
-```csharp
+```html
 <Axis>
     <X>
         <GridMajor Visible="True"></GridMajor>
@@ -358,7 +358,7 @@ C1BubbleChart.Aimation을 통해 애니메이션 및 애니메이션 딜레이 �
 
   
 
-```csharp
+```html
 <Animation Duration="500" Easing="EaseOutElastic"></Animation>
 ```
 
@@ -368,7 +368,7 @@ C1BubbleChart 3D데이터 표시
 
 C1BubbleChart에 시리즈를 추가하여 BubbleChartSeries를 만들고 C1BubbleChart.SeriesList를 통해 시리즈를 추가합니다. X, Y, Y1의 Values를 통해 3D데이터를 추가합니다. BubbleChartSeries.Label은 시리즈 레이블을 설정하는데 사용합니다.
 
-```csharp
+```html
 <serieslist>
     <wijmo:bubblechartseries label="서부">
         <data>
@@ -437,7 +437,7 @@ C1PieChart.InnerRadius 설정을 통해 법정 값으로 합니다. C1PieChart�
 
   
 
-```csharp
+```html
 <wijmo:C1PieChart runat = "server" ID="C1PieChart1" Radius="140" ShowChartLabels="false" 
 Height="475" Width = "756" CssClass ="ui-widget ui-widget-content ui-corner-all" 
 InnerRadius="40">
@@ -445,7 +445,7 @@ InnerRadius="40">
 
 C1PieChart의 Hint를 통해 툴팁의 애니메이션 효과, 표시 방법, 딜레이 등 툴팁 및 어떻게 툴팁을 표시할지 여부를 설정합니다. 사이트에서 로드 후 마우스를 도넛 그래프의 데이터 세그먼트 위에 올리면 툴팁을 표시하게 됩니다.
 
-```csharp
+```html
 <Hint>
     <Content Function="hintContent" />
 </Hint>
@@ -453,7 +453,7 @@ C1PieChart의 Hint를 통해 툴팁의 애니메이션 효과, 표시 방법, �
 
 C1PieChart의 Legend를 통해 그래프의 예시를 설정합니다. 그 중 Legend.Text 설정 그래프의 예시 텍스트와 스타일을 포함합니다. 아래의 코드를 참고합니다. :
 
-```csharp
+```html
 <Legend Text="May 2009 - May 2010"></Legend>
 ```
 
@@ -469,7 +469,7 @@ PieChartSeries의 Offset을 사용하여 데이터 세그먼트와 중심점의 
 
   
 
-```csharp
+```html
 <SeriesList>
     <wijmo:PieChartSeries Label="DX11GPU & WIN7" Data="5.6" Offset="30"></wijmo:PieChartSeries>
     <wijmo:PieChartSeries Label="iMac" Data="23.18"></wijmo:PieChartSeries>
@@ -621,7 +621,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 소스코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <wijmo:C1LinearGauge ID="C1LinearGauge1" runat="server" Value="10" Width="500px">
     <TickMajor Factor="2" Visible="True" Offset="0" Interval="10"></TickMajor>
     <TickMinor Visible="False" Offset="0" Interval="5"></TickMinor>
@@ -658,14 +658,14 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 앞에서는 기본 미터기를 추가했습니다. 이제 도형 미터기의 눈금 초기위치와 지침 초기위치를 설정합니다.
 
-```csharp
+```html
 <wijmo:C1RadialGauge ID="C1RadialGauge1" runat="server">
 </wijmo:C1RadialGauge>
 ```
 
 소스 코드를 변경합니다.：
 
-```csharp
+```html
 <wijmo:C1RadialGauge ID="C1RadialGauge1" runat="server" Value="50" Max="100" StartAngle="-45" SweepAngle="270">
 </wijmo:C1RadialGauge>
 ```
@@ -680,13 +680,13 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 미터기의 외관도 변경할 수 있습니다. `<wijmo:C1RadialGauge> </wijmo:C1RadialGauge>` 태그 사이에 아래의 코드를 추가하여 지침애니메이션 표시를 설정합니다. ：
 
-```csharp
+```html
 <Animation Duration="2000" Easing="EaseOutBack"></Animation>
 ```
 
 아래의 코드를 추가하면 특별한 눈금을 정할 수 있습니다.
 
-```csharp
+```html
 <TickMajor Position="Inside" Factor="2" Visible="True" Offset="27" Interval="25"></TickMajor>
 <TickMinor Position="Inside" Visible="True" Offset="30" Interval="5"></TickMinor>
 ```
@@ -699,7 +699,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 미터기 눈금반을 더 아름답게 만들 수 있습니다. 아래의 코드는 눈금반에 선을 그려 꾸민 것입니다. 실행 결과는 다음과 같습니다. ：
 
-```csharp
+```html
 <Ranges>
   <Wijmo:GaugelRange EndDistance="0.58" EndValue="10" EndWidth="5" StartDistance="0.6" StartValue="0" StartWidth="2">
   <RangeStyle Stroke="#7BA0CC" StrokeWidth="0">
@@ -754,7 +754,7 @@ C1Sparkline컨트롤은 한 줄로 정보의 주요 흐름을 나타냅니다. �
 
 소스코드는 다음과 같습니다. ：
 
-```csharp
+```html
 <C1Sparkline:C1Sparkline ID="Sparkline1" runat="server">
       <Animation Duration="800" />
       <SeriesList>
