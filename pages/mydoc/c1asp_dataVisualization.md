@@ -664,7 +664,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 **Step3**
 
-미터기의 외관도 변경할 수 있습니다. <wijmo:C1RadialGauge> </wijmo:C1RadialGauge>태그 사이에 아래의 코드를 추가하여 지침애니메이션 표시를 설정합니다. ：
+미터기의 외관도 변경할 수 있습니다. `<wijmo:C1RadialGauge> </wijmo:C1RadialGauge>` 태그 사이에 아래의 코드를 추가하여 지침애니메이션 표시를 설정합니다. ：
 
 ```
 <Animation Duration="2000" Easing="EaseOutBack"></Animation>
