@@ -45,3 +45,35 @@ entries:
           - title: C1 라이브 업데이트
             url: /c1_liveupdate.html
             output: web, pdf
+      
+      - title: Winforms(윈폼)
+        output: web, pdf
+        folderitems:
+          - title: 탐색 및 레이아웃
+            url: /c1win_layout.html
+            output: web, pdf
+          - title: 데이터 상호작용
+            url: /c1win_dataInteraction.html
+            output: web, pdf
+          - title: 데이터 분석 & 시각화
+            url: /c1win_dataVisualization.html
+            output: web, pdf
+          - title: 리포트 생성과 문서 변환
+            url: /c1win_report.html
+            output: web, pdf
+
+      - title: ASP.NET(웹폼)
+        output: web, pdf
+        folderitems:
+          - title: 내비게이션
+            url: /c1asp_nav.html
+            output: web, pdf
+          - title: 데이터 상호작용
+            url: /c1asp_dataInteraction.html
+            output: web, pdf
+          - title: 데이터 분석 & 시각화
+            url: /c1asp_dataVisualization.html
+            output: web, pdf
+          - title: UI
+            url: /c1asp_ui.html
+            output: web, pdf
