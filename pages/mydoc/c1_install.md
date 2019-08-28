@@ -55,8 +55,8 @@ folder: mydoc
     
     - De-activate a key: C1 제품을 머신 업그레이드나 교체등의 이유로 다른 머신으로 옮기거나 또는 이 머신에서 제품의 사용을 완전히 종료하기 원하여 활성화 정보를 완전히 삭제하고 싶은 경우 사용합니다. 위와 마찬가지로 이 옵션을 선택하면 하단의 키 입력란이 활성화 되어 키와 정보를 입력할 수 있게 됩니다. 만일 이 과정에서 비 활성화 (De-activation)를 하지않고 추후 인증을 해제 하고 싶으신 경우에는 다음번 “C1 라이선스 인증 해제”글을 참고하시면 됩니다. 원하는 옵션을 선택 후 적절한 값을 입력한 다음 NEXT를 눌러 진행 합니다.
     
-    제품을 구매 하셨다면 다음에 나오는 화면에서 키를 입력하여 제품을 활성화(Activation) 시킬수 있습니다.
-    ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-8.png)
+제품을 구매 하셨다면 다음에 나오는 화면에서 키를 입력하여 제품을 활성화(Activation) 시킬수 있습니다.
+![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-8.png)
   
 **9. Continue with trial을 선택한 경우 다음과 같은 창이 발생 합니다.**
 
