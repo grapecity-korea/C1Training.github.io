@@ -11,6 +11,6 @@ permalink: index.html
 
 사용중에 기술 문의 또는 구매에 대한 상담이 필요하실 경우, 언제든지 연락 부탁드립니다.
 
-> - **기술문의:** [support-kor@grapecity.com](support-kor@grapecity.com)
-> - **구매문의:** [sales-kor@grapecity.com](sales-kor@grapecity.com)
-> - **전화번호:** 1670-0583
+> - **기술문의:** <support-kor@grapecity.com>
+> - **구매문의:** <sales-kor@grapecity.com>
+> - **전화번호:** <1670-0583>

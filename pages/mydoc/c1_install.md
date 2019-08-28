@@ -29,7 +29,7 @@ folder: mydoc
   
 
 ## 4. 설치를 원하는 제품을 선택한 후 Next를 클릭합니다.  
-    만일 모든 제품을 설치하기 원하시면 좌측의 Studio Enterprise를 클릭한 후 설치를 진행하면 됩니다. 제품의 오른쪽에  ![](https://www.grapecity.co.kr/images/training/ico_attention.png)  심볼은 현재 PC환경 때문에 설치하지 못할 경우 생겨나게 됩니다. 예를 들어 VisualStudio의 버전이 해당 제품을 설치하기에 너무 낮거나 또는 Windows의 버전이 해당 제품을 지원하지 않을 경우 발생하게 됩니다. 이에 대한 좀더 자세한 내용은 [support-kor@grapecity.com](support-kor@grapecity.com) 또는 [1670-0583](1670-0583) 으로 문의 주시기 바랍니다.  
+    만일 모든 제품을 설치하기 원하시면 좌측의 Studio Enterprise를 클릭한 후 설치를 진행하면 됩니다. 제품의 오른쪽에  ![](https://www.grapecity.co.kr/images/training/ico_attention.png)  심볼은 현재 PC환경 때문에 설치하지 못할 경우 생겨나게 됩니다. 예를 들어 VisualStudio의 버전이 해당 제품을 설치하기에 너무 낮거나 또는 Windows의 버전이 해당 제품을 지원하지 않을 경우 발생하게 됩니다. 이에 대한 좀더 자세한 내용은 <support-kor@grapecity.com> 또는 1670-0583 으로 문의 주시기 바랍니다.  
     
     ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-4.png)
 
