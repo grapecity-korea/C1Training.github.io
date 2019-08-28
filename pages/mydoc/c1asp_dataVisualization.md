@@ -416,7 +416,7 @@ C1BubbleChart에 시리즈를 추가하여 BubbleChartSeries를 만들고 C1Bubb
 
 
 
-## C1PieChart 파이 그래프 컨트롤의 도넛 그래프 작성\
+## C1PieChart 파이 그래프 컨트롤의 도넛 그래프 작성
 
 [C1 Pie Chart - Donut 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1PieChart-donut.zip)
 
