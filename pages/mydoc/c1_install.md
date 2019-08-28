@@ -59,7 +59,7 @@ folder: mydoc
 
   
 
-3가지 옵션을 선택할수 있습니다.
+    3가지 옵션을 선택할수 있습니다.
 
     1. Continue with trial: 아직 제품을 구매하지 않았으며 30일간 체험판으로 제품을 사용할 때 선택합니다. 만일 이 과정에서 제품을 활성화 시키지 않고 체험판으로 사용하신다면 추후 제품을 구매하여 라이선스 키를 받은후 별도의 프로그램을 통해 활성화 시킬 수 있습니다. 이에 대한 자세한 안내는 다음번 “C1 라이선스 인증” 글을 참고해 주시기 바랍니다.
 
@@ -70,18 +70,14 @@ folder: mydoc
 
   
 
-9-1. Continue with trial을 선택후 진행하면 다음과 같은 창이 발생 합니다.
+9. Continue with trial을 선택한 경우 다음과 같은 창이 발생 합니다.
 
-![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-9.png)
+    ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-9.png)
 
-  
+    FINISH를 눌러 인증 과정을 완료합니다.
 
-FINISH를 눌러 인증 과정을 완료 합니다.
-
-9-2. Activate a key을 선택후 인증을 완료하면 다음과 같은 창이 발생 합니다.
+10. Activate a key을 선택한 경우 인증을 완료하면 다음과 같은 창이 발생 합니다.
 
 ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-10.png)
-
-  
 
 “Visit the ComponentOne Developer Community”를 눌러 미국 지사 사이트를 방문해 보시거나 또는 FINISH를 눌러 인증 과정을 완료 합니다.
