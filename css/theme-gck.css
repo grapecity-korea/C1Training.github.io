@@ -60,6 +60,8 @@ a[data-toggle="tooltip"] {
 .navbar-inverse {
   background-color: #ae2024;
   border: 0px;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-inverse .navbar-nav > li > a,
