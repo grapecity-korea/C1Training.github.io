@@ -44,6 +44,8 @@ C1LineChart.Header.Text를 통해 타이틀을 추가합니다. C1LineChart. Sho
 
 ### C1LineChart시리즈 설정
 
+[C1 Line Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1LineChart-overview.zip)
+
 페이지가로드되면 코드로 C1LineChart 패밀리를 추가하고 LineChartSeries를 작성한 다음 C1LineChart.SeriesList.Add를 통해 이를 추가합니다. 계열의 다양한 속성을 설정할 수 있습니다. 예를 들어 일련의 태그 유형, 레이블 시리즈 등을 설정할 수 있습니다. 위의 기능을 수행하려면 PageLoad 이벤트에서 다음 코드를 호출하십시오.
 
 ```csharp
@@ -79,7 +81,7 @@ private void PrepareOptions()
 
 본문 demo소스 코드는 다음과 같습니다. :
 
-[C1LineChart-overview.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1LineChart-overview.zip)
+[C1 Line Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1LineChart-overview.zip)
 
 
 ## C1BarChart데이터 소스를 통한 막대그래프의 생성
@@ -112,6 +114,8 @@ C1BarChart의 레이블은 ShowChartLabels를 통해 표시됩니다. ChartLabel
   
 
 ### 데이터로 그래프 채우기
+
+[C1 Bar Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1BarChart-Overview.zip)
 
 C1BarChart의 SeriesList를 통해 BarChartSeries를 만들고,  태그로 X축, Y축의 값을 설정합니다. 코드는 다음과 같습니다.
 
@@ -150,11 +154,13 @@ C1BarChart의 SeriesList를 통해 BarChartSeries를 만들고,  태그로 X축,
 
 본문Demo의 소스 코드는 다음과 같습니다：
 
-[C1BarChart-Overview.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1BarChart-Overview.zip)
+[C1 Bar Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1BarChart-Overview.zip)
 
 
 
 ## C1Candlestickchart 컨트롤 입문
+
+[Candle stick Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestCandlestickChart.zip)
 
 ComponentOne을 사용하는  C1Candlestickchart  컨트롤은 쉽게 주식차트를 작성할 수 있습니다! 아래는 주식차트 작성을 위한 구체적인 방법입니다.
 
@@ -332,10 +338,12 @@ SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이
 
 본문Demo의 소스 코드는 다음과 같습니다：
 
-[TestCandlestickChart.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestCandlestickChart.zip)
+[Candle stick Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestCandlestickChart.zip)
 
 
 ## C1BubbleChart를 사용하여 쉽게 버블 차트를 만드는 방법
+
+[C1 Bubble Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1BubbleChart-overview.zip)
 
 ASP.NET의 C1BubbleChart 컨트롤은 버블 차트를 쉽게 만들고 편리하게 3D데이터를 표시합니다. 본문에서는 어떻게 쉽게 버블차트를 만드는지를 소개합니다. 본문의 Demo에 구현을 위한 상세코드가 있습니다.
 
@@ -404,11 +412,13 @@ C1BubbleChart에 시리즈를 추가하여 BubbleChartSeries를 만들고 C1Bubb
 
 본문Demo의 소스 코드는 다음과 같습니다：
 
-[TestCandlestickChart.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1BubbleChart-overview.zip)
+[C1 Bubble Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1BubbleChart-overview.zip)
 
 
 
-## C1PieChart 파이 그래프 컨트롤의 도넛 그래프 작성
+## C1PieChart 파이 그래프 컨트롤의 도넛 그래프 작성\
+
+[C1 Pie Chart - Donut 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1PieChart-donut.zip)
 
 ASP.NET의 PieChart 컨트롤은 파이그래프를 작성할 수 있습니다. 파이그래프는 모든 시리즈마다 데이터 세그먼트를 만들고, 커스터마이즈 옵션과 애니메이션을 포함합니다.  
 본문에서는 InnerRadius속성에 대한 설치를 통해 C1PieChart를 도넛 그래프로 전환하는 방법에 대해 소개합니다.
@@ -481,10 +491,12 @@ PieChartSeries의 Offset을 사용하여 데이터 세그먼트와 중심점의 
 
 본문Demo의 소스 코드는 다음과 같습니다：
 
-[C1PieChart-donut.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1PieChart-donut.zip)
+[C1 Pie Chart - Donut 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1PieChart-donut.zip)
 
 
 ## C1BarChart 색 변경
+
+[C1 Bar Chart 색 변경 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/BarChart_DifferentColors.zip)
 
 C1BarChart 는 사용빈도가 가장 높은 컨트롤 중 하나입니다. 전형적인 활용법은 데이터 소스를 통해 그래프를 생성하고, X축과 Y축의 필드를 확정하는 것입니다. 최근 우리는 사용자의 요청을 받아 들여 데이터 설정을 하지 않은 그래프의 필드정보를 바탕으로 같은 시리즈의 데이터 바 색상을 설정하도록 했습니다.
 
@@ -576,7 +588,7 @@ $(document).ready(function () {
 
 해당 기능의 모든 코드를 적용하면 위의 그림과 같이 실행됩니다. Demo를 통해 경험하실 수 있습니다. :
 
-[BarChart_DifferentColors.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/BarChart_DifferentColors.zip)
+[C1 Bar Chart 색 변경 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/BarChart_DifferentColors.zip)
 
 
 ## C1LinearGauge와 C1RadialGauge 컨트롤 시작하기
@@ -627,6 +639,8 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
   
 
 ### C1RadialGauge컨트롤의 사용
+
+[C1 Gauge 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestGauge.zip)
 
 **Step1**
 
@@ -711,10 +725,12 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 원하는 대로 미터기가 완성되었습니다.
 
-[TestGauge.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestSparkline.zip)
+[C1 Gauge 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestGauge.zip)
 
 
 ## C1Sparkline컨트롤 시작하기
+
+[C1 Sparkline 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestSparkline.zip)
 
 C1Sparkline컨트롤은 한 줄로 정보의 주요 흐름을 나타냅니다. 미니 차트는 데이터를 볼 수 있게 해주는 작은 그래프로 구성되어 있으며 기존 차트처럼 공간을 차지하지 않습니다. 일반적으로 정보센터 게시판이나 테이블의 셀에 삽입됩니다.
 
@@ -813,4 +829,4 @@ Type속성의 변경을 통해 기둥형 그래프와 선형 그래프를 표시
 
 완전한 소스코드는 다음과 같습니다. ：
 
-[TestSparkline.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestGauge.zip)
+[C1 Sparkline 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestSparkline.zip)

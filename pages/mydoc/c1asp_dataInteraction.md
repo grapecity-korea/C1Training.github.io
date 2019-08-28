@@ -47,7 +47,7 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 
 ### C1GridView 이벤트 오퍼레이팅
-
+[C1GridView 이벤트 오퍼레이팅 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/GridViewOperation.zip)
 **Sort**
 
 순서배열기능은  Sorting과  Sorted  이벤트를 오퍼레이팅하고 Sorted 이벤트에서 새롭게 데이터 소스를 바인딩해야 실현됩니다.
@@ -113,7 +113,7 @@ protected void C1GridView1_ColumnUngrouped(object sender, C1.Web.Wijmo.Controls.
 
 더 많은 C1GridView 표 양식 컨트롤 관련 정보는，다음을 참고해 주시기 바랍니다. ：
 
-[gridViewOperation.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/GridViewOperation.zip)
+[C1GridView 이벤트 오퍼레이팅 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/GridViewOperation.zip)
 
 
 ## C1GridView 정렬이 가능한 표 양식 만들기
@@ -136,6 +136,8 @@ protected void C1GridView1_ColumnUngrouped(object sender, C1.Web.Wijmo.Controls.
 ```
 
 ### C1GridView 이벤트 오퍼레이팅
+
+[C1GridView 이벤트 오퍼레이팅 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1GridView-overview.zip)
 
 C1GridView의 DataSourceID 속성으로 데이터 소스를 바인딩 하고 아래의 DataField 속성을 구체적인 데이터소스 영역에 지정합니다. C1GridView 표 양식의 행은 데이터 소스의 모든 기록을 표시합니다.
 
@@ -161,7 +163,7 @@ C1GridView의 DataSourceID 속성으로 데이터 소스를 바인딩 하고 아
 
 본문의 Demo는 다음과 같습니다. :
 
-[C1GridView-overview.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1GridView-overview.zip)
+[C1GridView 이벤트 오퍼레이팅 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1GridView-overview.zip)
 
 
 
@@ -189,6 +191,7 @@ C1GridView은 DataSourceID를 통해 데이터소스를 선택하고 Columns의 
   
 
 ### 그룹나눔
+[C1 GridView 컨트롤 그룹핑 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1GridView-Grouping.zip)
 
 그룹 헤드와 마지막 행은  wijmo-wijgrid-groupheaderrow와  wijmo wijgrid-groupfooterrow  CSS유형으로 표기합니다. 개발자는 이 유형들과 Child Node를 결합 사용하여 그룹 행의 자체정의 양식을 제공하도록 합니다. 그룹 나눔을 실현하는 코드는 다음과 같습니다. ：
 
@@ -215,11 +218,12 @@ C1GridView은 DataSourceID를 통해 데이터소스를 선택하고 Columns의 
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1gridview-grouping.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1GridView-Grouping.zip)
+[C1 GridView 컨트롤 그룹핑 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1GridView-Grouping.zip)
 
 
 
 ## 데이터를 C1EventsCalendar 에 바인딩시키는 방법
+[C1 이벤트 캘린더 데이터 바인딩 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1EventsCalendar-Databinding.zip)
 
 본문에서는C1EventsCalendar컨트롤을 통한 통합기능 스케줄러 응용프로그램의 제작을 소개합니다. 일일, 일주일, 근무주간이나 매월의 도표로 공유캘린더와 개인 캘린더를 표시하고 데이터 소스에 바인딩되거나 내장된 데이터소스로 데이터를 보존하고 추가 로드할 수 있습니다.  
 본문에 첨부된 Demo를 통해 어떻게 데이터를 C1EventsCalendar 컨트롤에 바인딩시키는지 확인할 수 있습니다.
@@ -295,10 +299,12 @@ C1EventsCalendar일정에 저장된 DataSourceID속성을 설정합니다. 필�
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1Eventcalendar-Databinding.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1EventsCalendar-Databinding.zip)
+[C1 이벤트 캘린더 데이터 바인딩 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1EventsCalendar-Databinding.zip)
 
 
-## C1EventCalendar컨트롤 입문
+## C1EventCalendar 컨트롤 입문
+
+[C1 이벤트 캘린더 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestEventCalendar.zip)
 
 C1EventCalendar 컨트롤을 사용하여 iPad의 캘린더 응용프로그램과 유사한 디자인의 통합기능 스케줄 관리 응용프로그램을 만들 수 있습니다. 일일, 일주일, 근무주간 또는 매월의 도표로 공유 캘린더와 개인 캘린더를 표시하고 데이터 소스에 바인딩되거나 내장된 데이터소스로 데이터를 저장하고 추가 로드할 수 있습니다. 아래의 방법으로 고급 컨트롤을 사용할 수 있습니다.
 
@@ -306,7 +312,7 @@ C1EventCalendar 컨트롤을 사용하여 iPad의 캘린더 응용프로그램�
 
 **Step1**
 
-먼저,  ASP.Net Web응용프로그램을 만든 후,  Web 폼을 추가합니다. 그리고 툴 바에서  C1EventCalendar컨트롤을 찾습니다. 툴 바에 C1EventCalendar가 없는 경우, 오른쪽을 클릭하여 “선택옵션”을 선택하고 C1EventCalendar를 추가합니다.
+먼저,  ASP.Net Web응용프로그램을 만든 후,  Web 폼을 추가합니다. 그리고 툴 바에서  C1EventCalendar 컨트롤을 찾습니다. 툴 바에 C1EventCalendar가 없는 경우, 오른쪽을 클릭하여 “선택옵션”을 선택하고 C1EventCalendar를 추가합니다.
 
   
 
@@ -340,7 +346,7 @@ Web페이지에서 직접 스케줄을 추가할 수 있습니다.
 
 물론, 데이터 바인딩을 통해 스케줄을 추가할 수 있습니다.
 
-[TestEventCalendar.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestEventCalendar.zip)
+[C1 이벤트 캘린더 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestEventCalendar.zip)
 
 
 
@@ -351,6 +357,8 @@ ASP.NET의Input 컨트롤은 내장된 마스크, 사용자 정의 서식 지원
   
 
 ### C1Input입력 컨트롤 페이지 추가
+
+[C1 Input 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Input.zip)
 
 입력컨트롤 개요
 
@@ -392,11 +400,13 @@ C1Input의 모든 입력 컨트롤을 페이지에 추가합니다. 결과는 �
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1Input.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Input.zip)
+[C1 Input 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Input.zip)
 
 
 
 ## C1ComboBox애니메이션 효과 표시
+
+[C1 ComboBox 애니메이션 효과 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1ComboBox-animation.zip)
 
 ASP.NET의 C1ComboBox는 편집 가능한 텍스트 상자와 드롭 다운 리스트를 함께 결합하여 자동으로 검색할 수 있습니다. Items속성 설정을 통해 사용자는 C1ComboBox의 외관과 드롭 다운 메뉴 리스트 항목을 제어할 수 있습니다. 드롭 다운 메뉴를 표시하거나 숨길 때, C1ComboBox는 애니메이션 효과를 표시할 수 있습니다.  
 구체적인 방법은 다음과 같습니다.
@@ -459,17 +469,19 @@ ShowingAnimation  및  HidingAnimation  속성이 설정되면 페이지가 로�
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1ComboBox-animation.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1ComboBox-animation.zip)
+[C1 ComboBox 애니메이션 효과 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1ComboBox-animation.zip)
 
 
 ## C1Editor의 HTML내용 작성과 관리
+
+[C1Editor 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Editor.zip)
 
 ASP.NET의 C1Editor는 비 엔지니어 사용자가 어떤 웹 페이지에서도 HTML을 생성하고 관리할 수 있도록 합니다. 직관적이고 Microsoft Word와 유사한 편집기를 사용하여 모든 텍스트 상자와 사용자 지정 스타일을 바꿀 수 있습니다.  
 본문에서는 C1Editor컨트롤을 통한 HTML 내용의 작성 관리를 소개합니다.
 
   
 
-C1Editor 추가
+**C1Editor 추가**
 
 C1Editor를 페이지에 추가하면 에디터가 생성됩니다. 해당 에디터는 Microsoft Office의 스타일과 기능 영역 인터페이스를 실현합니다. 이 기능 영역은 관련 명령을 일련의 탭으로 구성하여 사용자가 메뉴 계층 구조를 탐색 할 필요없이 편집기 기능을 익힐 있습니다. 코드를 참고하세요. :
 
@@ -520,4 +532,4 @@ Editor1.Text = GetFileContent();
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1Editor.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Editor.zip)
+[C1Editor 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Editor.zip)

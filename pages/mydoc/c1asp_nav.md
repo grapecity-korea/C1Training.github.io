@@ -11,6 +11,8 @@ folder: mydoc
 
 ## C1Menu다양한 레벨의 메뉴 만들기
 
+[C1 메뉴 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Menu.zip)
+
 본문은 C1Menu를 사용하여 다양한 레벨의 메뉴 만들기를 소개합니다. C1Menu를 한 데이터 소스 및 애니메이션 효과 등에 바인딩합니다.
 
 C1Menu는 애니메이션 효과, 이미지, 체크상자 내의 항목 및 조정 항목 스크롤 표시 등을 사용하여 다양한 레벨의 메뉴를 만들 수 있습니다. 심지어 당신의 응용프로그램에서 컨텍스트가 지원하는 팝업메뉴를 만들 수 있습니다.
@@ -72,10 +74,12 @@ C1Menu는 톱 레벨 메뉴, 서브메뉴 및 서브그룹을 스크롤 표시�
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1Menu.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Menu.zip)
+[C1 메뉴 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Menu.zip)
 
 
 ## FileExplorer컨트롤 입문
+
+[FileExplorer 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TextC1FileExplorer.zip)
 
 처음  ConponentOne  컨트롤을 사용하면 그 강화된 기능에 놀라게 됩니다. 수많은 코드를 통해 비로소 완성되는 것들을 이 컨트롤을 사용하면 드래그만으로 만들어낼 수 있습니다. 실로 코딩 엔지니어에게는 꿈 같은 일이지요. 아래는  C1FileExplorer의 소개 및 입문과 관련된 내용입니다.
 
@@ -195,6 +199,6 @@ EnableCreateNewFolder=false
 
   
 
-FileExplorer의 더 많은 기타 특성에 흥미가 있다면 스스로 테스트해보세요 @_@
+FileExplorer의 더 많은 기타 특성에 흥미가 있다면 스스로 테스트해보세요.
 
-[FileExplorer.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TextC1FileExplorer.zip)
+[FileExplorer 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TextC1FileExplorer.zip)

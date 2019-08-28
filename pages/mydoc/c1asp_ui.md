@@ -9,7 +9,9 @@ folder: mydoc
 ---
 
 
-## C1Dialog대화창 만들기
+## C1Dialog 대화창 만들기
+
+[C1 대화창 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Dialog-overview.zip)
 
 ASP.NET Wijmo의 C1Dialog 컨트롤은 대화창을 만들 수 있습니다. 이런 특수한 유형의 대화창을 클라이언트에 만들 수 있습니다. 또는 서버에 메시지를 표시하고 고객의 입력한 내용을 접수할 수 있습니다.  
 이 예시는 기본  C1Dialog컨트롤을 표시합니다. 이 컨트롤로 에러, 설명 등의 메시지를 표시할 수 있습니다. 대화창은 이동시키거나 크기를 변경하거나 'X'아이콘으로 닫을 수 있습니다.
@@ -52,10 +54,12 @@ C1Dialog.Content태그를 사용하여 대화창의 내용을 설정합니다. �
 
 본문 Demo의 소스코드는 다음과 같습니다. :
 
-[C1Dialog-overview.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Dialog-overview.zip)
+[C1 대화창 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Dialog-overview.zip)
 
 
-## C1Rating컨트롤 애니메이션 설정방법
+## C1Rating 컨트롤 애니메이션 설정 방법
+
+[C1 Rating 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Rating.zip)
 
 ASP.NET의Rating컨트롤은 도형을 통해 ASP.NET에 등급을 표시할 수 있습니다. 해당 등급 컨트롤은 웹 사이트 방문자들이 투표를 통해 그들의 의견을 공유할 수 있도록 합니다. 해당 컨트롤을 사용자 정의 할 수 있으며, 별표, 엄지손가락, 막대그래프 등으로 등급을 표시할 수 있습니다.
 
@@ -65,19 +69,19 @@ ASP.NET의Rating컨트롤은 도형을 통해 ASP.NET에 등급을 표시할 수
 
   
 
-### C1Rating컨트롤 페이지 추가하기
+### C1Rating 컨트롤 페이지 추가하기
 
 C1Rating 등급 컨트롤을 페이지에 수평이나 수직으로 놓을 수 있습니다.
 
   
 
-### C1Rating사용자 정의 아이콘
+### C1Rating 사용자 정의 아이콘
 
 기본적으로 별표로 표시되며 사용자 정의를 통해 다른 아이콘으로도 등급 컨트롤을 만들 수 있습니다.
 
   
 
-### C1Rating애니메이션
+### C1Rating 애니메이션
 
 ComponentOne등급 컨트롤에 특수효과를 추가할 수 있습니다. 등급 컨트롤이 스크롤, 팝업, 페이딩, 슬라이드 등으로 전환되도록 설정할 수 있습니다. 애니메이션 효과를 설정하는 태그는 Animation입니다. 코드는 다음과 같습니다. :
 
@@ -87,7 +91,7 @@ ComponentOne등급 컨트롤에 특수효과를 추가할 수 있습니다. 등�
 <Animation Animated="fade" Duration="500" Easing="Linear" Delay="250" />
 ```
 
-### C1Rating알림
+### C1Rating 알림
 
 C1Rating에 마우스를 가져다 놓으면 메시지 알림이 나타납니다. 메시지 알림용 Hint태그를 설정합니다. 코드는 다음과 같습니다. :
 
@@ -105,4 +109,4 @@ C1Rating에 마우스를 가져다 놓으면 메시지 알림이 나타납니다
 
 본문 Demo의 소스코드는 아래와 같습니다. :
 
-[C1Rating.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TestGauge.zip)
+[C1 Rating 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Rating.zip)
