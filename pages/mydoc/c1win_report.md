@@ -108,31 +108,31 @@ _xlBook.Load(AppDomain.CurrentDomain.BaseDirectory+ filename);
 
 ```csharp
 DrillDataPoints GetChartData(C1XLBook book)
+{
+    // Get first sheet
+    var sheet = book.Sheets[0];
+
+    // Get location, date, and cell count
+    var location = sheet[1, 1].Value as string;
+    var date = (DateTime)sheet[2, 1].Value;
+    var count = sheet.Rows.Count - 5;
+    label.Text = string.Format("{0}, {1} points", location, count);
+
+    // Get values into arrays for charting
+    var drillData = new DrillDataPoints(count);
+    for (int r = 0; r < count; r++)
     {
-        // Get first sheet
-        var sheet = book.Sheets[0];
-
-        // Get location, date, and cell count
-        var location = sheet[1, 1].Value as string;
-        var date = (DateTime)sheet[2, 1].Value;
-        var count = sheet.Rows.Count - 5;
-        label.Text = string.Format("{0}, {1} points", location, count);
-
-        // Get values into arrays for charting
-        var drillData = new DrillDataPoints(count);
-        for (int r = 0; r < count; r++)
-        {
-            drillData.Temperature[r] = (double)sheet[r + 5, 1].Value;
-            drillData.Pressure[r] = (double)sheet[r + 5, 2].Value;
-            drillData.Conductivity[r] = (double)sheet[r + 5, 3].Value;
-            drillData.Ph[r] = (double)sheet[r + 5, 4].Value;
-            drillData.Depth[r] = r;
-        }
-        drillData.ScaleValues();
-
-        // Send data to chart
-        return drillData;
+        drillData.Temperature[r] = (double)sheet[r + 5, 1].Value;
+        drillData.Pressure[r] = (double)sheet[r + 5, 2].Value;
+        drillData.Conductivity[r] = (double)sheet[r + 5, 3].Value;
+        drillData.Ph[r] = (double)sheet[r + 5, 4].Value;
+        drillData.Depth[r] = r;
     }
+    drillData.ScaleValues();
+
+    // Send data to chart
+    return drillData;
+}
 ```
 
 XLS 파일이나 XLSX파일을 내보낼 수도 있습니다. C1XLBook을 사용하여 Excel 버전과 호환되는 보고서를 생성 할 수 있는 C1Chart 컨트롤입니다.
@@ -141,20 +141,20 @@ XLS 파일이나 XLSX파일을 내보낼 수도 있습니다. C1XLBook을 사용
 
 ```csharp
 //   fileName:	Name of the file to save.
-        //   stream:	System.IO.Stream where the worksheet is saved.
-        //   format:    C1.C1Excel.C1XLBook.FileFormat value that specifies the format to save 	//		the worksheet in.
-//     Saves the worksheet into a stream.
-        public void Save(Stream stream);
-        //
-	//     Saves the worksheet to a file.
-        public void Save(string fileName);
-        //
-        
-        //     Saves the worksheet into a stream.
-        public void Save(Stream stream, FileFormat format);
-        //
-        //     Saves the worksheet to a file.
-        public void Save(string fileName, FileFormat format);
+//   stream:	System.IO.Stream where the worksheet is saved.
+//   format:    C1.C1Excel.C1XLBook.FileFormat value that specifies the format to save 	//		the worksheet in.
+//   Saves the worksheet into a stream.
+public void Save(Stream stream);
+//
+//  Saves the worksheet to a file.
+public void Save(string fileName);
+//
+
+//   Saves the worksheet into a stream.
+public void Save(Stream stream, FileFormat format);
+//
+//   Saves the worksheet to a file.
+public void Save(string fileName, FileFormat format);
 ```
 
 본문 Demo의 소스코드는 다음과 같습니다. :
@@ -195,12 +195,12 @@ AddField방법을 사용하여 Acrobat리스트 필드를 PDF파일에 추가할
 먼저, 테스트 박스 필드를 만듭니다. 코드는 다음과 같습니다. :
 
 ```csharp
-	// text box field
-    rc = new RectangleF(rc.X, rc.Y + rc.Height / 10, rc.Width / 3, rc.Height / 30);
-    PdfTextBox textBox1 = RenderTextBox("TextBox Sample", fieldFont, rc);
-    textBox1.BorderWidth = FieldBorderWidth.Thick;
-    textBox1.BorderStyle = FieldBorderStyle.Inset;
-    textBox1.BorderColor = Color.Green;
+// text box field
+rc = new RectangleF(rc.X, rc.Y + rc.Height / 10, rc.Width / 3, rc.Height / 30);
+PdfTextBox textBox1 = RenderTextBox("TextBox Sample", fieldFont, rc);
+textBox1.BorderWidth = FieldBorderWidth.Thick;
+textBox1.BorderStyle = FieldBorderStyle.Inset;
+textBox1.BorderColor = Color.Green;
 ```
 
 ### C1Report의 지정리포트 읽기
@@ -459,21 +459,21 @@ foreach (C1ZipEntry ze in zec)
 {
 	var fa = ze.Attributes;
 	var entry = new String[] 
-        	{
-                        FileName(ze.FileName),                      // file name, no extension
-                        FileExtension(ze.FileName),                 // file extension, no dot
-                        ze.Date.ToString("MM/dd/yy  HH:mm"),        // mod date/time
-                        ze.SizeUncompressedLong.ToString("#,##0"),  // original size
-                        ze.SizeCompressedLong.ToString("#,##0"),    // compressed size
-                        AttribString(ze.Attributes),                // encode as "rahs"
-			((uint)ze.CRC32).ToString(),                // CRC32 (unsigned looks better)
-			ze.Comment                                  // user comment
-                    };
-                var lvi = new ListViewItem(entry);
-                lvi.Tag = ze;
-                lvi.ImageIndex = ((ze.Attributes & FileAttributes.Directory) != 0)? 0: 1;
-                if (ze.IsEncrypted) lvi.ImageIndex = 3;
-                listView.Items.Add(lvi);
+    {
+        FileName(ze.FileName),                      // file name, no extension
+        FileExtension(ze.FileName),                 // file extension, no dot
+        ze.Date.ToString("MM/dd/yy  HH:mm"),        // mod date/time
+        ze.SizeUncompressedLong.ToString("#,##0"),  // original size
+        ze.SizeCompressedLong.ToString("#,##0"),    // compressed size
+        AttribString(ze.Attributes),                // encode as "rahs"
+        ((uint)ze.CRC32).ToString(),                // CRC32 (unsigned looks better)
+        ze.Comment                                  // user comment
+    };
+    var lvi = new ListViewItem(entry);
+    lvi.Tag = ze;
+    lvi.ImageIndex = ((ze.Attributes & FileAttributes.Directory) != 0)? 0: 1;
+    if (ze.IsEncrypted) lvi.ImageIndex = 3;
+    listView.Items.Add(lvi);
 }
 ```
 
@@ -487,26 +487,26 @@ foreach (C1ZipEntry ze in zec)
 
 ```csharp
 // 적요:
-    //     Specifies the level of compression to be applied when adding entries to a
-    //     C1.C1Zip.C1ZipFile.
-    public enum CompressionLevelEnum
-    {
-        // 적요:
-        //     High compression, high speed.
-        DefaultCompression = -1,
-        //
-        // 적요:
-        //     No Compression.
-        NoCompression = 0,
-        //
-        // 적요:
-        //     Low compression, highest speed.
-        BestSpeed = 1,
-        //
-        // 적요:
-        //     Highest compression, low speed.
-        BestCompression = 9,
-    }
+//     Specifies the level of compression to be applied when adding entries to a
+//     C1.C1Zip.C1ZipFile.
+public enum CompressionLevelEnum
+{
+    // 적요:
+    //     High compression, high speed.
+    DefaultCompression = -1,
+    //
+    // 적요:
+    //     No Compression.
+    NoCompression = 0,
+    //
+    // 적요:
+    //     Low compression, highest speed.
+    BestSpeed = 1,
+    //
+    // 적요:
+    //     Highest compression, low speed.
+    BestCompression = 9,
+}
 ```
 
 파일삭제：C1ZipFile.Entries.Remove방법을 사용하여 현재 열려 있는Zip파일의 특정 항목을 삭제합니다.

@@ -27,16 +27,16 @@ UITypeEditorControl가 ComboBox, IServiceProvider, IWindowsFormsEditorService의
 
 ```csharp
 #region ** UITypeEditorControl (base class for all of the controls below)
-    /// <summary>
-    /// UITypeEditorControl
-    /// </summary>
-    public class UITypeEditorControl :
-        ComboBox,
-        IServiceProvider,
-        IWindowsFormsEditorService
-    {
-    }
-    #endregion
+/// <summary>
+/// UITypeEditorControl
+/// </summary>
+public class UITypeEditorControl :
+    ComboBox,
+    IServiceProvider,
+    IWindowsFormsEditorService
+{
+}
+#endregion
 ```
 
 자체정의 FlexGrid의CheckListEditor데이터유형：
@@ -55,13 +55,13 @@ UITypeEditorControl가 ComboBox, IServiceProvider, IWindowsFormsEditorService의
 
 ```csharp
 #region ** CheckListEditor
-    //
-    // CheckListEditor
-    // UITypeEditor that can be used to edit items in CheckedListBox control.
-    // Users can check any combination.
-    // 
-    public class CheckListEditor : UITypeEditor
-    #endregion
+//
+// CheckListEditor
+// UITypeEditor that can be used to edit items in CheckedListBox control.
+// Users can check any combination.
+// 
+public class CheckListEditor : UITypeEditor
+#endregion
 ```
 
 자체정의FlexGrid의FlexHyperlink데이터유형：
@@ -88,11 +88,11 @@ c1FlexGrid1.Cols.Count = 13 ；
 
 ```csharp
 //Checkbox List column
-            Column checkListCol = c1FlexGrid1.Cols[_checkListCol];
-            CheckListEditor checkListEditor = new CheckListEditor(new string[] { "덴마크어", "네덜란드어", "영어", "핀란드어", "프랑스어", "독일어", "이탈리아어", "노르웨이어", "폴란드어", "포르투갈어", "스페인어", "스웨덴어" });
-            checkListCol.Caption = "체크박스리스트";		
-		checkListCol.Editor = new UITypeEditorControl(checkListEditor, false);
-            checkListCol.Width = 150;
+Column checkListCol = c1FlexGrid1.Cols[_checkListCol];
+CheckListEditor checkListEditor = new CheckListEditor(new string[] { "덴마크어", "네덜란드어", "영어", "핀란드어", "프랑스어", "독일어", "이탈리아어", "노르웨이어", "폴란드어", "포르투갈어", "스페인어", "스웨덴어" });
+checkListCol.Caption = "체크박스리스트";		
+checkListCol.Editor = new UITypeEditorControl(checkListEditor, false);
+checkListCol.Width = 150;
 ```
 
 설정된 열의 데이터유형은 스텝1의 FlexHyperlink입니다. 코드는 다음을 참고합니다. ：
@@ -101,19 +101,19 @@ c1FlexGrid1.Cols.Count = 13 ；
 
 ```csharp
 //Hyperlink column
-            Column hyperlinkCol = c1FlexGrid1.Cols[_hyperlinkCol];
+Column hyperlinkCol = c1FlexGrid1.Cols[_hyperlinkCol];
 
-            hyperlinkCol.AllowEditing = true;
-            hyperlinkCol.Width = 160;
+hyperlinkCol.AllowEditing = true;
+hyperlinkCol.Width = 160;
 
-	hyperlinkCol.Caption = "하이퍼링크";
-            hyperlinkCol.ComboList = "...";				
+hyperlinkCol.Caption = "하이퍼링크";
+hyperlinkCol.ComboList = "...";				
 CellStyle cs = c1FlexGrid1.Styles.Add("NewLink");
-            cs.Font = new Font(c1FlexGrid1.Font, FontStyle.Underline);
-            cs.ForeColor = Color.Blue;
-            cs = c1FlexGrid1.Styles.Add("OldLink");
-            cs.Font = new Font(c1FlexGrid1.Font, FontStyle.Underline);
-            cs.ForeColor = Color.Purple;
+cs.Font = new Font(c1FlexGrid1.Font, FontStyle.Underline);
+cs.ForeColor = Color.Blue;
+cs = c1FlexGrid1.Styles.Add("OldLink");
+cs.Font = new Font(c1FlexGrid1.Font, FontStyle.Underline);
+cs.ForeColor = Color.Purple;
 ```
 
 ### 3. 수동추가FlexGrid의 유닛 셀 데이터
@@ -131,8 +131,8 @@ FlexGrid 자체정의 한 CheckListEditor열에 데이터를 채워줍니다. �
 string languages = "스페인어|독일어|네덜란드어, 프랑스어, 독일어|포르투갈어|영어, 프랑스어|덴마크어|핀란드어, 스웨덴어|프랑스어|독일어|영어|이탈리아어|스페인어|핀란드어, 노르웨이어|폴란드어|포르투갈어|스페인어|스웨덴어|프랑스어, 독일어, 이탈리아어|영어|영어";            
 for (int i = 1; i < c1FlexGrid1.Rows.Count; i++)
 {           
-          //Load checkbox list data
-          c1FlexGrid1[i, _checkListCol] = languages.Split('|')[i - 1];
+    //Load checkbox list data
+    c1FlexGrid1[i, _checkListCol] = languages.Split('|')[i - 1];
 }
 ```
 
@@ -140,26 +140,26 @@ FlexGrid 자체정의 한 FlexHyperlink 열에 데이터를 채워줍니다. 코
 
 ```csharp
 //Load hyperlink column
-            c1FlexGrid1[1, _hyperlinkCol] = new FlexHyperlink("여행비서", "http://www.turismo.gov.ar/eng/menu.htm");
-            c1FlexGrid1[2, _hyperlinkCol] = new FlexHyperlink("오스트리아 대사관", "http://www.austria.org/");
-            c1FlexGrid1[3, _hyperlinkCol] = new FlexHyperlink("벨기에여행", "http://www.visitbelgium.com/");
-            c1FlexGrid1[4, _hyperlinkCol] = new FlexHyperlink("브라질 - 위키백과", "http://en.wikipedia.org/wiki/Brazil");
-            c1FlexGrid1[5, _hyperlinkCol] = new FlexHyperlink("캐나다웹사이트", "http://www.canada.com/");
-            c1FlexGrid1[6, _hyperlinkCol] = new FlexHyperlink("덴마크웹사이트", "http://www.denmark.dk/");
-            c1FlexGrid1[7, _hyperlinkCol] = new FlexHyperlink("핀란드뉴스", "http://finland.fi/");
-            c1FlexGrid1[8, _hyperlinkCol] = new FlexHyperlink("프랑스여행사이트", "http://www.franceguide.com/");
-            c1FlexGrid1[9, _hyperlinkCol] = new FlexHyperlink("독일정보사이트", "http://www.germany.info/");
-            c1FlexGrid1[10, _hyperlinkCol] = new FlexHyperlink("아일랜드발견", "http://www.discoverireland.ie/");
-            c1FlexGrid1[11, _hyperlinkCol] = new FlexHyperlink("이탈리아에 관해", "http://www.state.gov/r/pa/ei/bgn/4033.htm");
-            c1FlexGrid1[12, _hyperlinkCol] = new FlexHyperlink("멕시코여행", "http://www.visitmexico.com/");
-            c1FlexGrid1[13, _hyperlinkCol] = new FlexHyperlink("노르웨이 웹사이트", "http://www.norway.org/");
-            c1FlexGrid1[14, _hyperlinkCol] = new FlexHyperlink("폴란드.pl", "http://www.poland.pl/");
-            c1FlexGrid1[15, _hyperlinkCol] = new FlexHyperlink("포르투갈지도", "http://www.portugal-info.net/maps/");
-            c1FlexGrid1[16, _hyperlinkCol] = new FlexHyperlink("스페인여행자", "http://www.spain.info/");
-            c1FlexGrid1[17, _hyperlinkCol] = new FlexHyperlink("스웨덴여행", "http://www.visitsweden.com/");
-            c1FlexGrid1[18, _hyperlinkCol] = new FlexHyperlink("스위스여행", "http://www.about.ch/");
-            c1FlexGrid1[19, _hyperlinkCol] = new FlexHyperlink("구글영국", "http://www.google.co.uk/");
-            c1FlexGrid1[20, _hyperlinkCol] = new FlexHyperlink("아메리카합중국 - 위키백과", http://en.wikipedia.org/wiki/United_States);
+c1FlexGrid1[1, _hyperlinkCol] = new FlexHyperlink("여행비서", "http://www.turismo.gov.ar/eng/menu.htm");
+c1FlexGrid1[2, _hyperlinkCol] = new FlexHyperlink("오스트리아 대사관", "http://www.austria.org/");
+c1FlexGrid1[3, _hyperlinkCol] = new FlexHyperlink("벨기에여행", "http://www.visitbelgium.com/");
+c1FlexGrid1[4, _hyperlinkCol] = new FlexHyperlink("브라질 - 위키백과", "http://en.wikipedia.org/wiki/Brazil");
+c1FlexGrid1[5, _hyperlinkCol] = new FlexHyperlink("캐나다웹사이트", "http://www.canada.com/");
+c1FlexGrid1[6, _hyperlinkCol] = new FlexHyperlink("덴마크웹사이트", "http://www.denmark.dk/");
+c1FlexGrid1[7, _hyperlinkCol] = new FlexHyperlink("핀란드뉴스", "http://finland.fi/");
+c1FlexGrid1[8, _hyperlinkCol] = new FlexHyperlink("프랑스여행사이트", "http://www.franceguide.com/");
+c1FlexGrid1[9, _hyperlinkCol] = new FlexHyperlink("독일정보사이트", "http://www.germany.info/");
+c1FlexGrid1[10, _hyperlinkCol] = new FlexHyperlink("아일랜드발견", "http://www.discoverireland.ie/");
+c1FlexGrid1[11, _hyperlinkCol] = new FlexHyperlink("이탈리아에 관해", "http://www.state.gov/r/pa/ei/bgn/4033.htm");
+c1FlexGrid1[12, _hyperlinkCol] = new FlexHyperlink("멕시코여행", "http://www.visitmexico.com/");
+c1FlexGrid1[13, _hyperlinkCol] = new FlexHyperlink("노르웨이 웹사이트", "http://www.norway.org/");
+c1FlexGrid1[14, _hyperlinkCol] = new FlexHyperlink("폴란드.pl", "http://www.poland.pl/");
+c1FlexGrid1[15, _hyperlinkCol] = new FlexHyperlink("포르투갈지도", "http://www.portugal-info.net/maps/");
+c1FlexGrid1[16, _hyperlinkCol] = new FlexHyperlink("스페인여행자", "http://www.spain.info/");
+c1FlexGrid1[17, _hyperlinkCol] = new FlexHyperlink("스웨덴여행", "http://www.visitsweden.com/");
+c1FlexGrid1[18, _hyperlinkCol] = new FlexHyperlink("스위스여행", "http://www.about.ch/");
+c1FlexGrid1[19, _hyperlinkCol] = new FlexHyperlink("구글영국", "http://www.google.co.uk/");
+c1FlexGrid1[20, _hyperlinkCol] = new FlexHyperlink("아메리카합중국 - 위키백과", http://en.wikipedia.org/wiki/United_States);
 ```
 
 이제 FlexGrid의 행, 열, 유닛 셀의 작성에 성공했습니다. 결과는 다음 그림과 같습니다. :
@@ -217,50 +217,50 @@ FlexGrid는 자체정의 필터로 전문적인 수치를 처리할 수 있습�
 
 ```csharp
 public CustomFiltering()
+{
+    InitializeComponent();
+
+    //// add demo properties
+    //AddProperty("AllowFiltering", _flex);
+
+    dt.Columns.Add("문자열", typeof(String));
+    dt.Columns.Add("일자", typeof(DateTime));
+    dt.Columns.Add("정형", typeof(int));
+    dt.Columns.Add("색상명", typeof(KnownColor));
+    dt.Columns.Add("색상", typeof(Color));
+
+    String[] names =
         {
-            InitializeComponent();
+            "Rob Walters",
+            "Janice Galvin",
+            "Garrett Vargas",
+            "David Campbell",
+            "Lynn Tsoflias",
+            "Linda Mitchell",
+            "Jillian Carson",
+            "Alan Brewer",
+            "William Vong"
+        };
 
-            //// add demo properties
-            //AddProperty("AllowFiltering", _flex);
+    var rnd = new Random();
+    foreach (KnownColor kc in Enum.GetValues(typeof(KnownColor)))
+    {
+        Color clr = Color.FromKnownColor(kc);
+        dt.Rows.Add(names[rnd.Next(0, 8)], DateTime.Today.AddDays(-rnd.Next(0, 100)), rnd.Next(0, 1000), kc, clr);
+    }
 
-            dt.Columns.Add("문자열", typeof(String));
-            dt.Columns.Add("일자", typeof(DateTime));
-            dt.Columns.Add("정형", typeof(int));
-            dt.Columns.Add("색상명", typeof(KnownColor));
-            dt.Columns.Add("색상", typeof(Color));
+    // configure grid
+    _flex.DataSource = dt;
+    _flex.DrawMode = C1.Win.C1FlexGrid.DrawModeEnum.OwnerDraw;
+    _flex.OwnerDrawCell += _flex_OwnerDrawCell;
+    _flex.AllowEditing = false;
+    _flex.AllowFiltering = true;
+    // assign custom filters
+    _flex.Cols["색상"].Filter = new ColorFilter();
+    _flex.Cols["일자"].Filter = new DateFilter();
+    _flex.Cols["색상명"].Filter = new StringFilter();
 
- 	String[] names =
-            {
-                "Rob Walters",
-                "Janice Galvin",
-                "Garrett Vargas",
-                "David Campbell",
-                "Lynn Tsoflias",
-                "Linda Mitchell",
-                "Jillian Carson",
-                "Alan Brewer",
-                "William Vong"
-            };
-
-var rnd = new Random();
-            foreach (KnownColor kc in Enum.GetValues(typeof(KnownColor)))
-            {
-                Color clr = Color.FromKnownColor(kc);
-                dt.Rows.Add(names[rnd.Next(0, 8)], DateTime.Today.AddDays(-rnd.Next(0, 100)), rnd.Next(0, 1000), kc, clr);
-            }
-
-            // configure grid
-            _flex.DataSource = dt;
-            _flex.DrawMode = C1.Win.C1FlexGrid.DrawModeEnum.OwnerDraw;
-            _flex.OwnerDrawCell += _flex_OwnerDrawCell;
-            _flex.AllowEditing = false;
-            _flex.AllowFiltering = true;
-            // assign custom filters
-            _flex.Cols["색상"].Filter = new ColorFilter();
-            _flex.Cols["일자"].Filter = new DateFilter();
-            _flex.Cols["색상명"].Filter = new StringFilter();
-
-        }
+}
 ```
 
 ### 3. FlexGrid의 Cell다시 그리기
@@ -271,23 +271,23 @@ FlexGrid의 OwnerDrawCell이벤트를 이용하여 Cell을 다시 작성합니�
 
 ```csharp
 void _flex_OwnerDrawCell(object sender, C1.Win.C1FlexGrid.OwnerDrawCellEventArgs e)
+{
+    if (_flex[e.Row, e.Col] is Color)
+    {
+        var clr = (Color)_flex[e.Row, e.Col];
+        if (clr != null)
         {
-            if (_flex[e.Row, e.Col] is Color)
+            e.DrawCell(C1.Win.C1FlexGrid.DrawCellFlags.Background | C1.Win.C1FlexGrid.DrawCellFlags.Border);
+            var rc = e.Bounds;
+            rc.Inflate(-4, -2);
+            using (var br = new SolidBrush(clr))
             {
-                var clr = (Color)_flex[e.Row, e.Col];
-                if (clr != null)
-                {
-                    e.DrawCell(C1.Win.C1FlexGrid.DrawCellFlags.Background | C1.Win.C1FlexGrid.DrawCellFlags.Border);
-                    var rc = e.Bounds;
-                    rc.Inflate(-4, -2);
-                    using (var br = new SolidBrush(clr))
-                    {
-                        e.Graphics.FillRectangle(br, rc);
-                        e.Graphics.DrawRectangle(Pens.Black, rc);
-                    }
-                }
+                e.Graphics.FillRectangle(br, rc);
+                e.Graphics.DrawRectangle(Pens.Black, rc);
             }
         }
+    }
+}
 ```
 
 ### 4. FlexGrid의 필터, 순서배열 및 그룹 나누기 시연
@@ -341,18 +341,18 @@ C1FlexGrid을 사용하여 최종사용자를 위한 고성능 업무 데이터�
 
 ```csharp
 public class MyItem
-    {
-        public int ID { get; set; }
-        public string 성명 { get; set; }
-        public bool? 표기 { get; set; }
-        public DateTime? 일자 { get; set; }
-        public double? 값1 { get; set; }
-        public double? 값2 { get; set; }
-        public double? 값3 { get; set; }
-        public double? 값4 { get; set; }
-        public double? 값5 { get; set; }
-        public double? 값6 { get; set; }
-    }
+{
+    public int ID { get; set; }
+    public string 성명 { get; set; }
+    public bool? 표기 { get; set; }
+    public DateTime? 일자 { get; set; }
+    public double? 값1 { get; set; }
+    public double? 값2 { get; set; }
+    public double? 값3 { get; set; }
+    public double? 값4 { get; set; }
+    public double? 값5 { get; set; }
+    public double? 값6 { get; set; }
+}
 ```
 
 ### 2. BackgroundWorker를 통해 FlexGrid데이터 로딩
@@ -370,16 +370,16 @@ Command Click에서 FlexGrid데이터 소스를 없앱니다. 행렬 값을 다�
 ```csharp
 c1Command1.Enabled = false;
 
-            // clear FlexGrid
-            c1FlexGrid1.DataSource = null;
-            c1FlexGrid1.Rows.Count = 1;
-            c1FlexGrid1.Cols.Count = 1;
+// clear FlexGrid
+c1FlexGrid1.DataSource = null;
+c1FlexGrid1.Rows.Count = 1;
+c1FlexGrid1.Cols.Count = 1;
 
-            count = (int)txtCount.Value;
-            progressBar.Maximum = count;
+count = (int)txtCount.Value;
+progressBar.Maximum = count;
 
-            // run background worker
-            worker.RunWorkerAsync();
+// run background worker
+worker.RunWorkerAsync();
 ```
 
 FlexGrid데이터 소스 준비：
@@ -389,24 +389,24 @@ FlexGrid데이터 소스 준비：
 ```csharp
 for (int i = 0; i < count; i++)
 {
-                    // report progress periodically
-                    if (i % 1000 == 0)
-                    {
-                        worker.ReportProgress(0, i);
-                    }
+    // report progress periodically
+    if (i % 1000 == 0)
+    {
+        worker.ReportProgress(0, i);
+    }
 
-                    MyItem m = new MyItem();
-                    m.ID = i;
-                    m.성명 = "Row" + i.ToString();
-                    m.표기 = i % 2 == 0 ? true : false;
-                    m.일자 = DateTime.Now.Add(new TimeSpan(i, i, i));
-                    m.값1 = (double)rnd.Next(int.MaxValue);
-                    m.값2 = (double)rnd.Next(int.MaxValue);
-                    m.값3 = (double)rnd.Next(int.MaxValue);
-                    m.값4 = (double)rnd.Next(int.MaxValue);
-                    m.값5 = (double)rnd.Next(int.MaxValue);
-                    m.값6 = (double)rnd.Next(int.MaxValue);
-		list.Add(m);
+    MyItem m = new MyItem();
+    m.ID = i;
+    m.성명 = "Row" + i.ToString();
+    m.표기 = i % 2 == 0 ? true : false;
+    m.일자 = DateTime.Now.Add(new TimeSpan(i, i, i));
+    m.값1 = (double)rnd.Next(int.MaxValue);
+    m.값2 = (double)rnd.Next(int.MaxValue);
+    m.값3 = (double)rnd.Next(int.MaxValue);
+    m.값4 = (double)rnd.Next(int.MaxValue);
+    m.값5 = (double)rnd.Next(int.MaxValue);
+    m.값6 = (double)rnd.Next(int.MaxValue);
+    list.Add(m);
 }
 ```
 
@@ -418,7 +418,7 @@ DoWork이벤트 처리 과정 중, ReportProgress를 실행하면 ProgressChange
 void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
 {
 	lblStatus.Text = string.Format("{0} / {1} 행", ((int)e.UserState).ToString(), count.ToString());
-	lblStatus.Text = string.Format("{0} / {1} 行", ((int)e.UserState).ToString(), count.ToString());
+	lblStatus.Text = string.Format("{0} / {1} 행", ((int)e.UserState).ToString(), count.ToString());
 }
 ```
 
@@ -431,34 +431,34 @@ DoWork이벤트 처리 종료 후, RunWorkerCompleted이벤트가 생성됩니�
 ```csharp
 void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 {
-            var items = (IList)e.Result;
-            if (items.Count == 0)
-            {
+    var items = (IList)e.Result;
+    if (items.Count == 0)
+    {
 		MessageBox.Show("내부저장한도를 초과했습니다. 개수가 적은 항목모음으로 시도해 보세요. ");
-            }
+    }
 	else
-            {
-                try
-                {
-                    // load flexgrid with redraw = false for best performance
-                    c1FlexGrid1.Redraw = false;
-                    c1FlexGrid1.DataSource = items;
-                    c1FlexGrid1.Redraw = true;
+    {
+        try
+        {
+            // load flexgrid with redraw = false for best performance
+            c1FlexGrid1.Redraw = false;
+            c1FlexGrid1.DataSource = items;
+            c1FlexGrid1.Redraw = true;
 
-		// custom editors
-		c1FlexGrid1.Cols["일자"].Editor = dateTimePicker1;
-                    c1FlexGrid1.Cols["값1"].Editor = numericUpDown1;
-                    c1FlexGrid1.Cols["값2"].Editor = numericUpDown1;
-                    c1FlexGrid1.Cols["값3"].Editor = numericUpDown1;
-                    c1FlexGrid1.Cols["값4"].Editor = numericUpDown1;
-                    c1FlexGrid1.Cols["값5"].Editor = numericUpDown1;
-                    c1FlexGrid1.Cols["값6"].Editor = numericUpDown1;
-                }
-	catch (Exception)
-                {
-                    MessageBox.Show("내부저장한도를 초과했습니다. 개수가 적은 항목모음으로 시도해 보세요.");
-}
-               c1Command1.Enabled = true;
+            // custom editors
+            c1FlexGrid1.Cols["일자"].Editor = dateTimePicker1;
+            c1FlexGrid1.Cols["값1"].Editor = numericUpDown1;
+            c1FlexGrid1.Cols["값2"].Editor = numericUpDown1;
+            c1FlexGrid1.Cols["값3"].Editor = numericUpDown1;
+            c1FlexGrid1.Cols["값4"].Editor = numericUpDown1;
+            c1FlexGrid1.Cols["값5"].Editor = numericUpDown1;
+            c1FlexGrid1.Cols["값6"].Editor = numericUpDown1;
+        }
+	    catch (Exception)
+        {
+            MessageBox.Show("내부저장한도를 초과했습니다. 개수가 적은 항목모음으로 시도해 보세요.");
+        }
+        c1Command1.Enabled = true;
 }
 ```
 
@@ -522,7 +522,7 @@ C1InputPanel항목 집합 에디터는 아래 그림과 같습니다.
 
 ## C1GanttView：융합소프트웨어Project사용자 체험 Gantt 차트 만들기
 
-Gantt 차트를 만들어 프로젝트를 관리하는 방법은 다음과 같습니다. :
+Gantt 차트를 만들어 프로젝트를 관리하는 방법은 다음과 같습니다.
 
   
 
@@ -573,17 +573,17 @@ Gantt 차트양식 설정：  실행 시, 최 상단의 막대형 양식 다이�
 본문 Demo 중, C1GanttView1.LoadXml방법을 사용하여 XML문서파일을 들여옵니다. 이렇게 직접 사용할 수 있습니다. 변경할 곳이 있는 경우 위의 방법 1과 방법 2에 따라 변경합니다. 들여 오기한 XML문서파일의 오버로딩 방법은 다음과 같습니다. :
 
 ```csharp
-// 적요:
-//     Loads the contents of C1.Win.C1GanttView.C1GanttView from a System.IO.Stream.
-public void LoadXml(Stream stream);
-//
- // 적요:
- //     Loads the contents of C1.Win.C1GanttView.C1GanttView from an XML file.
- public void LoadXml(string fileName);
- //
-// 적요:
-//     Loads the contents of C1.Win.C1GanttView.C1GanttView from an System.Xml.XmlDocument.
-public void LoadXml(XmlDocument doc);
+    // 적요:
+    //     Loads the contents of C1.Win.C1GanttView.C1GanttView from a System.IO.Stream.
+    public void LoadXml(Stream stream);
+    //
+    // 적요:
+    //     Loads the contents of C1.Win.C1GanttView.C1GanttView from an XML file.
+    public void LoadXml(string fileName);
+    //
+    // 적요:
+    //     Loads the contents of C1.Win.C1GanttView.C1GanttView from an System.Xml.XmlDocument.
+    public void LoadXml(XmlDocument doc);
 ```
 
 이렇게 특수한 경우에 최종사용자가 직접 C1GanttView를 통해 가장 적합한 업무 사항의 Gantt 차트를 정할 수 있고 기타 사용자에게 제출하거나 발표하여 동시에 실행할 수 있습니다. C1GanttView를 열고 그대로 삽입한 저장버튼을 클릭하면 설계된 프로젝트 계획 및 Gantt 차트를 모두 XML문서로 저장할 수 있습니다. 저장된 XML 파일이 열린 다이얼로그창은 다음과 같습니다.
@@ -626,30 +626,30 @@ C1Schedule 컨트롤은 C1Schedule.ViewType 속성을 사용하여 일, 주, 주
 
 ```csharp
 // 적요:
-    //     Determines the type of view to display in the C1.Win.C1Schedule.C1Schedule
-    //     control.
-    public enum ScheduleViewEnum
-    {
-        // 적요:
-        //     Day view.
-        DayView = 0,
-        //
-        // 적요:
-        //     Work week view.
-        WorkWeekView = 1,
-        //
-        // 적요:
-        //     Week view.
-        WeekView = 2,
-        //
-        // 적요:
-        //     Month view.
-        MonthView = 3,
-        //
-        // 적요:
-        //     Time Line view.
-        TimeLineView = 4,
-    }
+//     Determines the type of view to display in the C1.Win.C1Schedule.C1Schedule
+//     control.
+public enum ScheduleViewEnum
+{
+    // 적요:
+    //     Day view.
+    DayView = 0,
+    //
+    // 적요:
+    //     Work week view.
+    WorkWeekView = 1,
+    //
+    // 적요:
+    //     Week view.
+    WeekView = 2,
+    //
+    // 적요:
+    //     Month view.
+    MonthView = 3,
+    //
+    // 적요:
+    //     Time Line view.
+    TimeLineView = 4,
+}
 ```
 
 VeiwType을 사용하여 다른 열거 형 값을 설정하면 다른 뷰 효과를 얻을 수 있습니다.

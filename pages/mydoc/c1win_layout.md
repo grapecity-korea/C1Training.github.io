@@ -81,41 +81,41 @@ TileControl.Groups.Add를 통해 TileControl을 위한 각각 다른 그룹을 �
 
 ```csharp
 Group GetDriveGroup(DriveType driveType)
+{
+    string groupName = driveType.ToString();
+    foreach (Group group in itemTiles.Groups)
+    {
+        if (group.Name == groupName)
         {
-            string groupName = driveType.ToString();
-            foreach (Group group in itemTiles.Groups)
-            {
-                if (group.Name == groupName)
-                {
-                    return group;
-                }
-            }
-            Group newGroup = new Group();
-            switch (driveType)
-            {
-                case DriveType.CDRom:
-                    newGroup.Text = "CD/DVD";
-                    break;
-                case DriveType.Fixed:
-                    newGroup.Text = " 로컬 드라이브 ";
-                    break;
-                case DriveType.Network:
-                    newGroup.Text = " 네트워크 드라이브 ";
-                    break;
-                case DriveType.Ram:
-                    newGroup.Text = " 램 디스크 ";
-                    break;
-                case DriveType.Removable:
-                    newGroup.Text = " 삭제된 드라이브 ";
-                    break;
-                default:
-                    newGroup.Text = " Misc ";
-                    break;
-            }
-            itemTiles.Groups.Add(newGroup);
-            newGroup.Name = groupName;
-            return newGroup;
+            return group;
         }
+    }
+    Group newGroup = new Group();
+    switch (driveType)
+    {
+        case DriveType.CDRom:
+            newGroup.Text = "CD/DVD";
+            break;
+        case DriveType.Fixed:
+            newGroup.Text = " 로컬 드라이브 ";
+            break;
+        case DriveType.Network:
+            newGroup.Text = " 네트워크 드라이브 ";
+            break;
+        case DriveType.Ram:
+            newGroup.Text = " 램 디스크 ";
+            break;
+        case DriveType.Removable:
+            newGroup.Text = " 삭제된 드라이브 ";
+            break;
+        default:
+            newGroup.Text = " Misc ";
+            break;
+    }
+    itemTiles.Groups.Add(newGroup);
+    newGroup.Name = groupName;
+    return newGroup;
+}
 ```
 
 ### 2. 패치 만들기
@@ -123,27 +123,27 @@ Group GetDriveGroup(DriveType driveType)
 첫 번째 방법에서 TileControl은 이미 그룹 나누기에 추가되었습니다. 여기에서 패치 만들기를 통해 각기 다른 Tile 패치를 상응하는 그룹에 넣어야 합니다. 수직이나 수평으로 중첩되도록 선택할 수 있습니다. 그리고 Tile.Image 속성을 통해 그림을 추가합니다. 구체적인 코드는 다음과 같습니다. :
 
 ```csharp
-    DriveType dt = drive.DriveType;
-    Group group = GetDriveGroup(dt);
+DriveType dt = drive.DriveType;
+Group group = GetDriveGroup(dt);
 
-    Tile tile = new Tile();
-    switch (dt)
-    {
-        case DriveType.CDRom:
-            tile.Image = Title_FileExplorer.Properties.Resources.mediaDrive;
-            break;
-        case DriveType.Fixed:
-            tile.Image = Title_FileExplorer.Properties.Resources.hardDrive;
-            break;
-        case DriveType.Network:
-            tile.Image = Title_FileExplorer.Properties.Resources.networkDrive;
-            break;
-        default:
-            tile.Image = Title_FileExplorer.Properties.Resources.otherDrive;
-            break;
-    }
-    tile.HorizontalSize = 3;
-    group.Tiles.Add(tile);
+Tile tile = new Tile();
+switch (dt)
+{
+    case DriveType.CDRom:
+        tile.Image = Title_FileExplorer.Properties.Resources.mediaDrive;
+        break;
+    case DriveType.Fixed:
+        tile.Image = Title_FileExplorer.Properties.Resources.hardDrive;
+        break;
+    case DriveType.Network:
+        tile.Image = Title_FileExplorer.Properties.Resources.networkDrive;
+        break;
+    default:
+        tile.Image = Title_FileExplorer.Properties.Resources.otherDrive;
+        break;
+}
+tile.HorizontalSize = 3;
+group.Tiles.Add(tile);
 ```
 
 ### 3. 패치 템플릿 만들기
@@ -214,21 +214,20 @@ ComboBox의 SelectedIndexChanged 이벤트를 설정은 드롭 다운 상자를 
 
 ```csharp
 private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Set theme on the theme controller:
-            this.c1ThemeController1.Theme = this.comboBox1.SelectedItem.ToString();
-            // ...and apply it to all themable controls (this will override any control-specific theme settings):
-            Action setTheme = null;
-            setTheme = (c) =>
-            {
-                if (C1.Win.C1Themes.C1ThemeController.IsObjectThemeable(c))
-                    this.c1ThemeController1.SetTheme(c, this.c1ThemeController1.Theme);
-                foreach (Control cc in c.Controls)
-                    setTheme(cc);
-            };
-            setTheme(this);
-        }
-    }
+{
+    // Set theme on the theme controller:
+    this.c1ThemeController1.Theme = this.comboBox1.SelectedItem.ToString();
+    // ...and apply it to all themable controls (this will override any control-specific theme settings):
+    Action setTheme = null;
+    setTheme = (c) =>
+    {
+        if (C1.Win.C1Themes.C1ThemeController.IsObjectThemeable(c))
+            this.c1ThemeController1.SetTheme(c, this.c1ThemeController1.Theme);
+        foreach (Control cc in c.Controls)
+            setTheme(cc);
+    };
+    setTheme(this);
+}
 ```
 
 먼저, 코드를 바탕으로 C1ThemeController에 ComboBox 드롭다운 메뉴에서 선택한 Theme를 설정해줍니다. 그리고 모든 창의 컨트롤에서 해당 Theme를 사용합니다. 실행 결과는 다음 그림과 같습니다. ComboBox의 드롭다운 메뉴에서 각각 다른 Theme를 선택하여 창의 C1FlexGrid와 C1TrueDBGrid설정할 수 있습니다.

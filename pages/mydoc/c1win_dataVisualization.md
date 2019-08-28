@@ -23,12 +23,12 @@ C1Chart를 이용해 조정 가능한 그래프를 만들 수 있습니다. 최�
 
 ```csharp
 // Enable interaction
-            c1Chart1.Interaction.Enabled = true;
-            c1Chart1.Interaction.Actions["Zoom"].Modifier = Keys.None;
-            c1Chart1.Interaction.Actions["Scale"].Modifier = Keys.Control;
-            c1Chart1.Interaction.Actions["Translate"].Modifier = Keys.Shift;
-            c1Chart1.Interaction.Actions["Rotate"].Modifier = Keys.Alt;
-            c1Chart1.Interaction.Appearance = InteractionAppearance.FillSelectionArea;
+c1Chart1.Interaction.Enabled = true;
+c1Chart1.Interaction.Actions["Zoom"].Modifier = Keys.None;
+c1Chart1.Interaction.Actions["Scale"].Modifier = Keys.Control;
+c1Chart1.Interaction.Actions["Translate"].Modifier = Keys.Shift;
+c1Chart1.Interaction.Actions["Rotate"].Modifier = Keys.Alt;
+c1Chart1.Interaction.Appearance = InteractionAppearance.FillSelectionArea;
 ```
 
 그 다음은 C1Chart의 서열을 만듭니다. 본문의 Demo에서는 네 개의 Series를 만들어 보았습니다. 각각 전도율, ph, 온도, 압력입니다. 이 네 개의 Series는 각각 색상으로 구별하여 표시합니다. 구체적인 코드는 다음과 같습니다. :
@@ -37,41 +37,41 @@ C1Chart를 이용해 조정 가능한 그래프를 만들 수 있습니다. 최�
 
 ```csharp
 // Create chart series
-            c1Chart1.ChartGroups[0].ChartData.SeriesList.Clear();
-            cdsTemp = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
-            cdsPress = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
-            cdsCond = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
-            cdsPh = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+c1Chart1.ChartGroups[0].ChartData.SeriesList.Clear();
+cdsTemp = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+cdsPress = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+cdsCond = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+cdsPh = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
 
-            cdsTemp.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsTemp.LineStyle.Color = Color.FromArgb(150, 32, 132);
-            cdsTemp.LineStyle.Thickness = 2;
-            cdsPress.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsPress.LineStyle.Color = Color.FromArgb(42, 2, 153);
-            cdsPress.LineStyle.Thickness = 2;
-            cdsCond.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsCond.LineStyle.Color = Color.FromArgb(0, 114, 160);
-            cdsCond.LineStyle.Thickness = 2;
-            cdsPh.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsPh.LineStyle.Color = Color.FromArgb(100, 126, 52);
-            cdsPh.LineStyle.Thickness = 2;
+cdsTemp.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsTemp.LineStyle.Color = Color.FromArgb(150, 32, 132);
+cdsTemp.LineStyle.Thickness = 2;
+cdsPress.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsPress.LineStyle.Color = Color.FromArgb(42, 2, 153);
+cdsPress.LineStyle.Thickness = 2;
+cdsCond.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsCond.LineStyle.Color = Color.FromArgb(0, 114, 160);
+cdsCond.LineStyle.Thickness = 2;
+cdsPh.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsPh.LineStyle.Color = Color.FromArgb(100, 126, 52);
+cdsPh.LineStyle.Thickness = 2;
 ```
 
 마지막으로 C1Chart의 축과 스크롤 바를 만듭니다. 구체적인 코드는 다음과 같습니다. :
 
 ```csharp
 // Setup chart axes and scrollbar
-            c1Chart1.ChartArea.AxisX.ScrollBar.Scale = 0.1;
-            c1Chart1.ChartArea.AxisY.ScrollBar.Scale = 1.0;
-            c1Chart1.ChartArea.AxisX.ScrollBar.Alignment = StringAlignment.Near;
-            c1Chart1.ChartArea.AxisY.ScrollBar.Alignment = StringAlignment.Near;
-            c1Chart1.ChartArea.AxisX.ScrollBar.Appearance = ScrollBarAppearanceEnum.XP;
-            c1Chart1.ChartArea.AxisY.ScrollBar.Appearance = ScrollBarAppearanceEnum.XP;
-            c1Chart1.ChartArea.AxisX.ScrollBar.Visible = true;
-            c1Chart1.ChartArea.AxisY.ScrollBar.Visible = true;
-            c1Chart1.ChartArea.AxisY.ScrollBar.Max = 80;
-            c1Chart1.ChartArea.AxisY.ScrollBar.Min = 20;
-            c1Chart1.ChartArea.AxisX.ScrollBar.AxisScroll += new AxisScrollEventHandler(ScrollBar_AxisScroll);
+c1Chart1.ChartArea.AxisX.ScrollBar.Scale = 0.1;
+c1Chart1.ChartArea.AxisY.ScrollBar.Scale = 1.0;
+c1Chart1.ChartArea.AxisX.ScrollBar.Alignment = StringAlignment.Near;
+c1Chart1.ChartArea.AxisY.ScrollBar.Alignment = StringAlignment.Near;
+c1Chart1.ChartArea.AxisX.ScrollBar.Appearance = ScrollBarAppearanceEnum.XP;
+c1Chart1.ChartArea.AxisY.ScrollBar.Appearance = ScrollBarAppearanceEnum.XP;
+c1Chart1.ChartArea.AxisX.ScrollBar.Visible = true;
+c1Chart1.ChartArea.AxisY.ScrollBar.Visible = true;
+c1Chart1.ChartArea.AxisY.ScrollBar.Max = 80;
+c1Chart1.ChartArea.AxisY.ScrollBar.Min = 20;
+c1Chart1.ChartArea.AxisX.ScrollBar.AxisScroll += new AxisScrollEventHandler(ScrollBar_AxisScroll);
 ```
 
 ### 2. 초기화C1Chart，데이터 로딩
@@ -145,31 +145,31 @@ C1Chart그래프유형 설정: 금융그래프는 일반적으로 캔들 차트�
 ```csharp
 ResetChart();
 //금융그래프 설정은 캔들 차트 구성입니다.
-	if (radChartGroups.Checked)
-            {
-                ChartGroup g = c1Chart1.ChartGroups.Group0;
-                g.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.Candle;
-                g.ChartData.SeriesList[0].LineStyle.Thickness = 2;
-                c1Chart1.ChartGroups.Group1.Visible = true;
-                c1Chart1.ChartArea.AxisY2.Visible = true;
-            }
+if (radChartGroups.Checked)
+{
+    ChartGroup g = c1Chart1.ChartGroups.Group0;
+    g.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.Candle;
+    g.ChartData.SeriesList[0].LineStyle.Thickness = 2;
+    c1Chart1.ChartGroups.Group1.Visible = true;
+    c1Chart1.ChartArea.AxisY2.Visible = true;
+}
 //금융그래프 설정은 HiLo스위치입니다.
-	else if (radHiLoOpenClose.Checked)
-            {
-                c1Chart1.ChartGroups.Group0.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.HiLoOpenClose;
-            }
+else if (radHiLoOpenClose.Checked)
+{
+    c1Chart1.ChartGroups.Group0.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.HiLoOpenClose;
+}
 //금융그래프 설정은 캔들 차트입니다.
-	else if (radCandle.Checked)
-            {
-                ChartGroup g = c1Chart1.ChartGroups.Group0;
-                g.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.Candle;
-                g.ChartData.SeriesList[0].LineStyle.Thickness = 2;
-            }
+else if (radCandle.Checked)
+{
+    ChartGroup g = c1Chart1.ChartGroups.Group0;
+    g.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.Candle;
+    g.ChartData.SeriesList[0].LineStyle.Thickness = 2;
+}
 //금융그래프 설정은 HiLo입니다.
-	else
-            {
-                c1Chart1.ChartGroups.Group0.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.HiLo;
-            }
+else
+{
+    c1Chart1.ChartGroups.Group0.ChartType = C1.Win.C1Chart.Chart2DTypeEnum.HiLo;
+}
 ```
 
 그 다음은 C1Chart의 서열을 만듭니다. 본문의 Demo에서는 네 개의 Series를 만들어 보았습니다. 각각 전도율, ph, 온도, 압력입니다. 이 네 개의 Series는 각각 색상으로 구별하여 표시합니다. 구체적인 코드는 다음과 같습니다. :
@@ -178,24 +178,24 @@ ResetChart();
 
 ```csharp
 // Create chart series
-            c1Chart1.ChartGroups[0].ChartData.SeriesList.Clear();
-            cdsTemp = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
-            cdsPress = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
-            cdsCond = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
-            cdsPh = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+c1Chart1.ChartGroups[0].ChartData.SeriesList.Clear();
+cdsTemp = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+cdsPress = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+cdsCond = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
+cdsPh = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
 
-            cdsTemp.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsTemp.LineStyle.Color = Color.FromArgb(150, 32, 132);
-            cdsTemp.LineStyle.Thickness = 2;
-            cdsPress.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsPress.LineStyle.Color = Color.FromArgb(42, 2, 153);
-            cdsPress.LineStyle.Thickness = 2;
-            cdsCond.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsCond.LineStyle.Color = Color.FromArgb(0, 114, 160);
-            cdsCond.LineStyle.Thickness = 2;
-            cdsPh.SymbolStyle.Shape = SymbolShapeEnum.None;
-            cdsPh.LineStyle.Color = Color.FromArgb(100, 126, 52);
-            cdsPh.LineStyle.Thickness = 2;
+cdsTemp.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsTemp.LineStyle.Color = Color.FromArgb(150, 32, 132);
+cdsTemp.LineStyle.Thickness = 2;
+cdsPress.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsPress.LineStyle.Color = Color.FromArgb(42, 2, 153);
+cdsPress.LineStyle.Thickness = 2;
+cdsCond.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsCond.LineStyle.Color = Color.FromArgb(0, 114, 160);
+cdsCond.LineStyle.Thickness = 2;
+cdsPh.SymbolStyle.Shape = SymbolShapeEnum.None;
+cdsPh.LineStyle.Color = Color.FromArgb(100, 126, 52);
+cdsPh.LineStyle.Thickness = 2;
 ```
 
 ### 수학통계
@@ -216,80 +216,80 @@ C1Chart의Histogram만들기：  ChartHistogram을 사용하여 대상의 Displa
 
 ```csharp
 //create a Histogram in the second chart group using the scatter data
-            //and the distance from the marker intersection as data for the histogram.
-            ChartGroup cg = c1Chart1.ChartGroups[1];
+//and the distance from the marker intersection as data for the histogram.
+ChartGroup cg = c1Chart1.ChartGroups[1];
 
-            //start by adding a Normal (Gaussian) distribution curve.  This is available
-            //as a convenient reference to compare the histogram shape.
-            NormalCurve nc = cg.Histogram.NormalDisplay;
-            nc.FillStyle.Alpha = 64;
-            nc.FillStyle.Color1 = Color.Yellow;
-            nc.Visible = c1Chart1.ChartGroups[1].Histogram.NormalDisplay.Visible;
+//start by adding a Normal (Gaussian) distribution curve.  This is available
+//as a convenient reference to compare the histogram shape.
+NormalCurve nc = cg.Histogram.NormalDisplay;
+nc.FillStyle.Alpha = 64;
+nc.FillStyle.Color1 = Color.Yellow;
+nc.Visible = c1Chart1.ChartGroups[1].Histogram.NormalDisplay.Visible;
 
-            cg.ChartType = Chart2DTypeEnum.Histogram;
+cg.ChartType = Chart2DTypeEnum.Histogram;
 
-            ChartDataSeries cds = cg.ChartData.SeriesList.AddNewSeries();
-            cds.FitType = FitTypeEnum.Spline;
-            cds.FillStyle.Alpha = 64;
-            cds.FillStyle.Color1 = Color.Blue;
+ChartDataSeries cds = cg.ChartData.SeriesList.AddNewSeries();
+cds.FitType = FitTypeEnum.Spline;
+cds.FillStyle.Alpha = 64;
+cds.FillStyle.Color1 = Color.Blue;
 
-            cds.Histogram.IntervalCreationMethod = IntervalMethodEnum.SemiAutomatic;
-            cds.Histogram.DisplayType = DisplayTypeEnum.Histogram;
-            cds.Histogram.IntervalStart = 0;
-            cds.Histogram.IntervalWidth = 10;
-            cds.Histogram.IntervalNumber = 10;
+cds.Histogram.IntervalCreationMethod = IntervalMethodEnum.SemiAutomatic;
+cds.Histogram.DisplayType = DisplayTypeEnum.Histogram;
+cds.Histogram.IntervalStart = 0;
+cds.Histogram.IntervalWidth = 10;
+cds.Histogram.IntervalNumber = 10;
 
-            C1.Win.C1Chart.Label lab = c1Chart1.ChartLabels.LabelsCollection.AddNewLabel();
-            lab.AttachMethod = AttachMethodEnum.DataCoordinate;
-            lab.AttachMethodData.X = 100;
-            lab.AttachMethodData.Y = 0;
-            lab.AttachMethodData.GroupIndex = 0;
-            lab.Offset = 50;
-            lab.Name = "overflow";
-            lab.Text = "";
-            lab.Compass = LabelCompassEnum.South;
-            lab.Visible = true;
+C1.Win.C1Chart.Label lab = c1Chart1.ChartLabels.LabelsCollection.AddNewLabel();
+lab.AttachMethod = AttachMethodEnum.DataCoordinate;
+lab.AttachMethodData.X = 100;
+lab.AttachMethodData.Y = 0;
+lab.AttachMethodData.GroupIndex = 0;
+lab.Offset = 50;
+lab.Name = "overflow";
+lab.Text = "";
+lab.Compass = LabelCompassEnum.South;
+lab.Visible = true;
 ```
 
 Histogram데이터 기입：  Demo에서는 기입한 Histogram 데이터 탭에 따릅니다.
 
 ```csharp
-		//get the Target Coordinates
-                double xtarget = carea.AxisX.ValueLabels[0].NumericValue;
-                double ytarget = carea.AxisY.ValueLabels[0].NumericValue;
+//get the Target Coordinates
+double xtarget = carea.AxisX.ValueLabels[0].NumericValue;
+double ytarget = carea.AxisY.ValueLabels[0].NumericValue;
 
-                //get the data point coordinates from the chart.
-                ChartDataSeries cds = c1Chart1.ChartGroups[0].ChartData.SeriesList[0];
-                PointF[] cdata = (PointF[])cds.PointData.CopyDataOut();
+//get the data point coordinates from the chart.
+ChartDataSeries cds = c1Chart1.ChartGroups[0].ChartData.SeriesList[0];
+PointF[] cdata = (PointF[])cds.PointData.CopyDataOut();
 
-                //find the distance from each scatter point to the target point.
-                int n = cdata.Length;
-                double[] distances = (double[])Array.CreateInstance(typeof(double), n);
-                for (int i = 0; i < n; i++)
-                {
-                    double dx = cdata[i].X - xtarget;
-                    double dy = cdata[i].Y - ytarget;
-                    distances[i] = Math.Sqrt(dx * dx + dy * dy);
-                }
+//find the distance from each scatter point to the target point.
+int n = cdata.Length;
+double[] distances = (double[])Array.CreateInstance(typeof(double), n);
+for (int i = 0; i < n; i++)
+{
+    double dx = cdata[i].X - xtarget;
+    double dy = cdata[i].Y - ytarget;
+    distances[i] = Math.Sqrt(dx * dx + dy * dy);
+}
 
-                //add the data to the Histogram chart series in ChartGroup(1).
-                cds = c1Chart1.ChartGroups[1].ChartData.SeriesList[0];
-                cds.Y.CopyDataIn(distances);
+//add the data to the Histogram chart series in ChartGroup(1).
+cds = c1Chart1.ChartGroups[1].ChartData.SeriesList[0];
+cds.Y.CopyDataIn(distances);
 
-                //report the statistics of the distance data.
-                lblStats.Text = "거리통계: " +
-                    "  평균치: " + cds.Y.Statistics.Mean.ToString("0.000") +
-                    "  중위수: " + cds.Y.Statistics.Median.ToString("0.000") +
-                    "  표준편차: " + cds.Y.Statistics.StdDev.ToString("0.000");
+//report the statistics of the distance data.
+lblStats.Text = "거리통계: " +
+    "  평균치: " + cds.Y.Statistics.Mean.ToString("0.000") +
+    "  중위수: " + cds.Y.Statistics.Median.ToString("0.000") +
+    "  표준편차: " + cds.Y.Statistics.StdDev.ToString("0.000");
 
-                //set the overflow label.
-                int overflow = (int)cds.Histogram.AboveIntervalCount;
-                string msg = "";
-                if (overflow > 0)
-                {
-			msg = "수량 > " + carea.AxisX.Max.ToString() + " = " + overflow.ToString();
-                }
-                c1Chart1.ChartLabels["overflow"].Text = msg;
+//set the overflow label.
+int overflow = (int)cds.Histogram.AboveIntervalCount;
+string msg = "";
+if (overflow > 0)
+{
+    msg = "수량 > " + carea.AxisX.Max.ToString() + " = " + overflow.ToString();
+}
+c1Chart1.ChartLabels["overflow"].Text = msg;
 ```
 
 여기까지 본문에서 금융 그래프와 수리통계 그래프를 설명했습니다. 이 그래프들은 사용자로 하여금 직관적으로 필요한 분야의 데이터 분석하여 신속하게 결정하도록 도와줍니다. 본문의 후반부에서는 등고선과 등고 구역 그래프 작성에 대해 설명하겠습니다.
@@ -377,10 +377,10 @@ C1Chart3D의 줌 조정 :  Chart3D의 Scal을 통해 줌 비율을 조정합니�
   
 
 ```csharp
-	//Adjust zoom level
-    c1Chart3D1.ChartArea.View.ViewportScale = 1.4f;
-    c1Chart3D1.ChartArea.View.ViewportHorizontalShift = .15f;
-    c1Chart3D1.ChartArea.View.ViewportVerticalShift = -.17f;
+//Adjust zoom level
+c1Chart3D1.ChartArea.View.ViewportScale = 1.4f;
+c1Chart3D1.ChartArea.View.ViewportHorizontalShift = .15f;
+c1Chart3D1.ChartArea.View.ViewportVerticalShift = -.17f;
 ```
 
 C1Chart3D등고선의 조정：  설정을 통해 C1Chart3D는 마우스 회전, 리프팅, 이동 및 보관을 실현할 수 있습니다. Demo에서는 마우스로 드래그하거나 TrackBar를 조정하여 회전할 수 있습니다. 코드는 아래와 같습니다. :
@@ -389,15 +389,15 @@ C1Chart3D등고선의 조정：  설정을 통해 C1Chart3D는 마우스 회전,
 private System.Windows.Forms.TrackBar trkYAxis; 
 private void trkXAxis_Scroll(object sender, EventArgs e) 
 { 
-c1Chart3D1.ChartArea.View.RotationX = trkXAxis.Value; 
+    c1Chart3D1.ChartArea.View.RotationX = trkXAxis.Value; 
 } 
 private void trkYAxis_Scroll(object sender, EventArgs e) 
 { 
-c1Chart3D1.ChartArea.View.RotationY = trkYAxis.Value; 
+    c1Chart3D1.ChartArea.View.RotationY = trkYAxis.Value; 
 } 
 private void trkZAxis_Scroll(object sender, EventArgs e) 
 { 
-c1Chart3D1.ChartArea.View.RotationZ = trkZAxis.Value; 
+    c1Chart3D1.ChartArea.View.RotationZ = trkZAxis.Value; 
 }
 ```
 
@@ -443,31 +443,31 @@ C1Gauge는 표준 .NET 데이터 바인딩 기술을 사용합니다. 즉, C1Gau
 각기 다른 지침을 각각의 데이터 필드에 바인딩하는 C1Gauge.DataBindings.Add방법은 다음과 같습니다. :
 
 ```csharp
-    // 변수:
-    //   propertyName: 바인딩할 컨트롤 속성의 명칭
-    //   dataSource: 데이터소스를 표시한 System.Object。
-    //   dataMember: 바인딩 할 속성이나 리스트.
-    //   formattingEnabled: 양식화로 데이터를 표시하는 경우라면 true；아니라면 false。
-    //   updateMode: System.Windows.Forms.DataSourceUpdateMode 값 중 하나。
-    //   nullValue: 데이터 소스 값이 System.DBNull 일 때, 바인딩에 사용되는 컨트롤 속성인System.Object。
-    //   formatString: 하나 또는 여러 개 양식 설명부호가 표시 값을 어떻게 표시하는가
-    //   formatInfo: 감춘 양식설정을 다시 기입하는 System.IFormatProvider 의 실현.
-    //   binding: 추가할 System.Windows.Forms.Binding。
+// 변수:
+//   propertyName: 바인딩할 컨트롤 속성의 명칭
+//   dataSource: 데이터소스를 표시한 System.Object。
+//   dataMember: 바인딩 할 속성이나 리스트.
+//   formattingEnabled: 양식화로 데이터를 표시하는 경우라면 true；아니라면 false。
+//   updateMode: System.Windows.Forms.DataSourceUpdateMode 값 중 하나。
+//   nullValue: 데이터 소스 값이 System.DBNull 일 때, 바인딩에 사용되는 컨트롤 속성인System.Object。
+//   formatString: 하나 또는 여러 개 양식 설명부호가 표시 값을 어떻게 표시하는가
+//   formatInfo: 감춘 양식설정을 다시 기입하는 System.IFormatProvider 의 실현.
+//   binding: 추가할 System.Windows.Forms.Binding。
 
-    // 적요: 지정한 System.Windows.Forms.Binding 을 집합에 추가합니다.
-    public void Add(Binding binding);
+// 적요: 지정한 System.Windows.Forms.Binding 을 집합에 추가합니다.
+public void Add(Binding binding);
 
-    public Binding Add(string propertyName, object dataSource, string dataMember);
+public Binding Add(string propertyName, object dataSource, string dataMember);
 
-    public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled);
+public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled);
+
+public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode);
     
-    public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode);
-        
-	public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue);
-        
-	public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue, string formatString);
-        
-	public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue, string formatString, IFormatProvider formatInfo);
+public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue);
+    
+public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue, string formatString);
+    
+public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue, string formatString, IFormatProvider formatInfo);
 ```
 
 ### 3. 게이지 속성 설정
