@@ -10,8 +10,7 @@ folder: mydoc
 
 
 **1. 아래의 링크를 통해 제품을 다운로드 받거나 또는 구매 시 메일로 전달 받은 링크를 통해 제품을 다운 받습니다.**  
-
-    다운로드 :[https://www.grapecity.co.kr/download/componentone-studio](http://www.grapecity.co.kr/download/componentone-studio)
+    다운로드 :<https://www.grapecity.co.kr/download/componentone-studio>
     ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-1.png)
 
   

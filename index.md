@@ -13,4 +13,4 @@ permalink: index.html
 
 > - **기술문의:** <support-kor@grapecity.com>
 > - **구매문의:** <sales-kor@grapecity.com>
-> - **전화번호:** <1670-0583>
+> - **전화번호:** 1670-0583
