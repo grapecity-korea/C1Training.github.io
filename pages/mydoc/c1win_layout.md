@@ -45,6 +45,8 @@ this.c1CommandDock1.Controls.Add(this.c1ToolBar_File);
 
 ### 3. C1CommandHolder 만들기
 
+[C1 CommandHolder 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1ContextMenuToolbarOverview.zip)
+
 C1CommandHolder 컨트롤을 창에 드래그합니다. 해당 컨트롤은 메뉴와 툴바의 모든 명령을 단일한 집합으로 저장할 수 있습니다. 모든 명령은 C1CommandHolder의 Click 이벤트를 시작시킬 수 있습니다. 또한 여러 개의 메뉴와 툴 바 사이에 공유명령을 허용합니다. MainMenu, Toolbar 등의 컨트롤을 추가 할 때, C1CommandHolder 모듈로 자동 관리하고 진행할 수 있습니다.  
 C1CommandHolder에 Click 이벤트를 걸고 상응하는 명령을 클릭하면 Click이벤트가 일어납니다. 코드는 다음의 표시와 같습니다. :
 
@@ -64,10 +66,12 @@ private void c1CommandHolder1_CommandClick(object sender, CommandClickEventArgs 
 
 아래 링크를 통해 좀 더 자세한 사항을 확인해보실 수 있습니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1ContextMenuToolbarOverview.zip)
+[C1 CommandHolder 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1ContextMenuToolbarOverview.zip)
 
 
 ## C1TileControl로 Window10스타일 시뮬레이션의 문서파일브라우징 응용
+
+[C1 Tile 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1TileControl.zip)
 
 Window 10 양식의 시뮬레이션 레이아웃을 사용할 때, C1TileControl은 여러 가지 옵션을 제공하고 선택한 내용에 따라 대응형 인터페이스 배열을 완성합니다. 이렇게 하면 그룹에 따라 아이콘을 자동적으로 바둑판 배열을 하고 임의의 크기로 설정할 수 있습니다. 또한 인터페이스를 일시 정지, 중첩 또는 내포를 할 수도 있고 텍스트 요소 및 애니메이션도 설정 가능합니다.
 
@@ -168,10 +172,12 @@ tile.Template = tempFolder;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1TileControl.zip)
+[C1 Tile 컨트롤 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1TileControl.zip)
 
 
 ## C1Themes를 WinForms 응용프로그램에 추가하기
+
+[C1 테마 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Theme1.zip)
 
 본문은 C1Themes를 기존의 WinForms 응용프로그램에 어떻게 추가하는지 소개합니다. C1Themes는 전문적으로 설계된 테마가 25종 이상 내장되어 있습니다. 또한 사용자가 테마를 정의하여 응용 프로그램에 적용할 수도 있습니다. 본문은 주로 C1FlexGrid와 C1TrueDBGrid의 테마 설정을 소개합니다. 다음 방법에 따라 ComponentOne Studio for WinForms의 C1Report, C1Ribbon 및 기타 컨트롤에 C1Themes를 추가할 수 있습니다.
 
@@ -238,4 +244,4 @@ private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Theme1.zip)
+[C1 테마 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Theme1.zip)

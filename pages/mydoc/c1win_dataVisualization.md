@@ -74,13 +74,15 @@ c1Chart1.ChartArea.AxisY.ScrollBar.Min = 20;
 c1Chart1.ChartArea.AxisX.ScrollBar.AxisScroll += new AxisScrollEventHandler(ScrollBar_AxisScroll);
 ```
 
-### 2. 초기화C1Chart，데이터 로딩
+### 2. 초기화 C1Chart，데이터 로딩
 
 본문에 첨부된 Demo에서 C1XLBook의 Load방법을 통해 excel파일에 데이터를 로딩합니다. excel파일은 C1에 필요한 네 개의 Series (전도율, ph, 온도, 압력)의 데이터를 포함합니다. 또한 이 네 개의 Series는 실행 시 활동적으로 증가하거나 감소합니다. 즉, 사용자가 어떤 Series를 표시하는 그래프를 선택할 수 있습니다. 구체적인 것은 첨부한 Demo의 코드를 참조하실 수 있습니다.
 
   
 
 ### 3. C1Chart조정
+
+[C1 Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart_InteractionDemo.zip)
 
 사용자가 간단하게 C1의 조정 기능을 실현할 수 있습니다. (반전, 눈금, 역방향과 줌)  
 줌: 빅 데이터나 실시간 데이터의 경우 종종 그래프로 표시할 필요가 있습니다. 끊임 없이 업데이트되는 데이터를 추가하고 스크롤이나 줌을 통해 일부 또는 일시적인 경향에 대한 정보를 얻을 수 있습니다.  
@@ -116,10 +118,12 @@ c1Chart1.ChartArea.AxisX.Reversed = chkAxisXReversed.Checked;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart_InteractionDemo.zip)
+[C1 Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart_InteractionDemo.zip)
 
 
 ## C1Chart：업종 데이터 분석（상）
+
+[C1 Financial Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart-Finacial.zip)
 
 ComponentOne Chart for WinForms는 80여종의 2D와 3D 그래프유형을 포함합니다. 코드의 그래프설계장치 없이 유연하게 그래프요소를 확정할 수 있습니다. 최종 사용자가 조정 가능한 최상의 시각효과와 우수한 마우스 추적 능력 등을 갖추고 있습니다.
 
@@ -298,10 +302,12 @@ c1Chart1.ChartLabels["overflow"].Text = msg;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart-Finacial.zip)
+[C1 Financial Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart-Finacial.zip)
 
 
 ## C1Chart：업종 데이터 분석（하）
+
+[C1 3D Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart2.zip)
 
 상편에서 우리는 금융그래프와 데이터 통계를 포함하는 C1Chart의 그래프를 설명했습니다. 본문 하편에서는 주로 업종데이터분석의 등고선과 등고 지역을 설명합니다.
 
@@ -411,7 +417,7 @@ private void trkZAxis_Scroll(object sender, EventArgs e)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart2.zip)
+[C1 3D Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart2.zip)
 
 
 ## C1 Gauge：데이터 바인딩을 통한 날씨 표시
@@ -480,6 +486,8 @@ C1Gauge컨트롤의 아무 곳이나 더블 클릭하거나 한 번 클릭하면
 
 ### 4. 바인딩 내용을 게이지 날씨 데이터로 전환
 
+[C1 날씨 게이지 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Gauge-Weather.zip)
+
 본문의 Demo 게이지가 표시하는 날씨는 바인딩 한 날씨 데이터를 전환해야 합니다. 예를 들어 맑은 날, 비 오는 날 등 적합한 수치로 전환합니다. 코드는 다음을 참고해 주시기 바랍니다.
 
 ```csharp
@@ -522,4 +530,4 @@ Demo를 실행하면 아래 그림과 같은 날씨게이지를 확인할 있습
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Gauge-Weather.zip)
+[C1 날씨 게이지 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Gauge-Weather.zip)

@@ -11,6 +11,8 @@ folder: mydoc
 
 ## C1Report：NorthWind데이터베이스를 사용하여 데이터를 표시
 
+[C1 리포트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Report.zip)
+
 C1Report는 XML, Access, SQL Server, Oracle등을 포함하여 각종 데이터 소스 유형을 지원합니다. 이 밖에 Visual Studio .NET 데이터를 대상으로 IList, IList 및 IEnumerable 포트를 실현하기만 하면 C1Report가 지원됩니다.
 
 본문은 C1Report가 바인딩한 데이터 소스를 시연합니다. NorthWind 데이터 베이스는 자주 볼 수 있는 보고서 양식을 표시하고 프린트합니다.
@@ -75,10 +77,12 @@ c1PrintPreviewControl1.Document = c1Report1.Document;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Report.zip)
+[C1 리포트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Report.zip)
 
 
 ## C1을 사용한 응용프로그램과 Excel소프트웨어의 호환 방법
+
+[C1 Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart_InteractionDemo.zip)
 
 본문에서는 C1을 사용하여 Excel소프트웨어와 호환하는 방법을 소개합니다.
 
@@ -161,10 +165,12 @@ public void Save(string fileName, FileFormat format);
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart_InteractionDemo.zip)
+[C1 Chart 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Chart_InteractionDemo.zip)
 
 
-## C1PDF컨트롤로 응용프로그램에서AcroForm의PDF파일 만들기와 지원
+## C1 PDF 컨트롤로 응용프로그램에서 AcroForm의 PDF 파일 만들기와 지원
+
+[C1 PDF 문서 저장 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/PdfAcroform.zip)
 
 본문에서는 어떻게 C1PDF컨트롤을 사용하는지 소개합니다. 응용 프로그램에서 AcroForm의 PDF파일을 만들고 지원합니다.
 
@@ -330,10 +336,12 @@ internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/PdfAcroform.zip)
+[C1 PDF 문서 저장 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/PdfAcroform.zip)
 
 
 ## C1FlashCanvas을 사용하여 Flash단일 프레임 화면 또는 배경작성
+
+[C1 Flash Canvas 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Canvas_Bubbles.zip)
 
 본문은 C1FlashCanvas 컨트롤이 Flash 단일 프레임 화면이나 배경을 어떻게 작성하는지 소개합니다. C1FlashCanvas는 .NET 도형 유형과 비슷한 모듈입니다. .NET Graphics 유형과 완전히 동일한 도형 작성방법과 속성을 포함합니다.
 
@@ -428,10 +436,12 @@ Fill 함수로 다음과 같이 도형을 그립니다. :
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Canvas_Bubbles.zip)
+[C1 Flash Canvas 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/Canvas_Bubbles.zip)
 
 
 ## C1Zip：표준Zip파일 처리
+
+[C1 Zip 파일 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/ZipFileDemo.zip)
 
 본문은 표준 Zip파일 만들기, 열기, 편집을 포함하는 C1Zip의 C1ZipFile유형을 사용하여 Zip 파일을 어떻게 처리하는지 소개합니다. 또한 Zip파일 속의 항목, 추가, 삭제, 압축 해제 또는 조사한 파일을 열거할 수 있습니다. 모든 폴더를 압축하고 비밀번호를 사용하여 보호 / 암호화 합니다.
 
@@ -531,4 +541,4 @@ public enum CompressionLevelEnum
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/ZipFileDemo.zip)
+[C1 Zip 파일 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/ZipFileDemo.zip)

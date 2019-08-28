@@ -78,7 +78,7 @@ public class CheckListEditor : UITypeEditor
 
   
 
-### 2. 수동추가FlexGrid 의 열 및 데이터유형
+### 2. 수동추가 FlexGrid 의 열 및 데이터유형
 
 본편에서의 FlexGrid는 논 바인딩 모드입니다. 수동으로 열과 데이터를 추가해야 합니다.  
 먼저 FlexGrid.Cols.Count를 통해 FlexGrid의 열의 개수를 설정합니다. Demo에는 13개가 있습니다.  
@@ -116,7 +116,9 @@ cs.Font = new Font(c1FlexGrid1.Font, FontStyle.Underline);
 cs.ForeColor = Color.Purple;
 ```
 
-### 3. 수동추가FlexGrid의 유닛 셀 데이터
+### 3. 수동추가 FlexGrid의 유닛 셀 데이터
+
+[FlexGrid 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/FlexGrid_ColumnCellTypeDemo.zip)
 
 이미 추가된 열을 바탕으로 이제 FlexGrid에 데이터를 채워주어야 합니다.  
 먼저, FlexGrid.Rows.Count를 통해 행의 개수를 설정합니다. Demo에는 21개가 있습니다.  
@@ -168,7 +170,7 @@ c1FlexGrid1[20, _hyperlinkCol] = new FlexHyperlink("아메리카합중국 - 위�
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/FlexGrid_ColumnCellTypeDemo.zip)
+[FlexGrid 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/FlexGrid_ColumnCellTypeDemo.zip)
 
 
 
@@ -182,7 +184,7 @@ FlexGrid는 최초 필터링, 순서배열, 그룹 나누기 및 통합 등의 �
 
   
 
-### 1. FlexGrid자체정의필터
+### 1. FlexGrid 자체 정의 필터
 
 FlexGrid는 자체정의 필터로 전문적인 수치를 처리할 수 있습니다. 이 기능은 예를 들어 자체정의 필터의 필터링 색상, 지리 또는 자체정의 데이터 유형 방면 등에 추천합니다.  
 자체정의 필터를 만들려면 반드시 두 가지 유형을 만들어야 합니다. ：
@@ -211,7 +213,7 @@ FlexGrid는 자체정의 필터로 전문적인 수치를 처리할 수 있습�
 
   
 
-### 2. 데이터 소스 초기화 및 FlexGrid필터 설정
+### 2. 데이터 소스 초기화 및 FlexGrid 필터 설정
 
 먼저 DataTable데이터 소스를 설정합니다. 5개 열에 데이터를 추가합니다. 그 다음 FlexGrid의 DataSource를 통해 데이터 소스를 바인딩합니다. 다시 OwnerDrawCell이벤트를 통해 Cell을 그립니다. 마지막으로 FlexGrid의Column Filter에 상기 자체정의 필터를 설정해줍니다. 구체적인 코드는 다음과 같습니다. ：
 
@@ -263,7 +265,7 @@ public CustomFiltering()
 }
 ```
 
-### 3. FlexGrid의 Cell다시 그리기
+### 3. FlexGrid의 Cell 다시 그리기
 
 FlexGrid의 OwnerDrawCell이벤트를 이용하여 Cell을 다시 작성합니다. 코드는 다음과 같습니다. ：
 
@@ -302,7 +304,9 @@ void _flex_OwnerDrawCell(object sender, C1.Win.C1FlexGrid.OwnerDrawCellEventArgs
 
   
 
-### 5. FlexGrid프린트
+### 5. FlexGrid 프린트
+
+[FlexGrid 프린트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/CustomFilterDemo.zip)
 
 FlexGrid는 표 양식 컨트롤일 뿐만 아니라 사용자를 위해 보고서 기능도 제공하고 있습니다. 프린트 기능을 통해 데이터 분석결과를 프린트로 생성합니다. 이 때, FlexGrid.PrintGrid기능을 이용하면 쉽게 프린트 할 수 있습니다.
 
@@ -322,10 +326,10 @@ this._flex.PrintGrid("CustomFilter", C1.Win.C1FlexGrid.PrintGridFlags.ShowPrevie
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/CustomFilterDemo.zip)
+[FlexGrid 프린트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/CustomFilterDemo.zip)
 
 
-## C1FlexGrid고성능 빅 데이터 로딩방법
+## C1FlexGrid 고성능 빅 데이터 로딩방법
 
 C1FlexGrid을 사용하여 최종사용자를 위한 고성능 업무 데이터의 표시와 관리능력을 제공합니다. C1FlexGrid는 표 양식컨트롤 데이터 처리능력을 완벽하게 갖추고 있습니다. 바인딩 데이터 소스는 물론 논 바인딩 모드도 수지상 업무데이터 모드이며 고성능으로 데이터를 로딩할 수 있습니다. 100만행 × 10열 데이터 로딩은 0.27초면 가능합니다.
 
@@ -356,6 +360,8 @@ public class MyItem
 ```
 
 ### 2. BackgroundWorker를 통해 FlexGrid데이터 로딩
+
+[FlexGrid 데이터 로딩 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/FlexGrid_Performance.zip)
 
 BackgroundWorker는 .NET에서 사용되는 다중 스레드 미션을 수행하는 컨트롤입니다. 편집자가 다중 스레드에서 단독적으로 일련의 작업을 하는 것을 허용합니다. 해당 컨트롤은 3개의 이벤트：DoWork , ProgressChanged 및 RunWorkerCompleted가 있습니다. 프로그램에서RunWorkerAsync방법을 실행하면 DoWork이벤트가 가동되어 처리하게 됩니다. 이벤트의 처리는 이벤트 처리과정 중, ReportProgress방법을 실행하면 ProgressChanged 이벤트가 가동되어 처리하게 됩니다. DoWork이벤트 처리가 마무리 되면RunWorkerCompleted이벤트가 생성됩니다.
 
@@ -470,10 +476,12 @@ void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/FlexGrid_Performance.zip)
+[FlexGrid 데이터 로딩 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/FlexGrid_Performance.zip)
 
 
 ## C1InputPanel：데이터 폼을 빠르게 생성하는 방법
+
+[Input Panel 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1InputPanel.zip)
 
 본문에서는 C1InputPanel 컨트롤로 지정 데이터 소스에 근거하여 빠르게 데이터 폼을 생성하는 방법을 소개합니다. 완벽한 데이터 입력 스타일 폼으로 표현되며, 많은 구성 요소의 설계, 레이아웃, 외관 및 진행 관리를 할 수 있습니다.  
 데이터 폼을 생성하는 방법은 다음과 같습니다. ：
@@ -506,7 +514,7 @@ DataSource속성을 통해 해당 컨트롤이 데이터 소스를 지정하게 
 
   
 
-### 4. C1InputPanel레이아웃 미세조정
+### 4. C1InputPanel 레이아웃 미세조정
 
 C1InputPanel 레이아웃에 대한 미세조정을 할 수 있습니다.  
 InputPanel의ChildSpacing 속성을 변경하면 컨트롤 사이의 내변 거리가 조정됩니다. 이러한 컨트롤 간 거리의 증가나 감소는 컨트롤이 가지런히 배열을 유지하도록 해줍니다.  
@@ -517,10 +525,12 @@ C1InputPanel항목 집합 에디터는 아래 그림과 같습니다.
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1InputPanel.zip)
+[Input Panel 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1InputPanel.zip)
 
 
 ## C1GanttView：융합소프트웨어Project사용자 체험 Gantt 차트 만들기
+
+[Gantt 차트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1GanttView.zip)
 
 Gantt 차트를 만들어 프로젝트를 관리하는 방법은 다음과 같습니다.
 
@@ -594,10 +604,12 @@ Gantt 차트양식 설정：  실행 시, 최 상단의 막대형 양식 다이�
 
 이제 완벽한 Gantt 차트가 완성되었습니다. 본문 Demo의 소스코드는 다음과 같습니다.
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1GanttView.zip)
+[Gantt 차트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1GanttView.zip)
 
 
 ## C1Schedule：스케줄 관리용 응용프로그램 개발
+
+[C1 Schedule 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Schedule.zip)
 
 본문에서는 C1Schedule컨트롤을 어떻게 사용하는지 설명합니다. 간단한 스케줄 관리용 응용 프로그램을 개발하여 Outlook스타일로 사용자 체험 스케줄 표를 나타냅니다. 이 스케줄 관리 솔루션은 5개의 내장된 스케줄 및 정기적인 약속 관리 기능 등도 갖추고 있습니다.
 
@@ -713,7 +725,7 @@ this.c1Schedule1.ViewType = ScheduleViewEnum.TimeLineView;
 
   
 
-### 4. C1Calendar와C1Schedule동시 설정
+### 4. C1Calendar와 C1Schedule 동시 설정
 
 C1Calendar1.Schedule 속성을 설정하여 C1Calendar 및 C1Schedule 컨트롤을 함께 동기화 할 수 있습니다. 동기화 후에는 날짜를 선택하거나 지역을 선택하고 C1Schedule은 선택 항목에 따라 시간 범위 내의 모든 약속을 표시하고 지역에 대해 하루 또는 주 또는 월의 요일보기를 지정할 수 있습니다. C1Calendar 컨트롤은 사용 가능한 공간에 따라 한 번에 한 달 이상 표시 할 수 있습니다. C1Calendar의 동기화 설정된 C1Schedule코드는 다음과 같습니다. ：
 
@@ -733,10 +745,12 @@ this.c1Calendar1.Schedule = this.c1Schedule1;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Schedule.zip)
+[C1 Schedule 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/C1Schedule.zip)
 
 
 ## C1TrueDBGrid시트 컨트롤을 사용하여 서브 시트 만들기
+
+[C1 서브 시트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/TrueDBGrid-ChildGrids.zip)
 
 본문은 C1TrueDBGrid를 사용하여 빠르게 서브시트를 만드는 방법을 소개하여 사용자가 원하는 데이터와 인터페이스를 표시할 수 있도록 합니다.
 
@@ -781,5 +795,5 @@ this.c1TrueDBGrid2.ChildGrid = this.c1TrueDBGrid3;
 
   
 
-[샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/TrueDBGrid-ChildGrids.zip)
+[C1 서브 시트 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1Winforms/TrueDBGrid-ChildGrids.zip)
 
