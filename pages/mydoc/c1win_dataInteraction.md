@@ -25,7 +25,7 @@ ComponentOne WinForms 표 양식 컨트롤을 사용하는 FlexGrid는 많은 �
 
 UITypeEditorControl가 ComboBox, IServiceProvider, IWindowsFormsEditorService의 포트를 사용하는 것은 다른 데이터유형의 기초가 됩니다. 상속관계는 다음과 같습니다. :
 
-```
+```csharp
 #region ** UITypeEditorControl (base class for all of the controls below)
     /// <summary>
     /// UITypeEditorControl
@@ -53,7 +53,7 @@ UITypeEditorControl가 ComboBox, IServiceProvider, IWindowsFormsEditorService의
 
   
 
-```
+```csharp
 #region ** CheckListEditor
     //
     // CheckListEditor
@@ -86,7 +86,7 @@ c1FlexGrid1.Cols.Count = 13 ；
 그 다음 Column의DataType을 통해 각 열의 데이터유형을 설정하고 Width속성으로 열 너비를 설정합니다.  
 설정된 열의 데이터유형은 스텝1의 CheckListEditor입니다，코드는 다음을 참고합니다. ：
 
-```
+```csharp
 //Checkbox List column
             Column checkListCol = c1FlexGrid1.Cols[_checkListCol];
             CheckListEditor checkListEditor = new CheckListEditor(new string[] { "덴마크어", "네덜란드어", "영어", "핀란드어", "프랑스어", "독일어", "이탈리아어", "노르웨이어", "폴란드어", "포르투갈어", "스페인어", "스웨덴어" });
@@ -99,7 +99,7 @@ c1FlexGrid1.Cols.Count = 13 ；
 
   
 
-```
+```csharp
 //Hyperlink column
             Column hyperlinkCol = c1FlexGrid1.Cols[_hyperlinkCol];
 
@@ -127,7 +127,7 @@ c1FlexGrid1.Rows.Count = 21;
 그리고 코드를 통해 데이터를 채워나갑니다. 구체적인 코드는 본문 아래에 첨부한 Demo의LoadData방법을 참고해 주시기 바랍니다.  
 FlexGrid 자체정의 한 CheckListEditor열에 데이터를 채워줍니다. 코드는 다음과 같이 참고해 주시기 바랍니다. :
 
-```
+```csharp
 string languages = "스페인어|독일어|네덜란드어, 프랑스어, 독일어|포르투갈어|영어, 프랑스어|덴마크어|핀란드어, 스웨덴어|프랑스어|독일어|영어|이탈리아어|스페인어|핀란드어, 노르웨이어|폴란드어|포르투갈어|스페인어|스웨덴어|프랑스어, 독일어, 이탈리아어|영어|영어";            
 for (int i = 1; i < c1FlexGrid1.Rows.Count; i++)
 {           
@@ -138,7 +138,7 @@ for (int i = 1; i < c1FlexGrid1.Rows.Count; i++)
 
 FlexGrid 자체정의 한 FlexHyperlink 열에 데이터를 채워줍니다. 코드는 다음을 참고해 주시기 바랍니다. :
 
-```
+```csharp
 //Load hyperlink column
             c1FlexGrid1[1, _hyperlinkCol] = new FlexHyperlink("여행비서", "http://www.turismo.gov.ar/eng/menu.htm");
             c1FlexGrid1[2, _hyperlinkCol] = new FlexHyperlink("오스트리아 대사관", "http://www.austria.org/");
@@ -215,7 +215,7 @@ FlexGrid는 자체정의 필터로 전문적인 수치를 처리할 수 있습�
 
 먼저 DataTable데이터 소스를 설정합니다. 5개 열에 데이터를 추가합니다. 그 다음 FlexGrid의 DataSource를 통해 데이터 소스를 바인딩합니다. 다시 OwnerDrawCell이벤트를 통해 Cell을 그립니다. 마지막으로 FlexGrid의Column Filter에 상기 자체정의 필터를 설정해줍니다. 구체적인 코드는 다음과 같습니다. ：
 
-```
+```csharp
 public CustomFiltering()
         {
             InitializeComponent();
@@ -269,7 +269,7 @@ FlexGrid의 OwnerDrawCell이벤트를 이용하여 Cell을 다시 작성합니�
 
   
 
-```
+```csharp
 void _flex_OwnerDrawCell(object sender, C1.Win.C1FlexGrid.OwnerDrawCellEventArgs e)
         {
             if (_flex[e.Row, e.Col] is Color)
@@ -310,7 +310,7 @@ FlexGrid는 표 양식 컨트롤일 뿐만 아니라 사용자를 위해 보고�
 
 코드예시：
 
-```
+```csharp
 this._flex.PrintGrid("CustomFilter", C1.Win.C1FlexGrid.PrintGridFlags.ShowPreviewDialog);
 ```
 
@@ -339,7 +339,7 @@ C1FlexGrid을 사용하여 최종사용자를 위한 고성능 업무 데이터�
 
 먼저, 10열 FlexGrid 데이터소스를 정의합니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 public class MyItem
     {
         public int ID { get; set; }
@@ -367,7 +367,7 @@ Command Click에서 FlexGrid데이터 소스를 없앱니다. 행렬 값을 다�
 
   
 
-```
+```csharp
 c1Command1.Enabled = false;
 
             // clear FlexGrid
@@ -386,7 +386,7 @@ FlexGrid데이터 소스 준비：
 
 프로그램 중 RunWorkerAsync방법을 실행하면 DoWork이벤트가 가동되어 처리됩니다. 해당 이벤트에서 FlexGrid가 필요한 빅 데이터를 준비합니다. 코드는 다음과 같습니다.
 
-```
+```csharp
 for (int i = 0; i < count; i++)
 {
                     // report progress periodically
@@ -414,7 +414,7 @@ FlexGrid데이터량 동시 표시：
 
 DoWork이벤트 처리 과정 중, ReportProgress를 실행하면 ProgressChanged이벤트가 생성됩니다. 더 나아가 FlexGrid가 로딩한 데이터소스의 상태를 처리하고 데이터 량(행렬 개수)을 동시에 표시하게 됩니다. 코드는 다음과 같습니다.
 
-```
+```csharp
 void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
 {
 	lblStatus.Text = string.Format("{0} / {1} 행", ((int)e.UserState).ToString(), count.ToString());
@@ -428,7 +428,7 @@ DoWork이벤트 처리 종료 후, RunWorkerCompleted이벤트가 생성됩니�
 
   
 
-```
+```csharp
 void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 {
             var items = (IList)e.Result;
@@ -572,7 +572,7 @@ Gantt 차트양식 설정：  실행 시, 최 상단의 막대형 양식 다이�
 
 본문 Demo 중, C1GanttView1.LoadXml방법을 사용하여 XML문서파일을 들여옵니다. 이렇게 직접 사용할 수 있습니다. 변경할 곳이 있는 경우 위의 방법 1과 방법 2에 따라 변경합니다. 들여 오기한 XML문서파일의 오버로딩 방법은 다음과 같습니다. :
 
-```
+```csharp
 // 적요:
 //     Loads the contents of C1.Win.C1GanttView.C1GanttView from a System.IO.Stream.
 public void LoadXml(Stream stream);
@@ -624,7 +624,7 @@ Visual Studio도구상자의 C1Schedule와C1Calendar컨트롤을 직접 창에 �
 
 C1Schedule 컨트롤은 C1Schedule.ViewType 속성을 사용하여 일, 주, 주중, 월별 또는 타임 라인보기 별로 일정을 볼 수 있는 5 가지 기본 제공보기를 제공합니다. 이 속성의 열거 형은 다음과 같습니다.：
 
-```
+```csharp
 // 적요:
     //     Determines the type of view to display in the C1.Win.C1Schedule.C1Schedule
     //     control.
@@ -660,7 +660,7 @@ VeiwType을 사용하여 다른 열거 형 값을 설정하면 다른 뷰 효과
 
   
 
-```
+```csharp
 // Switch to the DayView.
 this.c1Schedule1.ViewType = ScheduleViewEnum.DayView;
 ```
@@ -671,7 +671,7 @@ this.c1Schedule1.ViewType = ScheduleViewEnum.DayView;
 
 주간 설정 ：  코드와 결과는 다음과 같습니다.
 
-```
+```csharp
 // Switch to the WeekView.
 this.c1Schedule1.ViewType = ScheduleViewEnum.WeekView;
 ```
@@ -682,7 +682,7 @@ this.c1Schedule1.ViewType = ScheduleViewEnum.WeekView;
 
 근무주간 설정：  코드와 결과는 다음과 같습니다.
 
-```
+```csharp
 // Switch to the WorkWeekView.
 this.c1Schedule1.ViewType = ScheduleViewEnum.WorkWeekView;
 ```
@@ -693,7 +693,7 @@ this.c1Schedule1.ViewType = ScheduleViewEnum.WorkWeekView;
 
 근무 월간 설정：  코드와 결과는 다음과 같습니다.
 
-```
+```csharp
 // Switch to the MonthView.
 this.c1Schedule1.ViewType = ScheduleViewEnum.MonthView;
 ```
@@ -704,7 +704,7 @@ this.c1Schedule1.ViewType = ScheduleViewEnum.MonthView;
 
 타임라인 설정：  코드와 결과는 다음과 같습니다.
 
-```
+```csharp
 // Switch to the TimeLineView.
 this.c1Schedule1.ViewType = ScheduleViewEnum.TimeLineView;
 ```
@@ -717,7 +717,7 @@ this.c1Schedule1.ViewType = ScheduleViewEnum.TimeLineView;
 
 C1Calendar1.Schedule 속성을 설정하여 C1Calendar 및 C1Schedule 컨트롤을 함께 동기화 할 수 있습니다. 동기화 후에는 날짜를 선택하거나 지역을 선택하고 C1Schedule은 선택 항목에 따라 시간 범위 내의 모든 약속을 표시하고 지역에 대해 하루 또는 주 또는 월의 요일보기를 지정할 수 있습니다. C1Calendar 컨트롤은 사용 가능한 공간에 따라 한 번에 한 달 이상 표시 할 수 있습니다. C1Calendar의 동기화 설정된 C1Schedule코드는 다음과 같습니다. ：
 
-```
+```csharp
 this.c1Calendar1.Schedule = this.c1Schedule1;
 ```
 
@@ -751,7 +751,7 @@ True DBGrid 데이터 간에 주 관계나 서브 관계를 표시하는 것을 
 
 1. TrueDBGrid 데이터 소스 연결：  각기 다른 세 개의 TrueDBGrid를 만들고 DataSource 속성을 통해 각각 데이터 소스에 연결합니다. 코드는 다음과 같습니다.
 
-```
+```csharp
 private C1.Win.C1TrueDBGrid.C1TrueDBGrid c1TrueDBGrid1 = new C1.Win.C1TrueDBGrid.C1TrueDBGrid();
 private C1.Win.C1TrueDBGrid.C1TrueDBGrid c1TrueDBGrid2 = new C1.Win.C1TrueDBGrid.C1TrueDBGrid();
 private C1.Win.C1TrueDBGrid.C1TrueDBGrid c1TrueDBGrid3 = new C1.Win.C1TrueDBGrid.C1TrueDBGrid();
@@ -764,7 +764,7 @@ this.c1TrueDBGrid3.DataSource = this.ordersOrderDetailsBindingSource;
 
   
 
-```
+```csharp
 this.c1TrueDBGrid1.ChildGrid = this.c1TrueDBGrid2;
 this.c1TrueDBGrid2.ChildGrid = this.c1TrueDBGrid3;
 ```

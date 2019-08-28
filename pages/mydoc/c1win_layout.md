@@ -21,7 +21,7 @@ C1MainMenu 컨트롤과 C1ContextMenu컨트롤은 네비게이션과 명령에 �
 
 도구상자로부터 C1MainMenu 컨트롤과 C1ContextMenu컨트롤을 창에 드래그합니다. 그리고 컨트롤을 CommandLinks 속성을 통해 code또는Editor로 각기 다른 명령 링크CommandLink를 추가해 줍니다. ComandLink.Command 속성을 사용하여 명령을 지정합니다. 구체적인 것은 아래의 코드를 참고하세요. :
 
-```
+```csharp
 private C1.Win.C1Command.C1CommandMenu c1CommandMenu_File = new C1.Win.C1Command.C1CommandMenu();
 this.c1CommandMenu_File.Text = "파일"; 
 
@@ -36,7 +36,7 @@ this.c1MainMenu1.CommandLinks.AddRange(new C1.Win.C1Command.C1CommandLink[] {thi
 
 C1CommandDock컨트롤을 창에 드래그하여 C1Toolbar를 일시 정지하거나 작동시킵니다. 그리고 C1ToolBar 컨트롤을 CommandDock에 드래그합니다. 이것은 툴바의 컨트롤을 표시합니다. 마치 C1MainMenu 컨트롤과 마찬가지로 일련의 명령 링크도 포함합니다. CommandDock은 각기 다른 여러 개의 Toolbar를 추가할 수 있습니다. 코드는 다음을 참고하세요. :
 
-```
+```csharp
 this.c1CommandDock1.Controls.Add(this.c1ToolBar_Tools);
 this.c1CommandDock1.Controls.Add(this.c1ToolBar_Format);
 this.c1CommandDock1.Controls.Add(this.c1ToolBar_Edit);
@@ -48,7 +48,7 @@ this.c1CommandDock1.Controls.Add(this.c1ToolBar_File);
 C1CommandHolder 컨트롤을 창에 드래그합니다. 해당 컨트롤은 메뉴와 툴바의 모든 명령을 단일한 집합으로 저장할 수 있습니다. 모든 명령은 C1CommandHolder의 Click 이벤트를 시작시킬 수 있습니다. 또한 여러 개의 메뉴와 툴 바 사이에 공유명령을 허용합니다. MainMenu, Toolbar 등의 컨트롤을 추가 할 때, C1CommandHolder 모듈로 자동 관리하고 진행할 수 있습니다.  
 C1CommandHolder에 Click 이벤트를 걸고 상응하는 명령을 클릭하면 Click이벤트가 일어납니다. 코드는 다음의 표시와 같습니다. :
 
-```
+```csharp
 private void c1CommandHolder1_CommandClick(object sender, CommandClickEventArgs e)
 {
 	//c1command click event
@@ -59,9 +59,7 @@ private void c1CommandHolder1_CommandClick(object sender, CommandClickEventArgs 
 본문의 Demo 소스코드는 다음과 같습니다. :
 
   
-```
 ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms2-2-1.png)
-```  
   
 
 아래 링크를 통해 좀 더 자세한 사항을 확인해보실 수 있습니다.
@@ -81,7 +79,7 @@ Window 10 양식의 시뮬레이션 레이아웃을 사용할 때, C1TileControl
 
 TileControl.Groups.Add를 통해 TileControl을 위한 각각 다른 그룹을 추가할 수 있습니다. Tile 바둑판 패치는 각기 다른 그룹 속에 두어 그룹 형식으로 표시합니다. 본문 Demo에서 각각 다른 유형의 그룹을 만듭니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 Group GetDriveGroup(DriveType driveType)
         {
             string groupName = driveType.ToString();
@@ -124,28 +122,28 @@ Group GetDriveGroup(DriveType driveType)
 
 첫 번째 방법에서 TileControl은 이미 그룹 나누기에 추가되었습니다. 여기에서 패치 만들기를 통해 각기 다른 Tile 패치를 상응하는 그룹에 넣어야 합니다. 수직이나 수평으로 중첩되도록 선택할 수 있습니다. 그리고 Tile.Image 속성을 통해 그림을 추가합니다. 구체적인 코드는 다음과 같습니다. :
 
-```
-                    DriveType dt = drive.DriveType;
-                    Group group = GetDriveGroup(dt);
+```csharp
+    DriveType dt = drive.DriveType;
+    Group group = GetDriveGroup(dt);
 
-                    Tile tile = new Tile();
-                    switch (dt)
-                    {
-                        case DriveType.CDRom:
-                            tile.Image = Title_FileExplorer.Properties.Resources.mediaDrive;
-                            break;
-                        case DriveType.Fixed:
-                            tile.Image = Title_FileExplorer.Properties.Resources.hardDrive;
-                            break;
-                        case DriveType.Network:
-                            tile.Image = Title_FileExplorer.Properties.Resources.networkDrive;
-                            break;
-                        default:
-                            tile.Image = Title_FileExplorer.Properties.Resources.otherDrive;
-                            break;
-                    }
-                    tile.HorizontalSize = 3;
-                    group.Tiles.Add(tile);
+    Tile tile = new Tile();
+    switch (dt)
+    {
+        case DriveType.CDRom:
+            tile.Image = Title_FileExplorer.Properties.Resources.mediaDrive;
+            break;
+        case DriveType.Fixed:
+            tile.Image = Title_FileExplorer.Properties.Resources.hardDrive;
+            break;
+        case DriveType.Network:
+            tile.Image = Title_FileExplorer.Properties.Resources.networkDrive;
+            break;
+        default:
+            tile.Image = Title_FileExplorer.Properties.Resources.otherDrive;
+            break;
+    }
+    tile.HorizontalSize = 3;
+    group.Tiles.Add(tile);
 ```
 
 ### 3. 패치 템플릿 만들기
@@ -154,7 +152,7 @@ Group GetDriveGroup(DriveType driveType)
 
 마지막으로 본문 마지막의Demo를 사용하여 C1TilleControl로 아래 그림과 같이 Window8 스타일을 가지는 문서파일 브라우징 응용프로그램을 만듭니다. :
 
-```
+```csharp
 private C1.Win.C1Tile.Template tempDrive = new C1.Win.C1Tile.Template();
 private C1.Win.C1Tile.C1TileControl itemTiles = new C1.Win.C1Tile.C1TileControl();
 this.itemTiles.Templates.Add(this.tempDrive);
@@ -183,7 +181,7 @@ tile.Template = tempFolder;
 
 먼저, 변경해야 하는 테마의 컨트롤을 응용프로그램에 추가합니다. 본문 Demo에서 먼저 도구상자의 C1FlexGrid와C1TrueDBGrid를 창에 드래그합니다. 또한 두 개의 컨트롤에 데이터 바인딩을 합니다. C1FlexGridDataSource에는 Employees 데이터리스트를 바인딩하고 C1TrueDBGrid에는 EmployeesOrders를 바인딩합니다. 데이터 바인딩 코드는 다음과 같습니다. :
 
-```
+```csharp
 this.c1TrueDBGrid1.DataSource = this.employeesOrdersBindingSource;
 this.c1FlexGrid1.DataSource = this.employeesBindingSource;
 ```
@@ -202,11 +200,11 @@ C1FlexGrid、C1TrueDBGrid의 어느 창에 각기 다른 테마를 설정해주�
 
 표준ComboBox를 창에 추가한 후 FormLoad 할 때, C1ThemController의 모든 사용 가능한 테마를 ComboBox의 드롭 다운 메뉴에 추가하여 사용 시 편리하게 선택하고 테마를 초기화로 설정할 수 있습니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 // populate combobox with all available themes
-            this.comboBox1.Items.AddRange(C1.Win.C1Themes.C1ThemeController.GetThemes());
-            // set initial theme
-            comboBox1.SelectedIndex = 0;
+this.comboBox1.Items.AddRange(C1.Win.C1Themes.C1ThemeController.GetThemes());
+// set initial theme
+comboBox1.SelectedIndex = 0;
 
 ```
 
@@ -214,7 +212,7 @@ C1FlexGrid、C1TrueDBGrid의 어느 창에 각기 다른 테마를 설정해주�
 
 ComboBox의 SelectedIndexChanged 이벤트를 설정은 드롭 다운 상자를 열고 상응하는 테마를 선택할 때, 해당 이벤트를 전용하여 창의 모든 컨트롤 테마를 변경합니다. 구체적인 코드는 다음과 같습니다. :
 
-```
+```csharp
 private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Set theme on the theme controller:

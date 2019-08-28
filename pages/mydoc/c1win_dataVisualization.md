@@ -21,7 +21,7 @@ C1Chart를 이용해 조정 가능한 그래프를 만들 수 있습니다. 최�
 
 먼저, C1Chart의 조정 특성을 컨트롤합니다. 각각 마우스 반전, 눈금, 반전 및 줌을 실행합니다. 구체적인 코드는 다음과 같습니다. :
 
-```
+```csharp
 // Enable interaction
             c1Chart1.Interaction.Enabled = true;
             c1Chart1.Interaction.Actions["Zoom"].Modifier = Keys.None;
@@ -35,7 +35,7 @@ C1Chart를 이용해 조정 가능한 그래프를 만들 수 있습니다. 최�
 
   
 
-```
+```csharp
 // Create chart series
             c1Chart1.ChartGroups[0].ChartData.SeriesList.Clear();
             cdsTemp = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
@@ -59,7 +59,7 @@ C1Chart를 이용해 조정 가능한 그래프를 만들 수 있습니다. 최�
 
 마지막으로 C1Chart의 축과 스크롤 바를 만듭니다. 구체적인 코드는 다음과 같습니다. :
 
-```
+```csharp
 // Setup chart axes and scrollbar
             c1Chart1.ChartArea.AxisX.ScrollBar.Scale = 0.1;
             c1Chart1.ChartArea.AxisY.ScrollBar.Scale = 1.0;
@@ -86,7 +86,7 @@ C1Chart를 이용해 조정 가능한 그래프를 만들 수 있습니다. 최�
 줌: 빅 데이터나 실시간 데이터의 경우 종종 그래프로 표시할 필요가 있습니다. 끊임 없이 업데이트되는 데이터를 추가하고 스크롤이나 줌을 통해 일부 또는 일시적인 경향에 대한 정보를 얻을 수 있습니다.  
 확대 참고코드：
 
-```
+```csharp
 // Zoom out
 c1Chart1.ChartArea.AxisX.ScrollBar.Scale = c1Chart1.ChartArea.AxisX.ScrollBar.Scale / _zoomScale;
 c1Chart1.ChartArea.AxisY.ScrollBar.Scale = c1Chart1.ChartArea.AxisY.ScrollBar.Scale / _zoomScale;
@@ -96,7 +96,7 @@ X축 반전： 본문 Demo에서 사용자가 X축으로 반전되는 CheckBox�
 
   
 
-```
+```csharp
 c1Chart1.ChartArea.AxisX.Reversed = chkAxisXReversed.Checked;
 ```
 
@@ -142,7 +142,7 @@ C1Chart데이터소스 설정: C1Chart.DataSource속성을 통해 데이터소�
 C1Chart그래프유형 설정: 금융그래프는 일반적으로 캔들 차트로 가격변동을 표시하거나 HLOC그래프로 주가의 경향을 표시해야 합니다.  
 이것은 C1Chart의ChartGroup.Group.ChartType열거 유형을 통해 실현할 수 있습니다. 구체적인 설정 코드는 다음과 같습니다.
 
-```
+```csharp
 ResetChart();
 //금융그래프 설정은 캔들 차트 구성입니다.
 	if (radChartGroups.Checked)
@@ -176,7 +176,7 @@ ResetChart();
 
   
 
-```
+```csharp
 // Create chart series
             c1Chart1.ChartGroups[0].ChartData.SeriesList.Clear();
             cdsTemp = c1Chart1.ChartGroups[0].ChartData.SeriesList.AddNewSeries();
@@ -214,7 +214,7 @@ C1Chart의Histogram만들기：  ChartHistogram을 사용하여 대상의 Displa
 
   
 
-```
+```csharp
 //create a Histogram in the second chart group using the scatter data
             //and the distance from the marker intersection as data for the histogram.
             ChartGroup cg = c1Chart1.ChartGroups[1];
@@ -253,7 +253,7 @@ C1Chart의Histogram만들기：  ChartHistogram을 사용하여 대상의 Displa
 
 Histogram데이터 기입：  Demo에서는 기입한 Histogram 데이터 탭에 따릅니다.
 
-```
+```csharp
 		//get the Target Coordinates
                 double xtarget = carea.AxisX.ValueLabels[0].NumericValue;
                 double ytarget = carea.AxisY.ValueLabels[0].NumericValue;
@@ -323,69 +323,69 @@ C1Chart3D컨트롤은 자동으로 등고선을 생성할 수 있고 데이터�
 
 C1Chart3D바인딩 데이터 :  Chart3DDataSetGrid의 XML데이터 바인딩은 등고선 자동 생성에 사용됩니다. 구체적인 코드는 다음과 같습니다. :
 
-```
+```csharp
 Chart3DDataSetGrid grid = c1Chart3D1.ChartGroups.Group0.ChartData.SetGrid;
-            IList rows = categorySales1.List;
-            Chart3DAxis x = c1Chart3D1.ChartArea.AxisX;
-            Chart3DAxis y = c1Chart3D1.ChartArea.AxisY;
-            Chart3DAxis z = c1Chart3D1.ChartArea.AxisZ;
-            grid.RowCount = rows.Count;
-            grid.ColumnCount = 4;
+IList rows = categorySales1.List;
+Chart3DAxis x = c1Chart3D1.ChartArea.AxisX;
+Chart3DAxis y = c1Chart3D1.ChartArea.AxisY;
+Chart3DAxis z = c1Chart3D1.ChartArea.AxisZ;
+grid.RowCount = rows.Count;
+grid.ColumnCount = 4;
 
-            for (int i = 0; i < rows.Count; i++)
-            {
-                DataRowView view = rows[i] as DataRowView;
-                DataRow r = view.Row;
-                grid[0, i] = System.Convert.ToDouble(r[1]);
-                grid[1, i] = System.Convert.ToDouble(r[2]);
-                grid[2, i] = System.Convert.ToDouble(r[3]);
-                grid[3, i] = System.Convert.ToDouble(r[4]);
-                y.ValueLabels.Add(i, r[0].ToString());
-            }
+for (int i = 0; i < rows.Count; i++)
+{
+    DataRowView view = rows[i] as DataRowView;
+    DataRow r = view.Row;
+    grid[0, i] = System.Convert.ToDouble(r[1]);
+    grid[1, i] = System.Convert.ToDouble(r[2]);
+    grid[2, i] = System.Convert.ToDouble(r[3]);
+    grid[3, i] = System.Convert.ToDouble(r[4]);
+    y.ValueLabels.Add(i, r[0].ToString());
+}
 
-            x.ValueLabels.Add(0, "Q1");
-            x.ValueLabels.Add(1, "Q2");
-            x.ValueLabels.Add(2, "Q3");
-            x.ValueLabels.Add(3, "Q4");
-            x.AnnoMethod = AnnotationMethodEnum.ValueLabels;
-            x.AnnoPosition = AnnoPositionEnum.Both;
+x.ValueLabels.Add(0, "Q1");
+x.ValueLabels.Add(1, "Q2");
+x.ValueLabels.Add(2, "Q3");
+x.ValueLabels.Add(3, "Q4");
+x.AnnoMethod = AnnotationMethodEnum.ValueLabels;
+x.AnnoPosition = AnnoPositionEnum.Both;
 
-            x.MajorGrid.IsOnXYPlane = true;
-            x.MajorGrid.IsOnXZPlane = true;
-            x.MajorGrid.Style.Color = SystemColors.ControlDarkDark;
+x.MajorGrid.IsOnXYPlane = true;
+x.MajorGrid.IsOnXZPlane = true;
+x.MajorGrid.Style.Color = SystemColors.ControlDarkDark;
 
-            y.AnnoMethod = AnnotationMethodEnum.ValueLabels;
-            y.AnnoRotated = true;
-            y.AnnoPosition = AnnoPositionEnum.Both;
+y.AnnoMethod = AnnotationMethodEnum.ValueLabels;
+y.AnnoRotated = true;
+y.AnnoPosition = AnnoPositionEnum.Both;
 
-            y.MajorGrid.IsOnXYPlane = true;
-            y.MajorGrid.IsOnYZPlane = true;
-            y.MajorGrid.Style.Color = SystemColors.ControlDarkDark;
+y.MajorGrid.IsOnXYPlane = true;
+y.MajorGrid.IsOnYZPlane = true;
+y.MajorGrid.Style.Color = SystemColors.ControlDarkDark;
 
-            z.AnnoFormat = FormatEnum.NumericManual;
-            z.AnnoFormatString = "#,";
-            z.Text = "$1,000's";
-            z.UnitMajor = z.UnitMinor;
+z.AnnoFormat = FormatEnum.NumericManual;
+z.AnnoFormatString = "#,";
+z.Text = "$1,000's";
+z.UnitMajor = z.UnitMinor;
 
-            z.MajorGrid.IsOnXZPlane = true;
-            z.MajorGrid.IsOnYZPlane = true;
-            z.MajorGrid.Style.Color = SystemColors.ControlDarkDark;
+z.MajorGrid.IsOnXZPlane = true;
+z.MajorGrid.IsOnYZPlane = true;
+z.MajorGrid.Style.Color = SystemColors.ControlDarkDark;
 ```
 
 C1Chart3D의 줌 조정 :  Chart3D의 Scal을 통해 줌 비율을 조정합니다. 코드는 다음과 같습니다. :
 
   
 
-```
+```csharp
 	//Adjust zoom level
-            c1Chart3D1.ChartArea.View.ViewportScale = 1.4f;
-            c1Chart3D1.ChartArea.View.ViewportHorizontalShift = .15f;
-            c1Chart3D1.ChartArea.View.ViewportVerticalShift = -.17f;
+    c1Chart3D1.ChartArea.View.ViewportScale = 1.4f;
+    c1Chart3D1.ChartArea.View.ViewportHorizontalShift = .15f;
+    c1Chart3D1.ChartArea.View.ViewportVerticalShift = -.17f;
 ```
 
 C1Chart3D등고선의 조정：  설정을 통해 C1Chart3D는 마우스 회전, 리프팅, 이동 및 보관을 실현할 수 있습니다. Demo에서는 마우스로 드래그하거나 TrackBar를 조정하여 회전할 수 있습니다. 코드는 아래와 같습니다. :
 
-```
+```csharp
 private System.Windows.Forms.TrackBar trkYAxis; 
 private void trkXAxis_Scroll(object sender, EventArgs e) 
 { 
@@ -442,26 +442,26 @@ C1Gauge는 표준 .NET 데이터 바인딩 기술을 사용합니다. 즉, C1Gau
 
 각기 다른 지침을 각각의 데이터 필드에 바인딩하는 C1Gauge.DataBindings.Add방법은 다음과 같습니다. :
 
-```
-        // 변수:
-        //   propertyName: 바인딩할 컨트롤 속성의 명칭
-        //   dataSource: 데이터소스를 표시한 System.Object。
-        //   dataMember: 바인딩 할 속성이나 리스트.
-        //   formattingEnabled: 양식화로 데이터를 표시하는 경우라면 true；아니라면 false。
-        //   updateMode: System.Windows.Forms.DataSourceUpdateMode 값 중 하나。
-        //   nullValue: 데이터 소스 값이 System.DBNull 일 때, 바인딩에 사용되는 컨트롤 속성인System.Object。
-        //   formatString: 하나 또는 여러 개 양식 설명부호가 표시 값을 어떻게 표시하는가
-        //   formatInfo: 감춘 양식설정을 다시 기입하는 System.IFormatProvider 의 실현.
-        //   binding: 추가할 System.Windows.Forms.Binding。
+```csharp
+    // 변수:
+    //   propertyName: 바인딩할 컨트롤 속성의 명칭
+    //   dataSource: 데이터소스를 표시한 System.Object。
+    //   dataMember: 바인딩 할 속성이나 리스트.
+    //   formattingEnabled: 양식화로 데이터를 표시하는 경우라면 true；아니라면 false。
+    //   updateMode: System.Windows.Forms.DataSourceUpdateMode 값 중 하나。
+    //   nullValue: 데이터 소스 값이 System.DBNull 일 때, 바인딩에 사용되는 컨트롤 속성인System.Object。
+    //   formatString: 하나 또는 여러 개 양식 설명부호가 표시 값을 어떻게 표시하는가
+    //   formatInfo: 감춘 양식설정을 다시 기입하는 System.IFormatProvider 의 실현.
+    //   binding: 추가할 System.Windows.Forms.Binding。
 
-        // 적요: 지정한 System.Windows.Forms.Binding 을 집합에 추가합니다.
-        public void Add(Binding binding);
+    // 적요: 지정한 System.Windows.Forms.Binding 을 집합에 추가합니다.
+    public void Add(Binding binding);
 
-public Binding Add(string propertyName, object dataSource, string dataMember);
+    public Binding Add(string propertyName, object dataSource, string dataMember);
 
-        public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled);
-       
-        public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode);
+    public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled);
+    
+    public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode);
         
 	public Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, DataSourceUpdateMode updateMode, object nullValue);
         
@@ -482,34 +482,34 @@ C1Gauge컨트롤의 아무 곳이나 더블 클릭하거나 한 번 클릭하면
 
 본문의 Demo 게이지가 표시하는 날씨는 바인딩 한 날씨 데이터를 전환해야 합니다. 예를 들어 맑은 날, 비 오는 날 등 적합한 수치로 전환합니다. 코드는 다음을 참고해 주시기 바랍니다.
 
-```
+```csharp
 //handle custom binding for Events gauge (sun, rain, thunderstorm, snow)
-            string events = (weatherData1.Current as DataRowView)["events"].ToString();
-            string[] eventsArray = events.Split('-');
-            if (eventsArray.Length == 0)
-            {
-                eventsgauge.Value = 3;
-                eventsgauge.MorePointersValue_0 = 3;
-                eventsgaugeMorePointersValue_1 = 3;
-            }
-            else if (eventsArray.Length == 1)
-            {
-                Eventsgauge.Value = WeatherEventConverter(eventsArray[0]);
-                eventsgauge.MorePointersValue_0 = WeatherEventConverter(eventsArray[0]);
-                eventsgaugeMorePointersValue_1 = WeatherEventConverter(eventsArray[0]);
-            }
-            else if (eventsArray.Length == 2)
-            {
-                eventsgauge.Value = WeatherEventConverter(eventsArray[0]);
-                eventsgauge.MorePointersValue_0 = WeatherEventConverter(eventsArray[1]);
-                eventsgauge.MorePointersValue_1 = WeatherEventConverter(eventsArray[0]);
-            }
-            else if (eventsArray.Length == 3)
-            {
-                eventsgaege.Value = WeatherEventConverter(eventsArray[0]);
-                eventsgaege.MorePointersValue_0 = WeatherEventConverter(eventsArray[1]);
-                eventsgaege.MorePointersValue_1 = WeatherEventConverter(eventsArray[2]);
-            }
+string events = (weatherData1.Current as DataRowView)["events"].ToString();
+string[] eventsArray = events.Split('-');
+if (eventsArray.Length == 0)
+{
+    eventsgauge.Value = 3;
+    eventsgauge.MorePointersValue_0 = 3;
+    eventsgaugeMorePointersValue_1 = 3;
+}
+else if (eventsArray.Length == 1)
+{
+    Eventsgauge.Value = WeatherEventConverter(eventsArray[0]);
+    eventsgauge.MorePointersValue_0 = WeatherEventConverter(eventsArray[0]);
+    eventsgaugeMorePointersValue_1 = WeatherEventConverter(eventsArray[0]);
+}
+else if (eventsArray.Length == 2)
+{
+    eventsgauge.Value = WeatherEventConverter(eventsArray[0]);
+    eventsgauge.MorePointersValue_0 = WeatherEventConverter(eventsArray[1]);
+    eventsgauge.MorePointersValue_1 = WeatherEventConverter(eventsArray[0]);
+}
+else if (eventsArray.Length == 3)
+{
+    eventsgaege.Value = WeatherEventConverter(eventsArray[0]);
+    eventsgaege.MorePointersValue_0 = WeatherEventConverter(eventsArray[1]);
+    eventsgaege.MorePointersValue_1 = WeatherEventConverter(eventsArray[2]);
+}
 ```
 
 Demo를 실행하면 아래 그림과 같은 날씨게이지를 확인할 있습니다. 바인딩 데이터의 다른 행을 선택하면 게이지가 바인딩 데이터에 따라 변화를 일으키게 됩니다.

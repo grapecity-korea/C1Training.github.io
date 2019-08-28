@@ -21,32 +21,32 @@ C1Report는 XML, Access, SQL Server, Oracle등을 포함하여 각종 데이터 
 
 1. XML에서 설정하거나 얻은 사용자 데이터가 바인딩 된 데이터 소스를 가져옵니다. 예를 들어 NorthWind 데이터베이스에서이 문서 Demo XML 문서를 사용하여 데이터 소스를 구하는 코드는 다음과 같습니다. :
 
-```
-Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|C1Demo.mdb;Persist Security Info=FalseSELECT Categories.*, Products.* FROM Categories INNER JOIN Products ON Categories.CategoryID = Products.CategoryID;
-```
+    ```csharp
+    Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|C1Demo.mdb;Persist Security Info=FalseSELECT Categories.*, Products.* FROM Categories INNER JOIN Products ON Categories.CategoryID = Products.CategoryID;
+    ```
 
 2. 지정된 문자열에서 XML 문서를 로드합니다. XmlDocument 클래스는 XML 문서를 로드하고 메모리의 문서 트리 구조를 작성하는 .NET Framework 용 DOC 파서입니다. LoadXML을 통해 XML 문서를 로드하는 코드는 다음과 같습니다.
 
   
 
-```
- // add Description tab 
-desc = new Label(); 
-desc.Dock = DockStyle.Fill; 
-desc.BackColor = Color.White; 
-TabPage tabDesc = new TabPage("Description"); 
-tabDesc.Controls.Add(desc); 
-c1PrintPreviewControl1.PreviewNavigationPanel.Controls.Add(tabDesc); 
-doc = new XmlDocument(); 
-doc.LoadXml(Report_Load.Properties.Resources.Report); 
-comboReports.SelectedIndex = 0; 
-```
+    ```csharp
+    // add Description tab 
+    desc = new Label(); 
+    desc.Dock = DockStyle.Fill; 
+    desc.BackColor = Color.White; 
+    TabPage tabDesc = new TabPage("Description"); 
+    tabDesc.Controls.Add(desc); 
+    c1PrintPreviewControl1.PreviewNavigationPanel.Controls.Add(tabDesc); 
+    doc = new XmlDocument(); 
+    doc.LoadXml(Report_Load.Properties.Resources.Report); 
+    comboReports.SelectedIndex = 0; 
+    ```
 
 ### C1Report의 지정리포트 읽기
 
 C1Report의 Load 방법을 통해 사용자는 읽을 보고서를 지정할 수 있습니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 // load C1Report with selected report
 c1Report1.Load(doc, reportName);
 c1Report1.Sections.Header.Visible = false;
@@ -58,8 +58,8 @@ c1Report1.Sections.Header.Visible = false;
 
   
 
-```
- // assign report to print preview control
+```csharp
+// assign report to print preview control
 c1PrintPreviewControl1.Document = c1Report1.Document;
 ```
 
@@ -96,7 +96,7 @@ Microsoft Excel을 설치할 필요 없이C1의 간단한 명령으로 작업노
 
 먼저, 도구상자에서 C1XLBook을 드래그하거나 만듭니다. C1XLBook에서 Excel 작업노트를 로딩하거나 만듭니다.
 
-```
+```csharp
 C1XLBook _xlBook = new C1XLBook();
 
 _xlBook.Load(AppDomain.CurrentDomain.BaseDirectory+ filename);
@@ -106,40 +106,40 @@ _xlBook.Load(AppDomain.CurrentDomain.BaseDirectory+ filename);
 
   
 
-```
+```csharp
 DrillDataPoints GetChartData(C1XLBook book)
+    {
+        // Get first sheet
+        var sheet = book.Sheets[0];
+
+        // Get location, date, and cell count
+        var location = sheet[1, 1].Value as string;
+        var date = (DateTime)sheet[2, 1].Value;
+        var count = sheet.Rows.Count - 5;
+        label.Text = string.Format("{0}, {1} points", location, count);
+
+        // Get values into arrays for charting
+        var drillData = new DrillDataPoints(count);
+        for (int r = 0; r < count; r++)
         {
-            // Get first sheet
-            var sheet = book.Sheets[0];
-
-            // Get location, date, and cell count
-            var location = sheet[1, 1].Value as string;
-            var date = (DateTime)sheet[2, 1].Value;
-            var count = sheet.Rows.Count - 5;
-            label.Text = string.Format("{0}, {1} points", location, count);
-
-            // Get values into arrays for charting
-            var drillData = new DrillDataPoints(count);
-            for (int r = 0; r < count; r++)
-            {
-                drillData.Temperature[r] = (double)sheet[r + 5, 1].Value;
-                drillData.Pressure[r] = (double)sheet[r + 5, 2].Value;
-                drillData.Conductivity[r] = (double)sheet[r + 5, 3].Value;
-                drillData.Ph[r] = (double)sheet[r + 5, 4].Value;
-                drillData.Depth[r] = r;
-            }
-            drillData.ScaleValues();
-
-            // Send data to chart
-            return drillData;
+            drillData.Temperature[r] = (double)sheet[r + 5, 1].Value;
+            drillData.Pressure[r] = (double)sheet[r + 5, 2].Value;
+            drillData.Conductivity[r] = (double)sheet[r + 5, 3].Value;
+            drillData.Ph[r] = (double)sheet[r + 5, 4].Value;
+            drillData.Depth[r] = r;
         }
+        drillData.ScaleValues();
+
+        // Send data to chart
+        return drillData;
+    }
 ```
 
 XLS 파일이나 XLSX파일을 내보낼 수도 있습니다. C1XLBook을 사용하여 Excel 버전과 호환되는 보고서를 생성 할 수 있는 C1Chart 컨트롤입니다.
 
 내보내기 방법은 다음과 같습니다. ：
 
-```
+```csharp
 //   fileName:	Name of the file to save.
         //   stream:	System.IO.Stream where the worksheet is saved.
         //   format:    C1.C1Excel.C1XLBook.FileFormat value that specifies the format to save 	//		the worksheet in.
@@ -176,7 +176,7 @@ C1PDF컨트롤의 경우, 문서파일에서 사용되는 모든 명령이 .NET 
 
 먼저, 도구상자에서 드래그하거나 코드를 사용하여 C1PdfDocument를 생성합니다. 생성코드는 다음과 같습니다. :
 
-```
+```csharp
 private C1.C1Pdf.C1PdfDocument _c1pdf = new C1.C1Pdf.C1PdfDocument();
 ```
 
@@ -194,20 +194,20 @@ AddField방법을 사용하여 Acrobat리스트 필드를 PDF파일에 추가할
 
 먼저, 테스트 박스 필드를 만듭니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 	// text box field
-            rc = new RectangleF(rc.X, rc.Y + rc.Height / 10, rc.Width / 3, rc.Height / 30);
-            PdfTextBox textBox1 = RenderTextBox("TextBox Sample", fieldFont, rc);
-            textBox1.BorderWidth = FieldBorderWidth.Thick;
-            textBox1.BorderStyle = FieldBorderStyle.Inset;
-            textBox1.BorderColor = Color.Green;
+    rc = new RectangleF(rc.X, rc.Y + rc.Height / 10, rc.Width / 3, rc.Height / 30);
+    PdfTextBox textBox1 = RenderTextBox("TextBox Sample", fieldFont, rc);
+    textBox1.BorderWidth = FieldBorderWidth.Thick;
+    textBox1.BorderStyle = FieldBorderStyle.Inset;
+    textBox1.BorderColor = Color.Green;
 ```
 
 ### C1Report의 지정리포트 읽기
 
 C1Report의 Load 방법을 통해 사용자는 읽을 보고서를 지정할 수 있습니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 // load C1Report with selected report
 c1Report1.Load(doc, reportName);
 c1Report1.Sections.Header.Visible = false;
@@ -217,47 +217,47 @@ c1Report1.Sections.Header.Visible = false;
 
   
 
-```
+```csharp
 // add text box field for fields of the PDF document
-        // with common parameters and default names.
-        // 
-        internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back, string toolTip)
-        {
-            // create
-            string name = string.Format("ACFTB{0}", _textBoxCount + 1);
-            PdfTextBox textBox = new PdfTextBox();
+// with common parameters and default names.
+// 
+internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back, string toolTip)
+{
+    // create
+    string name = string.Format("ACFTB{0}", _textBoxCount + 1);
+    PdfTextBox textBox = new PdfTextBox();
 
-            // default border
-            //textBox.BorderWidth = 3f / 4;
-            textBox.BorderStyle = FieldBorderStyle.Solid;
-            textBox.BorderColor = SystemColors.ControlDarkDark;
+    // default border
+    //textBox.BorderWidth = 3f / 4;
+    textBox.BorderStyle = FieldBorderStyle.Solid;
+    textBox.BorderColor = SystemColors.ControlDarkDark;
 
-            // parameters
-            textBox.Font = font;
-            textBox.Name = name;
-            textBox.DefaultText = text;
-            textBox.Text = text;
-            textBox.ToolTip = string.IsNullOrEmpty(toolTip) ? string.Format("{0} ({1})", text, name) : toolTip;
-            if (back != Color.Transparent && !back.IsEmpty)
-            {
-                textBox.BackColor = back;
-            }
+    // parameters
+    textBox.Font = font;
+    textBox.Name = name;
+    textBox.DefaultText = text;
+    textBox.Text = text;
+    textBox.ToolTip = string.IsNullOrEmpty(toolTip) ? string.Format("{0} ({1})", text, name) : toolTip;
+    if (back != Color.Transparent && !back.IsEmpty)
+    {
+        textBox.BackColor = back;
+    }
 
-            // add
-            _c1pdf.AddField(textBox, rc);
-            _textBoxCount++;
+    // add
+    _c1pdf.AddField(textBox, rc);
+    _textBoxCount++;
 
-            // done
-            return textBox;
-        }
-        internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back)
-        {
-            return RenderTextBox(text, font, rc, back, null);
-        }
-        internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc)
-        {
-            return RenderTextBox(text, font, rc, Color.Transparent, null);
-        }
+    // done
+    return textBox;
+}
+internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back)
+{
+    return RenderTextBox(text, font, rc, back, null);
+}
+internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc)
+{
+    return RenderTextBox(text, font, rc, Color.Transparent, null);
+}
 ```
 
 ### PDF문서파일 저장
@@ -266,60 +266,60 @@ c1Report1.Sections.Header.Visible = false;
 
   
 
-```
-	//
-        // 적요:
-        //     Saves the Pdf document to a System.IO.Stream.
-        public void Save(Stream stream);
-        //
-        // 적요:
-        //     Saves the Pdf document to a file.     
-        public void Save(string fileName);
+```csharp
+//
+// 적요:
+//     Saves the Pdf document to a System.IO.Stream.
+public void Save(Stream stream);
+//
+// 적요:
+//     Saves the Pdf document to a file.     
+public void Save(string fileName);
 ```
 
 본문에 첨부된Demo를 실행하려면, Form의 버튼을 클릭하여 다음과 같은PDF문서파일을 생성합니다. ：
 
-```
+```csharp
 // add text box field for fields of the PDF document
-        // with common parameters and default names.
-        // 
-        internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back, string toolTip)
-        {
-            // create
-            string name = string.Format("ACFTB{0}", _textBoxCount + 1);
-            PdfTextBox textBox = new PdfTextBox();
+// with common parameters and default names.
+// 
+internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back, string toolTip)
+{
+    // create
+    string name = string.Format("ACFTB{0}", _textBoxCount + 1);
+    PdfTextBox textBox = new PdfTextBox();
 
-            // default border
-            //textBox.BorderWidth = 3f / 4;
-            textBox.BorderStyle = FieldBorderStyle.Solid;
-            textBox.BorderColor = SystemColors.ControlDarkDark;
+    // default border
+    //textBox.BorderWidth = 3f / 4;
+    textBox.BorderStyle = FieldBorderStyle.Solid;
+    textBox.BorderColor = SystemColors.ControlDarkDark;
 
-            // parameters
-            textBox.Font = font;
-            textBox.Name = name;
-            textBox.DefaultText = text;
-            textBox.Text = text;
-            textBox.ToolTip = string.IsNullOrEmpty(toolTip) ? string.Format("{0} ({1})", text, name) : toolTip;
-            if (back != Color.Transparent && !back.IsEmpty)
-            {
-                textBox.BackColor = back;
-            }
+    // parameters
+    textBox.Font = font;
+    textBox.Name = name;
+    textBox.DefaultText = text;
+    textBox.Text = text;
+    textBox.ToolTip = string.IsNullOrEmpty(toolTip) ? string.Format("{0} ({1})", text, name) : toolTip;
+    if (back != Color.Transparent && !back.IsEmpty)
+    {
+        textBox.BackColor = back;
+    }
 
-            // add
-            _c1pdf.AddField(textBox, rc);
-            _textBoxCount++;
+    // add
+    _c1pdf.AddField(textBox, rc);
+    _textBoxCount++;
 
-            // done
-            return textBox;
-        }
-        internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back)
-        {
-            return RenderTextBox(text, font, rc, back, null);
-        }
-        internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc)
-        {
-            return RenderTextBox(text, font, rc, Color.Transparent, null);
-        }
+    // done
+    return textBox;
+}
+internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc, Color back)
+{
+    return RenderTextBox(text, font, rc, back, null);
+}
+internal PdfTextBox RenderTextBox(string text, Font font, RectangleF rc)
+{
+    return RenderTextBox(text, font, rc, Color.Transparent, null);
+}
 ```
 
 ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms5-3-1.png)
@@ -345,7 +345,7 @@ c1Report1.Sections.Header.Visible = false;
 
 예:
 
-```
+```csharp
 private C1.C1Flash.C1FlashCanvas c1FlashCanvas1 = new C1.C1Flash.C1FlashCanvas();
 ```
 
@@ -359,7 +359,7 @@ Flash단일 프레임 화면을 작성하기 전, C1FlashCanvas의Clear함수를
 
   
 
-```
+```csharp
  private Pen _pen = new Pen(Color.Black);
 _pen.Color = this.panel_DrawColor.BackColor;
 _pen.Width = (int)this.upd_LineWidth.Value;
@@ -386,7 +386,7 @@ Flash배경을 작성하기 전, C1FlashCanvas의 Clear함수를 사용하여 ca
 
 코드를 사용하여 랜덤으로SolidBrush를 생성합니다. 아래의 코드 중에서 RandomColor함수를 참고합니다. 그리고 C1FlashCanvas의FillRectangle함수를 사용해canvas안에 이Rectangle배경을 작성합니다. 코드 속의 RandomRectangle함수는 전 단계에 코드의 정의가 있습니다.
 
-```
+```csharp
 SolidBrush brush = new SolidBrush(Color.Black);
 for(int i = 0; i < 20; i++)
 {
@@ -451,7 +451,7 @@ C1ZipFile은 zip파일유형을 처리합니다. C1ZipFile은 C1ZipFile.Entries 
 
 Zip파일의 항목 열거：  C1ZipFile.Entrie 집합을 통해 Zip 파일에 있는 모든 항목을 확인할 수 있습니다. 코드를 통해 파일의 상세한 정보, 각 항목의 경로 정보 및 Zip 파일의 주석을 확인할 수 있습니다.
 
-```
+```csharp
 // fill out list
 var zec = _zipFile.Entries;
 listView.BeginUpdate();
@@ -485,7 +485,7 @@ foreach (C1ZipEntry ze in zec)
 
   
 
-```
+```csharp
 // 적요:
     //     Specifies the level of compression to be applied when adding entries to a
     //     C1.C1Zip.C1ZipFile.
