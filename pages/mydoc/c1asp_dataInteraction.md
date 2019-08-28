@@ -48,7 +48,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ### C1GridView 이벤트 오퍼레이팅
 
-_소트_
+**소트**
 
 순서배열기능은  Sorting과  Sorted  이벤트를 오퍼레이팅하고 Sorted 이벤트에서 새롭게 데이터 소스를 바인딩해야 실현됩니다.
 
@@ -64,7 +64,7 @@ protected void C1GridView1_Sorted(object sender, EventArgs e)
 }
 ```
 
-_필터_
+**필터**
 
 필터 기능은  Filtering과  Filtered  이벤트를 오퍼레이팅하고  Filtered  이벤트에서 새롭게 데이터 소스를 바인딩해야 실현됩니다.
 
@@ -80,7 +80,7 @@ protected void C1GridView1_Filtered(object sender, EventArgs e)
 }
 ```
 
-_페이지 나누기_
+**페이지 나누기**
 
 페이지 나누기의 코드와 순서배열, 필터는 약간 다릅니다.  Paging  이벤트를 실행해야 합니다. 먼저, NewPageIndex 속성을 현재의 PageIndex로 설정함과 동시에 데이터 소스를 새롭게 바인딩해야 합니다.
 
@@ -93,7 +93,7 @@ protected void C1GridView1_PageIndexChanging(object sender, C1.Web.Wijmo.Control
 }
 ```
 
-_그룹 나누기_
+**그룹 나누기**
 
 C1GridView의 그룹나누기 기능은 AllowColMoving 과 ShowGroupArea 속성을 true로 설정합니다. ColumnGrouped 와 ColumnUngrouped 이벤트를 실행해야 합니다. ColumnGrouped 이벤트에서는 이벤트 변수를 통해 데이터소스를 다시 바인딩해야 합니다. 매개 변수인 HeaderText 속성은 드래그한 열의 헤드 텍스트입니다. 이 매개 변수는 먼저 열을 정렬 한 다음 그룹화하여 중복 된 그룹화를 피할 수 있습니다.
 
@@ -309,13 +309,13 @@ C1EventCalendar 컨트롤을 사용하여 iPad의 캘린더 응용프로그램�
 
   
 
-### Step1
+**Step1**
 
 먼저,  ASP.Net Web응용프로그램을 만든 후,  Web 폼을 추가합니다. 그리고 툴 바에서  C1EventCalendar컨트롤을 찾습니다. 툴 바에 C1EventCalendar가 없는 경우, 오른쪽을 클릭하여 “선택옵션”을 선택하고 C1EventCalendar를 추가합니다.
 
   
 
-### Step2
+**Step2**
 
 C1EventCalendar컨트롤을 더블클릭하고 페이지에 추가합니다. 컨트롤의 테스크 메뉴를 열어 너비와 높이를 각각 800과 500으로 설정합니다.
 
@@ -331,7 +331,7 @@ EventCalendar의 Theme양식을 변경할 수 있습니다. 컨트롤의 테스�
 
   
 
-### Step3
+**Step3**
 
 간단한 일정 캘린더가 완성되었습니다. 실행하면 다음과 같이 표시됩니다. ：
 
