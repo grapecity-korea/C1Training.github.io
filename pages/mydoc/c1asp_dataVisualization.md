@@ -154,19 +154,19 @@ C1BarChart의 SeriesList를 통해 BarChartSeries를 만들고,  태그로 X축,
 
 
 
-## C1Candlestickchart컨트롤입문
+## C1Candlestickchart 컨트롤 입문
 
 ComponentOne을 사용하는  C1Candlestickchart  컨트롤은 쉽게 주식차트를 작성할 수 있습니다! 아래는 주식차트 작성을 위한 구체적인 방법입니다.
 
   
 
-### Step1
+**Step1**
 
 먼저 ASP.Net Web 응용 프로그램을 만든 후 Web 폼을 추가합니다. 그리고 툴 바에서  C1CandlestickChart  컨트롤을 찾습니다. 툴 바에 C1CandlestickChart가 없는 경우 오른쪽을 클릭하고  “옵션”을 선택하여 C1CandlestickChart를 추가시킵니다.
 
   
 
-### Step2
+**Step2**
 
 도구상자에서  C1CandlestickChart  컨트롤을 Web 폼으로 드래그합니다. 컨트롤을 클릭하여 C1CandlestickChart 작업 메뉴를 열고  SreiesList를 선택합니다.
 
@@ -276,7 +276,7 @@ X의 값은 2011-12-01부터2012-01-31까지입니다.
 
   
 
-### Step3
+**Step3**
 
 SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이 예시에서  Close-Fill-Color설정을 Blue로 하고  Close-Width  설정을 5로 합니다. 순서대로  FallingClose, HighLow, Open, RisingClose, UnchangeClose를 설정합니다.
 
@@ -300,7 +300,7 @@ SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이
 
   
 
-### Step4
+**Step4**
 
 소스보기에서 차트 좌표축의 외관을 변경할 수 있습니다. 이 예시는 다음과 같이 코드를 변경한 것입니다：
 
@@ -408,7 +408,7 @@ C1BubbleChart에 시리즈를 추가하여 BubbleChartSeries를 만들고 C1Bubb
 
 
 
-## C1PieChart파이그래프 컨트롤의 도넛 그래프 작성
+## C1PieChart 파이 그래프 컨트롤의 도넛 그래프 작성
 
 ASP.NET의 PieChart 컨트롤은 파이그래프를 작성할 수 있습니다. 파이그래프는 모든 시리즈마다 데이터 세그먼트를 만들고, 커스터마이즈 옵션과 애니메이션을 포함합니다.  
 본문에서는 InnerRadius속성에 대한 설치를 통해 C1PieChart를 도넛 그래프로 전환하는 방법에 대해 소개합니다.
@@ -484,7 +484,7 @@ PieChartSeries의 Offset을 사용하여 데이터 세그먼트와 중심점의 
 [C1PieChart-donut.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1PieChart-donut.zip)
 
 
-## C1BarChart 색변경
+## C1BarChart 색 변경
 
 C1BarChart 는 사용빈도가 가장 높은 컨트롤 중 하나입니다. 전형적인 활용법은 데이터 소스를 통해 그래프를 생성하고, X축과 Y축의 필드를 확정하는 것입니다. 최근 우리는 사용자의 요청을 받아 들여 데이터 설정을 하지 않은 그래프의 필드정보를 바탕으로 같은 시리즈의 데이터 바 색상을 설정하도록 했습니다.
 
@@ -579,7 +579,7 @@ $(document).ready(function () {
 [BarChart_DifferentColors.zip](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/BarChart_DifferentColors.zip)
 
 
-## C1LinearGauge와 C1RadialGauge컨트롤 시작하기
+## C1LinearGauge와 C1RadialGauge 컨트롤 시작하기
 
 C1LinearGauge컨트롤은 여러분이 원하는 정확한 그래픽 표현을 제공할 수 있습니다. 여러분은 수평, 수직 또는 경사 선형의 측량컨트롤을 선택할 수 있습니다.
 
@@ -587,15 +587,15 @@ C1RadialGauge컨트롤은 여러분이 원하는 정확한 그래픽 표현을 �
 
   
 
-### C1LinearGauge컨트롤의 사용
+### C1LinearGauge 컨트롤의 사용
 
-### Step1
+**Step1**
 
 먼저,  ASP.Net Web응용프로그램을 만든 후  Web폼을 추가해야 합니다. 그리고 툴 바에서  C1LinearGauge컨트롤을 찾습니다. 툴 바에 C1LinearGauge가 없으면 오른쪽을 클릭하여 “옵션”에서 C1LinearGauge를 선택하여 추가합니다. 이 컨트롤을 더블 클릭하여 페이지에 추가합니다.
 
   
 
-### Step2
+**Step2**
 
 C1LinearGauge컨트롤의 속성 변경을 통해 원하는 효과를 적용할 수 있습니다.  
 Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 있습니다. Width와 Height속성을 통해 너비와 높이를 변경합니다. Face—FaceStyle—Fill—Color의 변경을 통해 색 채우기를 수정할 수 있습니다.  
@@ -628,7 +628,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 ### C1RadialGauge컨트롤의 사용
 
-### Step1
+**Step1**
 
 항목 중에 새롭게 Web폼을 추가한 후, 툴 바에서 C1LinearGauge컨트롤을 찾습니다. 툴 바에 C1RadialGauge가 없으면 오른쪽을 클릭하여 “옵션”에서 C1RadialGauge를 선택하여 추가합니다. 이 컨트롤을 더블 클릭하여 페이지에 추가합니다.
 
@@ -640,7 +640,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
   
 
-### Step2
+**Step2**
 
 앞에서는 기본 미터기를 추가했습니다. 이제 도형 미터기의 눈금 초기위치와 지침 초기위치를 설정합니다.
 
@@ -662,7 +662,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
   
 
-### Step3
+**Step3**
 
 미터기의 외관도 변경할 수 있습니다. <wijmo:C1RadialGauge> </wijmo:C1RadialGauge>태그 사이에 아래의 코드를 추가하여 지침애니메이션 표시를 설정합니다. ：
 
@@ -720,13 +720,13 @@ C1Sparkline컨트롤은 한 줄로 정보의 주요 흐름을 나타냅니다. �
 
   
 
-### Step1
+**Step1**
 
 먼저, ASP.Net Web응용프로그램을 만든 후 Web 폼을 추가해야 합니다. 그리고 툴 바에서 C1Sparkline컨트롤을 찾습니다. 툴 바에 C1Sparkline가 없으면 오른쪽을 클릭하여 “옵션”에서 C1Sparkline를 선택하여 추가합니다. 이 컨트롤을 더블 클릭하여 페이지에 추가합니다.
 
   
 
-### Step2
+**Step2**
 
 해당 컨트롤의 속성을 열어 Width속성 값은 200 px, Height속성 값은 50px으로 설정합니다. 또 기타 속성을 설정할 수 있고 컨트롤의 테마를 변경할 수도 있습니다. Theme 값을 Rocket으로 선택합니다, 설계도표에서 컨트롤의 태스크 메뉴를 열어 Edit Series를 선택하고 Sparkline Series 통합에디터를 엽니다. 오른 쪽 칸의 Type 값을 Area로 설정합니다. 자세한 것은 아래 그림을 참조합니다. ：
 
@@ -754,7 +754,7 @@ C1Sparkline컨트롤은 한 줄로 정보의 주요 흐름을 나타냅니다. �
 
   
 
-### Step3
+**Step3**
 
 계속해서 데이터를 설정해봅시다. 코드에 데이터를 직접 입력하면 됩니다.
 
