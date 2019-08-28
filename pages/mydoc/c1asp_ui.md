@@ -28,7 +28,7 @@ C1Dialog.Content태그를 사용하여 대화창의 내용을 설정합니다. �
 
   
 
-```
+```csharp
 <cc1:C1Dialog ID="dialog" runat="server" Width="550px" Height="240px" Title="서베이">
     <Content>
         <h2>대화창</h2>
@@ -38,7 +38,7 @@ C1Dialog.Content태그를 사용하여 대화창의 내용을 설정합니다. �
 
 페이지에 대화창표시와 대화창 감추기의 버튼 두 개를 추가합니다. 코드는 다음과 같습니다. ：
 
-```
+```csharp
 <input type="button" value="대화창감추기" onclick="$('#<%=dialog.ClientID%>').c1dialog('close')" />
   
 <input type="button" value="대화창표시" onclick="$('#<%=dialog.ClientID%>').c1dialog('open')" />
@@ -83,7 +83,7 @@ ComponentOne등급 컨트롤에 특수효과를 추가할 수 있습니다. 등�
 
   
 
-```
+```csharp
 <Animation Animated="fade" Duration="500" Easing="Linear" Delay="250" />
 ```
 
@@ -93,7 +93,7 @@ C1Rating에 마우스를 가져다 놓으면 메시지 알림이 나타납니다
 
   
 
-```
+```csharp
 <Hint Content="Below Average,Average,Above Average,Awesome,Epic" />
 ```
 

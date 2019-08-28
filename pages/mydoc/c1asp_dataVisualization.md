@@ -27,7 +27,7 @@ C1LineChart.Header.Text를 통해 타이틀을 추가합니다. C1LineChart. Sho
 
   
 
-```
+```csharp
 <wijmo:C1LineChart runat="server" ID="C1LineChart1" ShowChartLabels="False" Height="475" Width="756">
     <Animation Duration="2000"></Animation>
     <Header Text="온라인사용자">
@@ -46,27 +46,27 @@ C1LineChart.Header.Text를 통해 타이틀을 추가합니다. C1LineChart. Sho
 
 페이지가로드되면 코드로 C1LineChart 패밀리를 추가하고 LineChartSeries를 작성한 다음 C1LineChart.SeriesList.Add를 통해 이를 추가합니다. 계열의 다양한 속성을 설정할 수 있습니다. 예를 들어 일련의 태그 유형, 레이블 시리즈 등을 설정할 수 있습니다. 위의 기능을 수행하려면 PageLoad 이벤트에서 다음 코드를 호출하십시오.
 
-```
+```csharp
 //Invoke in Page Load event
- private void PrepareOptions()
-        {
-            var valuesX = new List(){new DateTime(2010, 10, 27, 11, 48, 0), new DateTime(2010, 10, 27, 13, 47, 0), new DateTime(2010, 10, 27, 15, 46, 0), new DateTime(2010, 10, 27, 17, 45, 0), 
-            new DateTime(2010, 10, 27, 19, 44, 0), new DateTime(2010, 10, 27, 21, 43, 0), new DateTime(2010, 10, 27, 23, 41, 0), new DateTime(2010, 10, 28, 1, 40, 0), new DateTime(2010, 10, 28, 3, 39, 0), 
-            new DateTime(2010, 10, 28, 5, 38, 0), new DateTime(2010, 10, 28, 7, 37, 0), new DateTime(2010, 10, 28, 9, 36, 0), new DateTime(2010, 10, 28, 11, 35, 0), new DateTime(2010, 10, 28, 13, 34, 0), 
-            new DateTime(2010, 10, 28, 15, 33, 0), new DateTime(2010, 10, 28, 17, 32, 0), new DateTime(2010, 10, 28, 19, 31, 0), new DateTime(2010, 10, 28, 21, 30, 0), new DateTime(2010, 10, 28, 23, 38, 0), 
-            new DateTime(2010, 10, 29, 1, 27, 0), new DateTime(2010, 10, 29, 3, 26, 0), new DateTime(2010, 10, 29, 5, 25, 0), new DateTime(2010, 10, 29, 7, 24, 0), new DateTime(2010, 10, 29, 9, 23, 0), new DateTime(2010, 10, 29, 11, 22, 0)};
-            var valuesY = new List() { 2665513, 2300921, 1663229, 1622528, 1472847, 1354026, 1348909, 1514946, 1746392, 2020481, 2312976, 2539210, 2657505, 2369938, 1869805, 1648695, 1529983, 1398148, 1389668, 1568134, 1787466, 2101460, 2090771, 2351994, 2537400 };
+private void PrepareOptions()
+{
+    var valuesX = new List(){new DateTime(2010, 10, 27, 11, 48, 0), new DateTime(2010, 10, 27, 13, 47, 0), new DateTime(2010, 10, 27, 15, 46, 0), new DateTime(2010, 10, 27, 17, 45, 0), 
+    new DateTime(2010, 10, 27, 19, 44, 0), new DateTime(2010, 10, 27, 21, 43, 0), new DateTime(2010, 10, 27, 23, 41, 0), new DateTime(2010, 10, 28, 1, 40, 0), new DateTime(2010, 10, 28, 3, 39, 0), 
+    new DateTime(2010, 10, 28, 5, 38, 0), new DateTime(2010, 10, 28, 7, 37, 0), new DateTime(2010, 10, 28, 9, 36, 0), new DateTime(2010, 10, 28, 11, 35, 0), new DateTime(2010, 10, 28, 13, 34, 0), 
+    new DateTime(2010, 10, 28, 15, 33, 0), new DateTime(2010, 10, 28, 17, 32, 0), new DateTime(2010, 10, 28, 19, 31, 0), new DateTime(2010, 10, 28, 21, 30, 0), new DateTime(2010, 10, 28, 23, 38, 0), 
+    new DateTime(2010, 10, 29, 1, 27, 0), new DateTime(2010, 10, 29, 3, 26, 0), new DateTime(2010, 10, 29, 5, 25, 0), new DateTime(2010, 10, 29, 7, 24, 0), new DateTime(2010, 10, 29, 9, 23, 0), new DateTime(2010, 10, 29, 11, 22, 0)};
+    var valuesY = new List() { 2665513, 2300921, 1663229, 1622528, 1472847, 1354026, 1348909, 1514946, 1746392, 2020481, 2312976, 2539210, 2657505, 2369938, 1869805, 1648695, 1529983, 1398148, 1389668, 1568134, 1787466, 2101460, 2090771, 2351994, 2537400 };
 
-            //serieslist
-            var series = new LineChartSeries();
-            this.C1LineChart1.SeriesList.Add(series);
-            series.Markers.Visible = true;
-            series.Markers.Type = MarkerType.Circle;
-            series.Data.X.AddRange(valuesX.ToArray());
-            series.Data.Y.AddRange(valuesY.ToArray());
-            series.Label = "Users";
-            series.LegendEntry = true;
-        }
+    //serieslist
+    var series = new LineChartSeries();
+    this.C1LineChart1.SeriesList.Add(series);
+    series.Markers.Visible = true;
+    series.Markers.Type = MarkerType.Circle;
+    series.Data.X.AddRange(valuesX.ToArray());
+    series.Data.Y.AddRange(valuesY.ToArray());
+    series.Label = "Users";
+    series.LegendEntry = true;
+}
 ```
 
 위의 방법을 통해 본문에 첨부한 Demo와 같이 C1LineChart를 구현할 수 있습니다. 실행 결과는 다음과 같습니다.
@@ -98,7 +98,7 @@ C1BarChart的Axis태그를 통해 X, Y축의 텍스트를 설정합니다. Axis.
 
   
 
-```
+```csharp
 <Axis>
     <X Text=""></X>
     <Y Text="전체 하드웨어" Compass="West"></Y>
@@ -115,30 +115,30 @@ C1BarChart의 레이블은 ShowChartLabels를 통해 표시됩니다. ChartLabel
 
 C1BarChart의 SeriesList를 통해 BarChartSeries를 만들고,  태그로 X축, Y축의 값을 설정합니다. 코드는 다음과 같습니다.
 
-```
+```csharp
 <SeriesList> 
-            <wijmo:BarChartSeries Label="서부" LegendEntry="true"> 
-                <Data> 
-                    <X> 
-                        <Values> 
-                            <wijmo:ChartXData StringValue="데스크톱" /> 
-                            <wijmo:ChartXData StringValue="노트북" /> 
-                            <wijmo:ChartXData StringValue="일체형" />
-                            <wijmo:ChartXData StringValue="태블릿PC" />
-                            <wijmo:ChartXData StringValue="전화" />
-                        </Values>
-                    </X>
-                    <Y>
-                        <Values>
-                            <wijmo:ChartYData DoubleValue="5" />
-                            <wijmo:ChartYData DoubleValue="3" />
-                            <wijmo:ChartYData DoubleValue="4" />
-                            <wijmo:ChartYData DoubleValue="7" />
-                            <wijmo:ChartYData DoubleValue="2" />
-                        </Values>
-                    </Y>
-                </Data>
-            </wijmo:BarChartSeries>
+    <wijmo:BarChartSeries Label="서부" LegendEntry="true"> 
+        <Data> 
+            <X> 
+                <Values> 
+                    <wijmo:ChartXData StringValue="데스크톱" /> 
+                    <wijmo:ChartXData StringValue="노트북" /> 
+                    <wijmo:ChartXData StringValue="일체형" />
+                    <wijmo:ChartXData StringValue="태블릿PC" />
+                    <wijmo:ChartXData StringValue="전화" />
+                </Values>
+            </X>
+            <Y>
+                <Values>
+                    <wijmo:ChartYData DoubleValue="5" />
+                    <wijmo:ChartYData DoubleValue="3" />
+                    <wijmo:ChartYData DoubleValue="4" />
+                    <wijmo:ChartYData DoubleValue="7" />
+                    <wijmo:ChartYData DoubleValue="2" />
+                </Values>
+            </Y>
+        </Data>
+    </wijmo:BarChartSeries>
 </SeriesList>
 ```
 
@@ -216,7 +216,7 @@ X의 값은 2011-12-01부터2012-01-31까지입니다.
 
 소스코드는 다음과 같습니다：
 
-```
+```csharp
 <Data>
 <Low DoubleValues="7.5,8.6,4.4,4.2,8,9,11,10,12.2,12,16,15.5,16,15,16,16.5,16,16,15,14.5,14,13.5,13,12,11,11,10,9,8,7.5,7.9,7.5,8.6,4.4,4.2,8,9,11,10,12.2,12,16,15.5,16" />
 <High DoubleValues="10,12,11,14,16,20,18,17,17.5,20,22,21,22.5,20,21,20.8,20,19,18,17,16,15,15,14,13,12,11.5,10.9,10,9,9.5,10,12,11,14,16,20,18,17,17.5,20,22,21,22.5" />
@@ -286,7 +286,7 @@ SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이
 
 소스코드는 다음과 같습니다. ：
 
-```
+```csharp
 <HighLow Width="2">
     <Fill Color="#8C8C8C"></Fill>
 </HighLow>
@@ -304,7 +304,7 @@ SreiesStyles을 선택하고 CandlestickCharts의 외관을 설정합니다. 이
 
 소스보기에서 차트 좌표축의 외관을 변경할 수 있습니다. 이 예시는 다음과 같이 코드를 변경한 것입니다：
 
-```
+```csharp
 <Axis>
     <X>
         <GridMajor Visible="True"></GridMajor>
@@ -350,7 +350,7 @@ C1BubbleChart.Aimation을 통해 애니메이션 및 애니메이션 딜레이 �
 
   
 
-```
+```csharp
 <Animation Duration="500" Easing="EaseOutElastic"></Animation>
 ```
 
@@ -360,7 +360,7 @@ C1BubbleChart 3D데이터 표시
 
 C1BubbleChart에 시리즈를 추가하여 BubbleChartSeries를 만들고 C1BubbleChart.SeriesList를 통해 시리즈를 추가합니다. X, Y, Y1의 Values를 통해 3D데이터를 추가합니다. BubbleChartSeries.Label은 시리즈 레이블을 설정하는데 사용합니다.
 
-```
+```csharp
 <serieslist>
     <wijmo:bubblechartseries label="서부">
         <data>
@@ -427,7 +427,7 @@ C1PieChart.InnerRadius 설정을 통해 법정 값으로 합니다. C1PieChart�
 
   
 
-```
+```csharp
 <wijmo:C1PieChart runat = "server" ID="C1PieChart1" Radius="140" ShowChartLabels="false" 
 Height="475" Width = "756" CssClass ="ui-widget ui-widget-content ui-corner-all" 
 InnerRadius="40">
@@ -435,7 +435,7 @@ InnerRadius="40">
 
 C1PieChart의 Hint를 통해 툴팁의 애니메이션 효과, 표시 방법, 딜레이 등 툴팁 및 어떻게 툴팁을 표시할지 여부를 설정합니다. 사이트에서 로드 후 마우스를 도넛 그래프의 데이터 세그먼트 위에 올리면 툴팁을 표시하게 됩니다.
 
-```
+```csharp
 <Hint>
     <Content Function="hintContent" />
 </Hint>
@@ -443,7 +443,7 @@ C1PieChart의 Hint를 통해 툴팁의 애니메이션 효과, 표시 방법, �
 
 C1PieChart의 Legend를 통해 그래프의 예시를 설정합니다. 그 중 Legend.Text 설정 그래프의 예시 텍스트와 스타일을 포함합니다. 아래의 코드를 참고합니다. :
 
-```
+```csharp
 <Legend Text="May 2009 - May 2010"></Legend>
 ```
 
@@ -459,7 +459,7 @@ PieChartSeries의 Offset을 사용하여 데이터 세그먼트와 중심점의 
 
   
 
-```
+```csharp
 <SeriesList>
     <wijmo:PieChartSeries Label="DX11GPU & WIN7" Data="5.6" Offset="30"></wijmo:PieChartSeries>
     <wijmo:PieChartSeries Label="iMac" Data="23.18"></wijmo:PieChartSeries>
@@ -500,8 +500,8 @@ C1BarChart가 status 필드를 바인딩하지 않으면 어떻게 현재 태스
 
   
 
-```
- protected void Page_Load(object sender, EventArgs e)
+```csharp
+protected void Page_Load(object sender, EventArgs e)
 {
    DataTable dt = new DataTable();
    dt.Columns.Add("Week", typeof(string));
@@ -532,7 +532,7 @@ C1BarChart가 status 필드를 바인딩하지 않으면 어떻게 현재 태스
 
 다음으로 C1GridView를 통해 포 그라운드에서 작업 상태를 가져와야합니다. 코드는 다음과 같습니다.
 
-```
+```csharp
 var color = [];
 $(document).ready(function () {
    var data = $("#C1GridView1").c1gridview("data");
@@ -609,7 +609,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 소스코드는 다음과 같습니다. ：
 
-```
+```csharp
 <wijmo:C1LinearGauge ID="C1LinearGauge1" runat="server" Value="10" Width="500px">
     <TickMajor Factor="2" Visible="True" Offset="0" Interval="10"></TickMajor>
     <TickMinor Visible="False" Offset="0" Interval="5"></TickMinor>
@@ -644,14 +644,14 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 앞에서는 기본 미터기를 추가했습니다. 이제 도형 미터기의 눈금 초기위치와 지침 초기위치를 설정합니다.
 
-```
+```csharp
 <wijmo:C1RadialGauge ID="C1RadialGauge1" runat="server">
 </wijmo:C1RadialGauge>
 ```
 
 소스 코드를 변경합니다.：
 
-```
+```csharp
 <wijmo:C1RadialGauge ID="C1RadialGauge1" runat="server" Value="50" Max="100" StartAngle="-45" SweepAngle="270">
 </wijmo:C1RadialGauge>
 ```
@@ -666,13 +666,13 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 미터기의 외관도 변경할 수 있습니다. `<wijmo:C1RadialGauge> </wijmo:C1RadialGauge>` 태그 사이에 아래의 코드를 추가하여 지침애니메이션 표시를 설정합니다. ：
 
-```
+```csharp
 <Animation Duration="2000" Easing="EaseOutBack"></Animation>
 ```
 
 아래의 코드를 추가하면 특별한 눈금을 정할 수 있습니다.
 
-```
+```csharp
 <TickMajor Position="Inside" Factor="2" Visible="True" Offset="27" Interval="25"></TickMajor>
 <TickMinor Position="Inside" Visible="True" Offset="30" Interval="5"></TickMinor>
 ```
@@ -685,7 +685,7 @@ Behavior—value속성을 설정하여 미터기의 초기 값을 변경할 수 
 
 미터기 눈금반을 더 아름답게 만들 수 있습니다. 아래의 코드는 눈금반에 선을 그려 꾸민 것입니다. 실행 결과는 다음과 같습니다. ：
 
-```
+```csharp
 <Ranges>
   <Wijmo:GaugelRange EndDistance="0.58" EndValue="10" EndWidth="5" StartDistance="0.6" StartValue="0" StartWidth="2">
   <RangeStyle Stroke="#7BA0CC" StrokeWidth="0">
@@ -738,7 +738,7 @@ C1Sparkline컨트롤은 한 줄로 정보의 주요 흐름을 나타냅니다. �
 
 소스코드는 다음과 같습니다. ：
 
-```
+```csharp
 <C1Sparkline:C1Sparkline ID="Sparkline1" runat="server">
       <Animation Duration="800" />
       <SeriesList>
@@ -758,7 +758,7 @@ C1Sparkline컨트롤은 한 줄로 정보의 주요 흐름을 나타냅니다. �
 
 계속해서 데이터를 설정해봅시다. 코드에 데이터를 직접 입력하면 됩니다.
 
-```
+```csharp
 var data1 = new[]{
     new { Name="a",Score=73 ,Mood=66},
     new { Name="b",Score=95 ,Mood=50},

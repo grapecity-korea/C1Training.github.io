@@ -25,7 +25,7 @@ C1GridView는 DataSet，DataTable 등과 같은 ADO.NET 데이터소스를 바�
 
   
 
-```
+```csharp
 public DataSet BindGrid()
 {
     OleDbConnection con = new OleDbConnection("provider=Microsoft.Jet.Oledb.4.0; Data Source=" + Server.MapPath("~/App_Data/C1NWind.mdb"));
@@ -48,11 +48,11 @@ protected void Page_Load(object sender, EventArgs e)
 
 ### C1GridView 이벤트 오퍼레이팅
 
-**소트**
+**Sort**
 
 순서배열기능은  Sorting과  Sorted  이벤트를 오퍼레이팅하고 Sorted 이벤트에서 새롭게 데이터 소스를 바인딩해야 실현됩니다.
 
-```
+```csharp
 protected void C1GridView1_Sorting(object sender, C1.Web.Wijmo.Controls.C1GridView.C1GridViewSortEventArgs e)
 {
 }
@@ -68,7 +68,7 @@ protected void C1GridView1_Sorted(object sender, EventArgs e)
 
 필터 기능은  Filtering과  Filtered  이벤트를 오퍼레이팅하고  Filtered  이벤트에서 새롭게 데이터 소스를 바인딩해야 실현됩니다.
 
-```
+```csharp
 protected void C1GridView1_Filtering(object sender, C1.Web.Wijmo.Controls.C1GridView.C1GridViewFilterEventArgs e)
 {
 }
@@ -84,7 +84,7 @@ protected void C1GridView1_Filtered(object sender, EventArgs e)
 
 페이지 나누기의 코드와 순서배열, 필터는 약간 다릅니다.  Paging  이벤트를 실행해야 합니다. 먼저, NewPageIndex 속성을 현재의 PageIndex로 설정함과 동시에 데이터 소스를 새롭게 바인딩해야 합니다.
 
-```
+```csharp
 protected void C1GridView1_PageIndexChanging(object sender, C1.Web.Wijmo.Controls.C1GridView.C1GridViewPageEventArgs e)
 {
     C1GridView1.PageIndex = e.NewPageIndex;
@@ -97,7 +97,7 @@ protected void C1GridView1_PageIndexChanging(object sender, C1.Web.Wijmo.Control
 
 C1GridView의 그룹나누기 기능은 AllowColMoving 과 ShowGroupArea 속성을 true로 설정합니다. ColumnGrouped 와 ColumnUngrouped 이벤트를 실행해야 합니다. ColumnGrouped 이벤트에서는 이벤트 변수를 통해 데이터소스를 다시 바인딩해야 합니다. 매개 변수인 HeaderText 속성은 드래그한 열의 헤드 텍스트입니다. 이 매개 변수는 먼저 열을 정렬 한 다음 그룹화하여 중복 된 그룹화를 피할 수 있습니다.
 
-```
+```csharp
 //그룹나누기 실행
 protected void C1GridView1_ColumnGrouped(object sender,   C1.Web.Wijmo.Controls.C1GridView.C1GridViewColumnGroupedEventArgs e)
 {
@@ -130,9 +130,8 @@ protected void C1GridView1_ColumnUngrouped(object sender, C1.Web.Wijmo.Controls.
 
   
 
-```
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\C1Nwind.mdb;Persist Security Info=True" ProviderName="System.Data.OleDb" 
-    SelectCommand="SELECT [EmployeeID], [LastName], [FirstName], [BirthDate] FROM [Employees]">
+```csharp
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\C1Nwind.mdb;Persist Security Info=True" ProviderName="System.Data.OleDb" SelectCommand="SELECT [EmployeeID], [LastName], [FirstName], [BirthDate] FROM [Employees]">
 </asp:SqlDataSource>
 ```
 
@@ -142,7 +141,7 @@ C1GridView의 DataSourceID 속성으로 데이터 소스를 바인딩 하고 아
 
 구체적인 코드는 다음과 같습니다. :
 
-```
+```csharp
 <wijmo:C1GridView ID="C1GridView1" runat="server" DataSourceID="SqlDataSource1" 
     AutoGenerateColumns="false" ShowRowHeader="true" AllowSorting="true" CallbackSettings-Action="All"> 
     <Columns> 
@@ -180,7 +179,7 @@ C1GridView컨트롤을 페이지에 드래그하고 데이터소스를 설정합
 
   
 
-```
+```csharp
 <asp:sqldatasource id="SqlDataSource1" runat="server" connectionstring="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\C1NWind.mdb;Persist Security Info=True" providername="System.Data.OleDb" selectcommand="SELECT TOP 50 Products.ProductName, d.OrderID, d.Quantity, (d.UnitPrice * d.Quantity) as Total FROM Products INNER JOIN (SELECT details.ProductID, details.OrderID, details.UnitPrice, details.Quantity FROM [Order Details] AS details INNER JOIN (SELECT OrderID FROM Orders WHERE Year(OrderDate) = 1994) AS tmp ON details.OrderID = tmp.OrderID) as d ON Products.ProductID = d.ProductID ORDER BY d.ProductID"> 
 </asp:sqldatasource>
 ```
@@ -193,15 +192,15 @@ C1GridView은 DataSourceID를 통해 데이터소스를 선택하고 Columns의 
 
 그룹 헤드와 마지막 행은  wijmo-wijgrid-groupheaderrow와  wijmo wijgrid-groupfooterrow  CSS유형으로 표기합니다. 개발자는 이 유형들과 Child Node를 결합 사용하여 그룹 행의 자체정의 양식을 제공하도록 합니다. 그룹 나눔을 실현하는 코드는 다음과 같습니다. ：
 
-```
-            <wijmo:C1BoundField DataField="ProductName" SortExpression="ProductName" HeaderText="제품명" Aggregate="Count"> 
-                <GroupInfo Position="Header" OutlineMode="StartCollapsed" />
-            </wijmo:C1BoundField> 
-            <wijmo:C1BoundField DataField="OrderID" SortExpression="OrderID" HeaderText="주문서ID"></wijmo:C1BoundField> 
-            <wijmo:C1BoundField DataField="Quantity" SortExpression="Quantity" HeaderText="수량" Aggregate="Sum"></wijmo:C1BoundField> 
-            <wijmo:C1BoundField DataField="Total" SortExpression="Total" HeaderText="총계" Aggregate="Sum"></wijmo:C1BoundField>
-        </Columns> 
-    </wijmo:C1GridView>
+```csharp
+<wijmo:C1BoundField DataField="ProductName" SortExpression="ProductName" HeaderText="제품명" Aggregate="Count"> 
+    <GroupInfo Position="Header" OutlineMode="StartCollapsed" />
+</wijmo:C1BoundField> 
+<wijmo:C1BoundField DataField="OrderID" SortExpression="OrderID" HeaderText="주문서ID"></wijmo:C1BoundField> 
+    <wijmo:C1BoundField DataField="Quantity" SortExpression="Quantity" HeaderText="수량" Aggregate="Sum"></wijmo:C1BoundField> 
+    <wijmo:C1BoundField DataField="Total" SortExpression="Total" HeaderText="총계" Aggregate="Sum"></wijmo:C1BoundField>
+    </Columns> 
+</wijmo:C1GridView>
 ```
 
 본문의 Demo에서 C1GridView의 AllowColMoving를 통해 true가 허용한 드래그 열을 설정하게 됩니다. 그룹 헤드 유닛 셀은  wijmo-wijgrid.TD wijmo wijgrid-groupheaderrow  CSS 서열로 설계됩니다. 또한 제품명을 그룹으로 나눕니다. 그룹으로 나눈 후 그룹 헤드에서 제품명과 수량의 요약데이터를 표시합니다. OutlineMode을 통해 설정된 StartCollaspsed가 나타내는 그룹에서 가장 최초의 그룹은 모두 접혀 있습니다.  
@@ -239,20 +238,16 @@ C1EventsCalendar일정을 저장한 DataSourceID속성을 설정합니다. 필�
 
   
 
-```
+```csharp
 DeleteCommand="DELETE FROM [Appointments] WHERE [AppointmentId] = ?" 
-InsertCommand="INSERT INTO [Appointments] ([AppointmentId], [Description], [End], 
-[Location], [Start], [Subject], [Properties], [Color], [Calendar], [Tag]) VALUES 
-(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" 
+InsertCommand="INSERT INTO [Appointments] ([AppointmentId], [Description], [End], [Location], [Start], [Subject], [Properties], [Color], [Calendar], [Tag]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" 
 SelectCommand="SELECT * FROM [Appointments]" 
-UpdateCommand="UPDATE [Appointments] SET [Description] = ?, [End] = ?, 
-[Location] = ?, [Start] = ?, [Subject] = ?, [Properties] = ?, [Color] = ?, 
-[Calendar] = ?, [Tag] = ? WHERE [AppointmentId] = ?"
+UpdateCommand="UPDATE [Appointments] SET [Description] = ?, [End] = ?, [Location] = ?, [Start] = ?, [Subject] = ?, [Properties] = ?, [Color] = ?, [Calendar] = ?, [Tag] = ? WHERE [AppointmentId] = ?"
 ```
 
 설정한C1EventCalendar일정은 저장 데이터를 반영합니다. 다음과 같은 코드로 표시합니다. :
 
-```
+```csharp
 <EventStorage DataSourceID="AccessDataSource_Events">
 	<Mappings>	
 		<IdMapping MappingName="AppointmentId" />			
@@ -276,7 +271,7 @@ C1EventsCalendar일정에 저장된 DataSourceID속성을 설정합니다. 필�
 
 설정한C1EventCalendar일정은 저장 데이터를 반영합니다. 예：
 
-```
+```csharp
 <CalendarStorage DataSourceID="AccessDataSource_Calendars">
 	<Mappings>
 		<IdMapping MappingName="CalendarId" />
@@ -366,7 +361,7 @@ C1EventsCalendar일정을 저장한 DataSourceID속성을 설정합니다. 필�
 C1InputCurrency는 C1InputNumeric에서 파생됩니다. 화폐 값을 입력하는데 사용됩니다. 디지털 편집기를 사용하면 사용자 지정 유효성 검사 논리를 작성하지 않고도 응용 프로그램에서 입력을 지정할 수 있습니다.  
 참고 코드는 다음과 같습니다. ；
 
-```
+```csharp
 <wijmo:C1InputCurrency ID="C1InputCurrency" runat="server" Value="123.45">
 </wijmo:C1InputCurrency>
 ```
@@ -377,7 +372,7 @@ C1InputMask  의 컨트롤은 주로 텍스트 양식에 관련된 데이터 유
 
 C1InputNumeric은 C1InputMask에서 파생된 것으로 숫자 입력에 사용됩니다. 해당 디지털 에디터를 사용하여 응용프로그램에서 입력을 지정할 수 있어 어떤 사용자 지정 유효성 검사 논리를 작성하지 않고도 응용 프로그램에서 입력을 지정할 수 있습니다. 참고 코드는 다음과 같습니다. :
 
-```
+```csharp
 <wijmo:C1InputNumeric ID="C1InputNumeric1" runat="server" 
 ShowSpinner="true" value="2.324" DecimalPlaces="3">
 </wijmo:C1InputNumeric>
@@ -414,7 +409,7 @@ C1ComboBox를 페이지에 추가합니다.
 
 Items  속성의 설정을 통해  C1ComboBox의 외관과 드롭 다운 메뉴 리스트 항목을 제어할 수 있습니다. 코드는 다음과 같습니다. :
 
-```
+```csharp
 <Items>
 <wijmo:C1ComboBoxItem Text="c++" Value="c++" />
 <wijmo:C1ComboBoxItem Text="java" Value="java" />
@@ -446,8 +441,8 @@ ShowingAnimation  및  HidingAnimation  속성이 설정되면 페이지가 로�
 
 참고 코드는 다음과 같습니다. ：
 
-```
- <ShowingAnimation Duration="1000">
+```csharp
+<ShowingAnimation Duration="1000">
 <Animated Effect="Scale" />
 </ShowingAnimation>
 <HidingAnimation Duration="1000">
@@ -478,7 +473,7 @@ C1Editor 추가
 
 C1Editor를 페이지에 추가하면 에디터가 생성됩니다. 해당 에디터는 Microsoft Office의 스타일과 기능 영역 인터페이스를 실현합니다. 이 기능 영역은 관련 명령을 일련의 탭으로 구성하여 사용자가 메뉴 계층 구조를 탐색 할 필요없이 편집기 기능을 익힐 있습니다. 코드를 참고하세요. :
 
-```
+```csharp
 <wijmo:C1Editor runat="server" 
 ID="Editor1" Width="760" Height="530"  Text="The Insert tab contains groups of commands that enable end-users to insert items, 
 such as images or paragraph breaks, into the text editor. 
@@ -493,7 +488,7 @@ txt데이터소스를 App_Data폴더에 추가합니다.
 
 File.OpenText를 사용하여 읽을 수 있는 기존 텍스트 파일을 엽니다. 파일의 내용을 가져 오면 참조 코드는 다음과 같습니다.
 
-```
+```csharp
 private string GetFileContent()
 {
     string text = string.Empty;
@@ -513,7 +508,7 @@ private string GetFileContent()
 
 페이지에서 추가 로드할 때 가져온 파일내용을 Editor.Text에 설정해줍니다. 파일내용을 C1Editor에 표시합니다. 참고 코드는 다음과 같습니다.
 
-```
+```csharp
 Editor1.Text = GetFileContent();
 ```
 
