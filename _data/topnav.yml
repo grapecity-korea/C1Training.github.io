@@ -8,7 +8,7 @@ topnav:
       - title: 새로운 기능
         url: /2019v2_whatsnew.html
       - title: 다운로드
-        external_url: https://www.grapecity.co.kr/download/componentone-enterprise
+        external_url: https://www.grapecity.co.kr/download/componentone-studio
 #Topnav dropdowns
 # topnav_dropdowns:
 # - title: Topnav dropdowns
