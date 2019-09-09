@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for ASP.NET | 데이터 분석 & 시각화
 keywords: ComponentOne, ASP.NET, 웹폼, 데이터 분석, 시각화, data analysis, data visualization
+tags: [line chart, 선형 차트, 라인 차트, bar chart, 막대 차트, 막대 그래프, candlestick chart, 캔들스틱 차트, bubble chart, 버블 차트, pie chart, 파이 차트, 도넛 그래프, 색 변경, linear gauge, 선형 게이지, radial gauge, 방사형 게이지, sparkline, 스파크라인]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for ASP.NET 이 제공하는 데이터 분석 및 시각화 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar

@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for ASP.NET | 내비게이션
 keywords: ComponentOne, ASP.NET, 웹폼, 내비게이션, navigation
+tage: [ 메뉴, menu, file explorer ]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for ASP.NET 이 제공하는 내비게이션 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar
@@ -9,7 +10,7 @@ folder: mydoc
 ---
 
 
-## C1Menu다양한 레벨의 메뉴 만들기
+## C1Menu 다양한 레벨의 메뉴 만들기
 
 [C1 메뉴 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Menu.zip)
 
@@ -77,7 +78,7 @@ C1Menu는 톱 레벨 메뉴, 서브메뉴 및 서브그룹을 스크롤 표시�
 [C1 메뉴 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/C1Menu.zip)
 
 
-## FileExplorer컨트롤 입문
+## FileExplorer 컨트롤 입문
 
 [FileExplorer 샘플 다운로드](https://www.grapecity.co.kr/files/C1/Samples/C1ASP.NET/TextC1FileExplorer.zip)
 

@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for ASP.NET | 데이터 상호작용
 keywords: ComponentOne, ASP.NET, 웹폼, 데이터 상호작용
+tags: [GridView, 그리드뷰, 표, 그룹핑, grouping, calendar, 캘린더, input control, 입력 컨트롤, combobox, 콤보박스, 애니메이션, animation, html, editor, 편집기]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for ASP.NET 이 제공하는 내비게이션 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar

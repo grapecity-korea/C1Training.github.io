@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for Winforms | 탐색 및 레이아웃
 keywords: ComponentOne, Winforms, 탐색, 레이아웃, search, layout
+tags: [Menu, Toolbar, 메뉴, 툴바, Tile Control, 바둑판, theme, 테마, combobox,]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for Winforms 가 제공하는 탐색 및 레이아웃 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar

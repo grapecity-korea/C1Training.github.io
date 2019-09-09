@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for Winforms | 데이터 분석 및 시각화
 keywords: ComponentOne, Winforms, 분석, 시각화, analysis, dataVisualization
+tags: [chart, 차트, data loding, 데이터 로딩, financial graph, 금융 그래프, mathematical statistics, 수학 통계, gauge, 게이지, weather, 날씨]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for Winforms 가 제공하는 데이터 분석 및 시각화 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar

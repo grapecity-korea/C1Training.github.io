@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for ASP.NET | UI
 keywords: ComponentOne, ASP.NET, ui
+tags: [ dialog, 대화창, rating, 등급]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for ASP.NET 가 제공하는 UI 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar

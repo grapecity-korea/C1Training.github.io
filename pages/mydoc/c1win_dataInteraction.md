@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for Winforms | 데이터 상호작용
 keywords: ComponentOne, Winforms, FlexGrid, 필터링, 빅데이터 로딩, 데이터 폼, 간트 차트, 스케줄, 서브 시트
+tags: [FlexGrid, 그리드, 데이터 필터링, 프린트, filtering, print, 데이터 로딩, data loading, input panel, 입력 패널, ganttview, gantt chart, 간트 차트, 캘린더, calendar, xml, schedule, 스케줄, true db grid]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for Winforms 가 제공하는 데이터 상호작용 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar

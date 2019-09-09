@@ -2,7 +2,7 @@
 title: C1 마이그레이션 | Migration
 keywords: c1 마이그레이션, c1 migration
 last_updated: Aug 08, 2019
-summary: "컴포넌트원(ComponentOne)의 DLL을 평가판에서 정식버전으로, 또는 구버전에서 최신버전으로 마이그리이션 하는 방법을 설명합니다."
+summary: "컴포넌트원(ComponentOne)의 DLL을 평가판에서 정식버전으로, 또는 구버전에서 최신버전으로 마이그레이션 하는 방법을 설명합니다."
 sidebar: mydoc_sidebar
 permalink: c1_migration.html
 folder: mydoc
