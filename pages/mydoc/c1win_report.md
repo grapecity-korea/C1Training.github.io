@@ -1,6 +1,7 @@
 ---
 title: ComponentOne for Winforms | 리포트 생성과 문서 변환
 keywords: ComponentOne, Winforms, 리포트, 문서, report, documentation
+tags: [pdf]
 last_updated: Aug 08, 2019
 summary: "ComponentOne for Winforms 가 제공하는 리포트 생성 및 문서 변환 컨트롤을 소개합니다."
 sidebar: mydoc_sidebar
