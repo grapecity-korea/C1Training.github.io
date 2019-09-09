@@ -8,6 +8,7 @@ simple_map: true
 map_name: usermap
 box_number: 2
 folder: product2
+search: exclude
 ---
 
 
