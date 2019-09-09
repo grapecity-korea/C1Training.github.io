@@ -13,7 +13,7 @@ search: exclude
 "keywords": "{{page.keywords}}",
 "url": "{{ page.url | remove: "/"}}",
 "summary": "{{page.summary | strip }}",
-"toc": "{{ page.toc }}"
+"toc": "{{ page#toc }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
 {% endunless %}
@@ -27,7 +27,7 @@ search: exclude
 "keywords": "{{post.keywords}}",
 "url": "{{ post.url | remove: "/" }}",
 "summary": "{{post.summary | strip }}",
-"toc": "{{ post.toc }}"
+"toc": "{{ post#toc }}"
 }
 {% unless forloop.last %},{% endunless %}
 {% endfor %}
