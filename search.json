@@ -12,8 +12,7 @@ search: exclude
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
 "url": "{{ page.url | remove: "/"}}",
-"summary": "{{page.summary | strip }}",
-"post-content": "{{ page.post-content }}"
+"summary": "{{page.summary | strip }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
 {% endunless %}
@@ -26,8 +25,7 @@ search: exclude
 "tags": "{{ post.tags }}",
 "keywords": "{{post.keywords}}",
 "url": "{{ post.url | remove: "/" }}",
-"summary": "{{post.summary | strip }}",
-"post-content": "{{ post.post-content }}"
+"summary": "{{post.summary | strip }}"
 }
 {% unless forloop.last %},{% endunless %}
 {% endfor %}
