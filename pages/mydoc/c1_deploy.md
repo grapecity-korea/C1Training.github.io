@@ -1,6 +1,6 @@
 ---
 title: C1 배포 | Deploy
-keywords: c1 배포, c1 deply, c1 distribution
+keywords: c1 배포, c1 deploy, c1 distribution
 last_updated: Aug 08, 2019
 summary: "컴포넌트원(ComponentOne)를 배포하는 방법에 대한 설명입니다."
 sidebar: mydoc_sidebar
