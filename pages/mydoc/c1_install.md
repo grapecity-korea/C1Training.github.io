@@ -64,9 +64,3 @@ folder: mydoc
 **10. Activate a key을 선택한 경우 인증을 완료하면 다음과 같은 창이 발생 합니다.**  
     ![](https://www.grapecity.co.kr/images/training/c1/tc_winforms1-1-10.png)  
     “Visit the ComponentOne Developer Community”를 눌러 미국 지사 사이트를 방문해 보시거나 또는 FINISH를 눌러 인증 과정을 완료 합니다.
-
-| Priority apples | Second priority | Third priority |
-|-------|--------|---------|
-| ambrosia | gala | red delicious |
-| pink lady | jazz | macintosh |
-| honeycrisp | granny smith | fuji |
