@@ -2,7 +2,7 @@
 title: ComponentOne Enterprise 2020 V3 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements, componentOne, 컴포넌트원, c1, .net, 닷넷, c#, csharp
-permalink: 2019v3_whatsnew.html
+permalink: 2020v3_whatsnew.html
 folder: news
 summary: "ComponentOne 2020 v3 릴리스가 발표되었습니다! 개발 팀의 노력 덕분에 .NET UI 컨트롤의 기능을 한 차원 높일 수 있었습니다. 이 릴리스는 WinForms 및 WPF용 .NET 5 컨트롤의 공식 릴리스, 새로운 데이터 소스 커넥터, 새로운 Blazor UI 컨트롤, 모든 플랫폼의 FlexGrid 개선 사항 등 다수의 중요한 변경 사항으로 가득 차 있습니다. 기능이 향상된 C1DemoExplorer를 통해 모든 데모를 새로운 방식으로 체험하실 수 있습니다."
 ---

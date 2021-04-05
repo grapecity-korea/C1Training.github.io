@@ -2,7 +2,7 @@
 title: ComponentOne Enterprise 2020 V1 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements
-permalink: 2019v3_whatsnew.html
+permalink: 2020v1_whatsnew.html
 folder: news
 summary: "ComponentOne 2020 v1 릴리스를 새로 제공해드리게 되었음을 기쁜 마음으로 알려드립니다. 이 릴리스는 데이터에 중점을 두었습니다. 즉 온라인 데이터 소스에 연결하는 새로운 방식, 크로스 플랫폼 데이터 집합 관리, 데이터를 표시할 수 있는 새로운 UI, 데이터 분석 기능, 다양한 소스 전반에 걸친 데이터 통합 등을 제공합니다. 새롭고 강력한 .NET Standard 컴포넌트를 도입하였을 뿐 아니라 새로운 Blazor UI 컨트롤을 통한 웹 개선, ASP.NET MVC 강화, 새로운 방문자 웹 API도 포함하였습니다. 이외에도 WinForms 및 WPF 컨트롤의 기능을 향상하였습니다."
 ---

@@ -2,7 +2,7 @@
 title: ComponentOne Enterprise 2020 V2 새로운 기능
 sidebar: home_sidebar
 keywords: news, blog, updates, release notes, announcements, componentOne, 컴포넌트원, c1, .net, 닷넷, c#, csharp
-permalink: 2019v3_whatsnew.html
+permalink: 2020v2_whatsnew.html
 folder: news
 summary: "이 릴리스에는 .NET 5 컨트롤 초기 버전, .NET Core 3.1 지원, Blazor 차트 및 WebAssembly 지원, 새로운 WinForms, WPF, ASP.NET MVC 컨트롤 등의 중대한 변경 사항을 비롯하여 필수적이고 중요한 라이선싱 변경 사항도 포함되어 있습니다. C1ControlPanel 설치 프로그램에서는 새롭게 개선된 UI도 확인할 수 있습니다."
 ---
