@@ -6,11 +6,11 @@ entries:
       - title: 새로운 기능
         output: web
         folderitems:
-        - title: 2020 V3
+          - title: 2020 V3
             url: /2020v3_whatsnew.html
             output: web
             type: homepage
-            - title: 2020 V2
+          - title: 2020 V2
             url: /2020v2_whatsnew.html
             output: web           
           - title: 2020 V1
